@@ -475,7 +475,7 @@ if __name__ == "__main__":
         output = 1
         DS=[3]
         nbInterp=[1]
-        nbClus=[5]
+        nbClus=[3]
         buildData = True
         seuil = 0
         folds = 5

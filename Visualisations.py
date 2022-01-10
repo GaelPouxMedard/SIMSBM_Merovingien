@@ -64,20 +64,23 @@ def read_params(folder, features, output, featToClus, nbClus, fold, run=-1):
     return thetas, p, intToOut, intToFeat
 
 
-def plotThetasGraph(thetas, p, intToOut, intToFeat):
+def plotThetasGraph(thetas, intToFeat):
     scaleFeat = 2.
     scaleClus = 10.
     scaleTypes = 1.
     scaleAlpha = 1.
-    norm = 1
 
 
     nbTypes = len(thetas)
     for type in range(len(thetas)):
-        maxTheta = np.max(thetas[type])
+        # maxTheta = np.max(thetas[type])
+        # thetas[type] = np.exp(-scaleAlpha * (maxTheta - thetas[type]))
+
         shift = (type - nbTypes / 2) * scaleTypes
         nbFeat = thetas[type].shape[0] - 1
         nbClus = thetas[type].shape[-1] - 1
+
+
         for k in range(thetas[type].shape[1]):
             plt.plot(0, (k - nbClus / 2) * scaleClus + shift, "or", markersize=15)
 
@@ -85,7 +88,7 @@ def plotThetasGraph(thetas, p, intToOut, intToFeat):
             plt.text(-1, (i - nbFeat / 2) * scaleFeat + shift, intToFeat[type][i].replace("_", " "), ha="right",
                      va="center")
             for k in range(len(thetas[type][i])):
-                plt.plot([-1, 0], [(i - nbFeat / 2) * scaleFeat + shift, (k - nbClus / 2) * scaleClus + shift], "k-", linewidth=thetas[type][i][k], alpha=np.exp(-scaleAlpha*(maxTheta**norm-thetas[type][i][k])))
+                plt.plot([-1, 0], [(i - nbFeat / 2) * scaleFeat + shift, (k - nbClus / 2) * scaleClus + shift], "k-", linewidth=thetas[type][i][k], alpha=thetas[type][i][k])
 
     plt.axis("off")
     plt.tight_layout()
@@ -96,18 +99,16 @@ def plotThetasGraph(thetas, p, intToOut, intToFeat):
 
 def plotGraph1D(thetas, p, intToOut, intToFeat):
     def findClusters(mat):
-        from sklearn.cluster import AgglomerativeClustering
-        cluster = AgglomerativeClustering(n_clusters=5, affinity='euclidean', linkage='ward')
+        from sklearn.cluster import SpectralClustering
+        cluster = SpectralClustering(n_clusters=mat.shape[-1])
         cluster.fit_predict(mat)
         return cluster.labels_
 
-    scaleFeat = 2.
-    scaleClus = 10.
+    scaleFeat = 4.
+    scaleClus = 30.
     scaleOut = 10.
     scalex = 100
     scaleAlpha = 4.
-
-    norm = 1
 
     nbFeat = thetas[0].shape[0]
     nbClus = thetas[0].shape[-1]
@@ -115,23 +116,24 @@ def plotGraph1D(thetas, p, intToOut, intToFeat):
 
     maxTheta = np.max(thetas[0])
     maxp = np.max(p)
-
-    for k in range(nbClus):
-        plt.plot(0, (k - (nbClus-1) / 2) * scaleClus, "or", markersize=15)
+    # thetas[0] = np.exp(-scaleAlpha*(maxTheta-thetas[0]))
+    # p = np.exp(-scaleAlpha*(maxp-p))
 
     clusLab = findClusters(thetas[0])
+    pos = 0
+    print(clusLab)
     for clus in range(len(clusLab)):
         for i in np.where(clusLab==clus)[0]:
-            plt.text(-scalex, (i - (nbFeat-1) / 2) * scaleFeat, intToFeat[0][i].replace("_", " ")+" ", ha="right", va="center")
+            plt.text(-scalex, (pos - (nbFeat-1) / 2) * scaleFeat, intToFeat[0][i].replace("_", " ")+" ", ha="right", va="center")
             for k in range(nbClus):
-                plt.plot([-scalex, 0], [(i - (nbFeat-1) / 2) * scaleFeat, (k - (nbClus-1) / 2) * scaleClus], "k-", linewidth=1., alpha=np.exp(-scaleAlpha*(maxTheta**norm-thetas[0][i][k])))
+                plt.plot([-scalex, 0], [(pos - (nbFeat-1) / 2) * scaleFeat, (k - (nbClus-1) / 2) * scaleClus], "k-", linewidth=1., alpha=thetas[0][i][k])
+            pos += 1
 
-    clusLab = findClusters(p)
     for j in range(nbOut):
         plt.text(scalex, (j - (nbOut-1) / 2) * scaleOut, intToOut[j].replace("_", " ")+" ", ha="left", va="center")
-        for clus in range(len(clusLab)):
-            for k in np.where(clusLab==clus)[0]:
-                plt.plot([0, scalex], [(k - (nbClus-1) / 2) * scaleClus, (j - (nbOut-1) / 2) * scaleOut], "k-", linewidth=1., alpha=np.exp(-scaleAlpha*(maxp**norm-p[k][j])))
+        for k in range(nbClus):
+            plt.plot([0, scalex], [(k - (nbClus-1) / 2) * scaleClus, (j - (nbOut-1) / 2) * scaleOut], "k-", linewidth=1., alpha=p[k][j])
+            plt.plot(0, (k - (nbClus - 1) / 2) * scaleClus, "or", markersize=15)
 
 
     plt.axis("off")
@@ -161,7 +163,7 @@ except Exception as e:
     output = 1
     DS = [3]
     nbInterp = [1]
-    nbClus = [5]
+    nbClus = [3]
     buildData = True
     seuil = 0
     folds = 5
@@ -183,9 +185,8 @@ for features, output, DS, nbInterp, nbClus, buildData, seuil, folds in list_para
         print(intToOut)
         nbOut = p.shape[-1]
 
-        #plotThetasGraph(thetas, p, intToOut, intToFeat)
+        #plotThetasGraph(thetas, intToFeat)
         if nbInterp==[1]:
-            pass
             plotGraph1D(thetas, p, intToOut, intToFeat)
 
 

@@ -328,8 +328,8 @@ except Exception as e:
     features = [0]
     output = 1
     DS = [3]
-    nbInterp = [3]
-    nbClus = [5]
+    nbInterp = [1]
+    nbClus = [3]
     buildData = True
     seuil = 0
     folds = 5
