@@ -2,11 +2,11 @@
 0005	adulte
 0014	adulte
 0015	adulte
-0016	adulte
-0020	adulte
+0016	-1
+0020	-1
 0024	adulte
 0025	adulte
-0026	adulte
+0026	-1
 0033	adulte
 0035	adulte
 0036	immature
@@ -191,7 +191,7 @@
 0147	adulte
 0149	adulte
 0155	immature
-0156	adulte
+0156	-1
 0157	adulte
 0159	adulte
 0161	adulte

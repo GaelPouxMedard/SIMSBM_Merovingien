@@ -23,6 +23,8 @@ with open("Data/data.csv", "r") as f:
             dicData[data_line[1]]["Sexe"] = "-1"
             dicData[data_line[1]]["Classe_age"] = "-1"
 
+        if data_line[3] in ["non_identifié", "indéterminé", "objet_décontextualisé"]: continue
+
         dicData[data_line[1]]["Statut"] = data_line[2]
         dicData[data_line[1]]["Objets"].append(data_line[3])
         dicData[data_line[1]]["Nombre_indiv"] = data_line[6]

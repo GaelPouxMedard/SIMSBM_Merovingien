@@ -356,9 +356,9 @@ def run(folder, nbInterp, featuresData, outputData, propTrainingSet, folds, lim=
         print("FOLD", fold)
         alphaTr, alphaTe, IDsTraining, IDsTest = getAlpha(features, outcome, nbInterp, allIDsTraining[fold], allIDsTest[fold])
         print("Original shape :", alphaTr.shape)
-        alphaTr, alphaTe, featToInt, outToInt = reduceAlpha(seuil, alphaTr, alphaTe, nbInterp, featToInt, outToInt)
+        alphaTr, alphaTe, currentFeatToInt, currentOutToInt = reduceAlpha(seuil, alphaTr, alphaTe, nbInterp, featToInt, outToInt)
         print("Final shape :", alphaTr.shape)
-        saveData(alphaTr, alphaTe, folder, nbInterp, featToInt, outToInt, IDsTraining, IDsTest, featuresData, outputData, fold, folds)
+        saveData(alphaTr, alphaTe, folder, nbInterp, currentFeatToInt, currentOutToInt, IDsTraining, IDsTest, featuresData, outputData, fold, folds)
 
 
 '''
