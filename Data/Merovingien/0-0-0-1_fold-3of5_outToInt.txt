@@ -1,0 +1,2 @@
+masculin	0
+féminin	1

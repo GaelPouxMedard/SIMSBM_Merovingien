@@ -455,8 +455,6 @@ if __name__ == "__main__":
     maxCnt = 30  # Number of consecutive times the relative variation is lesser than prec for the algorithm to stop
     saveToFile = True
     propTrainingSet = 0.7
-    folds = 5
-    nbRuns = 100
     lim = -1
 
     try:
@@ -469,17 +467,19 @@ if __name__ == "__main__":
         buildData = bool(int(sys.argv[7]))
         seuil = int(sys.argv[8])
         folds = int(sys.argv[9])
+        nbRuns = int(sys.argv[10])
     except Exception as e:
         print("Using predefined parameters")
         folder = "Merovingien"
         features = [0]
         output = 1
         DS=[3]
-        nbInterp=[3]
+        nbInterp=[1]
         nbClus=[5]
         buildData = True
         seuil = 0
         folds = 5
+        nbRuns = 10
     list_params = [(features, output, DS, nbInterp, nbClus, buildData, seuil, folds)]
 
 
