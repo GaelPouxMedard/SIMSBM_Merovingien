@@ -472,9 +472,9 @@ if __name__ == "__main__":
         print("Using predefined parameters")
         folder = "Merovingien"
         features = [0]
-        output = 2
+        output = 1
         DS=[3]
-        nbInterp=[3]
+        nbInterp=[2]
         nbClus=[5]
         buildData = True
         seuil = 0

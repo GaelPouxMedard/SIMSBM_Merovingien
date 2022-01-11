@@ -232,16 +232,16 @@ def scores(listTrue, listProbs, label, tabMetricsAll, nbOut, run):
 
     return tabMetricsAll
 
-def saveResults(tabMetricsAll, folder, features, DS, fold, printRes=True, final=False, averaged=True):
+def saveResults(tabMetricsAll, folder, features, DS, nbInterp, nbClus, fold, printRes=True, final=False, averaged=True):
 
     if "Results" not in os.listdir("./"): os.mkdir("./Results")
     if folder not in os.listdir("./Results"): os.mkdir("./Results/"+folder)
 
     dicResAvg = {}
     if averaged:
-        fAvg = open("Results/" + folder + f"/_{features}_{DS}_{fold}_Avg_Results.txt", "w+")
-        fStd = open("Results/" + folder + f"/_{features}_{DS}_{fold}_Std_Results.txt", "w+")
-        fSem = open("Results/" + folder + f"/_{features}_{DS}_{fold}_Sem_Results.txt", "w+")
+        fAvg = open("Results/" + folder + f"/_{features}_{DS}_{nbInterp}_{nbClus}_{fold}_Avg_Results.txt", "w+")
+        fStd = open("Results/" + folder + f"/_{features}_{DS}_{nbInterp}_{nbClus}_{fold}_Std_Results.txt", "w+")
+        fSem = open("Results/" + folder + f"/_{features}_{DS}_{nbInterp}_{nbClus}_{fold}_Sem_Results.txt", "w+")
         fstPass = True
         for label in tabMetricsAll:
             dicResAllRuns = {}
@@ -290,7 +290,7 @@ def saveResults(tabMetricsAll, folder, features, DS, fold, printRes=True, final=
 
     if not os.path.exists("Results/" + folder + "/"):
         os.makedirs("Results/" + folder + "/")
-    with open("Results/" + folder + f"/_{txtFin}{features}_{DS}_{fold}_Results.txt", "w+") as f:
+    with open("Results/" + folder + f"/_{txtFin}{features}_{DS}_{nbInterp}_{nbClus}_{fold}_Results.txt", "w+") as f:
         firstPassage = True
         for label in sorted(list(tabMetricsAll.keys()), key=lambda x: "".join(list(reversed(x)))):
             if firstPassage:
@@ -328,10 +328,23 @@ except Exception as e:
     print("Using predefined parameters")
     folder = "Merovingien"
     features = [0]
-    output = 2
     DS = [3]
-    nbInterp = [3]
-    nbClus = [5]
+    nbInterp = [2]
+    output = 2
+    if output==1:
+        if nbInterp==[1]:
+            nbClus = [3]
+        elif nbInterp==[2]:
+            nbClus = [5]
+        elif nbInterp==[3]:
+            nbClus = [3]
+    else:
+        if nbInterp==[1]:
+            nbClus = [5]
+        elif nbInterp==[2]:
+            nbClus = [7]
+        elif nbInterp==[2]:
+            nbClus = [5]
     buildData = True
     seuil = 0
     folds = 5
@@ -360,7 +373,7 @@ for features, output, DS, nbInterp, nbClus, buildData, seuil, folds in list_para
             listTrue, listProbs = buildArraysProbs(folder, features, output, DS, thetas, p, featToClus, nbInterp)
             tabMetricsAll = scores(listTrue, listProbs, f"SIMSBM_{nbInterp}", tabMetricsAll, nbOut, run)
 
-        dicResAvg = saveResults(tabMetricsAll, folder, features, DS, fold, printRes=False, final=False, averaged=True)
+        dicResAvg = saveResults(tabMetricsAll, folder, features, DS, nbInterp, nbClus, fold, printRes=False, final=False, averaged=True)
         tabDicResAvg.append(dicResAvg)
 
     print()
