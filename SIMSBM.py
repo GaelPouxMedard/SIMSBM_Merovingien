@@ -334,7 +334,7 @@ def EMLoop(alpha, featToClus, popFeat, nbOutputs, nbNatures, nbClus, maxCnt, pre
     thetas, p = initVars(featToClus, popFeat, nbOutputs, nbNatures, nbClus, nbInterp)
     maskedProbs = getAllProbs(dicnnz, [], np.moveaxis(p, -1, 0), thetas, featToClus, 0, nbFeat)
     Pfo = sparse.COO(alpha.nonzero(), np.array(maskedProbs), shape=alpha.shape)
-    maxThetas, maxP = initVars(featToClus, popFeat, nbOutputs, nbNatures, nbClus)
+    maxThetas, maxP = initVars(featToClus, popFeat, nbOutputs, nbNatures, nbClus, nbInterp)
     prevL, L, maxL = -1e20, -1e20, -1e20
     cnt = 0
     num_iterations = 0
