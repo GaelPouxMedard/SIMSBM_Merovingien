@@ -418,7 +418,8 @@ def runFit(alpha, nbClus, nbInterp, prec, nbRuns, maxCnt, features, output, fold
             print("######saved####### MAX L =", L)
         print("=============================== END EM ==========================")
 
-def runForOneDS(folder, DS, features, output, nbInterp, nbClus, buildData, seuil, lim, propTrainingSet, folds, prec, nbRuns, maxCnt):
+def runForOneDS():
+    folder, DS, features, output, nbInterp, nbClus, buildData, seuil, lim, propTrainingSet, folds, prec, nbRuns, maxCnt = args
     if buildData:
         print("Build alpha training and alpha test (matrix of observations)")
         import BuildAlpha
@@ -484,7 +485,8 @@ if __name__ == "__main__":
 
 
     for features, output, DS, nbInterp, nbClus, buildData, seuil, folds in list_params:
-        runForOneDS(folder, DS, features, output, nbInterp, nbClus, buildData, seuil, lim, propTrainingSet, folds, prec, nbRuns, maxCnt)
+        args = folder, DS, features, output, nbInterp, nbClus, buildData, seuil, lim, propTrainingSet, folds, prec, nbRuns, maxCnt
+        runForOneDS(args)
 
     sys.exit(0)
 
