@@ -27,10 +27,8 @@ if __name__ == "__main__":
                 list_params.append((features, output, DS, nbInterp, nbClus, buildData, seuil, folds))
 
     with multiprocessing.Pool(processes=15) as p:
-        args = ()
         with tqdm.tqdm(total=len(list_params)) as progress:
-            args = [(folder, DS, features, output, nbInterp, nbClus, buildData, seuil, lim, propTrainingSet, folds, prec, nbRuns, maxCnt)
-                    for features, output, DS, nbInterp, nbClus, buildData, seuil, folds in list_params]
+            args = [(folder, DS, features, output, nbInterp, nbClus, buildData, seuil, lim, propTrainingSet, folds, prec, nbRuns, maxCnt) for features, output, DS, nbInterp, nbClus, buildData, seuil, folds in list_params]
             for i, res in enumerate(p.imap(runForOneDS, args)):
                 progress.update()
 
