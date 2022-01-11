@@ -295,7 +295,7 @@ def maximization_Theta(alpha, featToClus, nbClus, thetaPrev, p, Cm, Pfo):
     return thetas
 
 # Random initialisation of p, theta
-def initVars(featToClus, popFeat, nbOutputs, nbNatures, nbClus):
+def initVars(featToClus, popFeat, nbOutputs, nbNatures, nbClus, nbInterp):
     nbFeat = len(featToClus)
     thetas = []
     for i in range(nbNatures):
@@ -331,7 +331,7 @@ def initVars(featToClus, popFeat, nbOutputs, nbNatures, nbClus):
 # Main loop of the EM algorithm, for 1 run
 def EMLoop(alpha, featToClus, popFeat, nbOutputs, nbNatures, nbClus, maxCnt, prec, folder, run, Cm, dicnnz, nbInterp, features, output, fold):
     nbFeat = len(featToClus)
-    thetas, p = initVars(featToClus, popFeat, nbOutputs, nbNatures, nbClus)
+    thetas, p = initVars(featToClus, popFeat, nbOutputs, nbNatures, nbClus, nbInterp)
     maskedProbs = getAllProbs(dicnnz, [], np.moveaxis(p, -1, 0), thetas, featToClus, 0, nbFeat)
     Pfo = sparse.COO(alpha.nonzero(), np.array(maskedProbs), shape=alpha.shape)
     maxThetas, maxP = initVars(featToClus, popFeat, nbOutputs, nbNatures, nbClus)
