@@ -472,14 +472,14 @@ if __name__ == "__main__":
         print("Using predefined parameters")
         folder = "Merovingien"
         features = [0]
-        output = 1
+        output = 2
         DS=[3]
-        nbInterp=[1]
-        nbClus=[3]
+        nbInterp=[3]
+        nbClus=[5]
         buildData = True
         seuil = 0
         folds = 5
-        nbRuns = 10
+        nbRuns = 100
     list_params = [(features, output, DS, nbInterp, nbClus, buildData, seuil, folds)]
 
 

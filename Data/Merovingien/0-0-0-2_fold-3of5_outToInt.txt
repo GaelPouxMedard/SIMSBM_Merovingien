@@ -1,0 +1,4 @@
+adolescent	0
+adulte	1
+immature	2
+mature-âgé	3

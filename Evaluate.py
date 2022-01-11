@@ -187,14 +187,14 @@ def buildArraysProbs(folder, featuresCons, outputCons, DS, thetas, p, featToClus
         tabTrue.append(a)
         tabProbs.append(prob)
 
-    print(list(outcome.values()))
     print("NOMBRE D'EVALUATIONS :", len(tabTrue))
 
     return tabTrue, tabProbs
 
+
+
 def scores(listTrue, listProbs, label, tabMetricsAll, nbOut, run):
-    #listTrue = np.vstack((listTrue, np.ones((nbOut))))  # Pour eviter qu'une classe n'ait aucun ex negatif ; prendre la moyenne weighted si on utilise ca !
-    #listProbs = np.vstack((listProbs, np.ones((nbOut))))
+    labels_considered = np.where(np.sum(listTrue, axis=0)!=0)[0]
     nanmask = np.isnan(listProbs)
     if np.any(nanmask):
         print(f"CAREFUL !!!!! {np.sum(nanmask.astype(int))} NANs IN PROBA !!!")
@@ -204,7 +204,7 @@ def scores(listTrue, listProbs, label, tabMetricsAll, nbOut, run):
 
     tabMetricsAll[label][run]["F1"], tabMetricsAll[label][run]["Acc"] = 0, 0
     for thres in np.linspace(0, 1, 1001):
-        F1 = metrics.f1_score(listTrue, (listProbs>thres).astype(int), average="weighted")
+        F1 = metrics.f1_score(listTrue, (listProbs>thres).astype(int), labels=labels_considered, average="micro")
         acc = metrics.accuracy_score(listTrue, (listProbs>thres).astype(int))
         if F1 > tabMetricsAll[label][run]["F1"]:
             tabMetricsAll[label][run]["F1"] = F1
@@ -213,21 +213,22 @@ def scores(listTrue, listProbs, label, tabMetricsAll, nbOut, run):
 
     k = 1  # Si k=1, sklearn considère les 0 et 1 comme des classes, mais de fait on prédit jamais 0 dans un P@k...
     topk = np.argpartition(listProbs, -k, axis=1)[:, -k:]
-    trueTopK = np.array([listTrue[i][topk[i]] for i in range(len(listTrue))])
-    probsTopK = np.array([np.ones((len(topk[i]))) for i in range(len(listProbs))])
-    if k>=2:
-        tabMetricsAll[label][run][f"P@{k}"] = metrics.precision_score(trueTopK, probsTopK, average="weighted")
-    else:
-        tabMetricsAll[label][run][f"P@{k}"] = np.average(trueTopK, axis=0)[0]
+    probsTopK = np.zeros(np.array(listProbs).shape)
+    for row in range(len(probsTopK)):
+        probsTopK[row][topk[row]] = 1.
+    trueTopK = listTrue
 
-    tabMetricsAll[label][run]["AUCROC"] = metrics.roc_auc_score(listTrue, listProbs, average="weighted")
-    tabMetricsAll[label][run]["AUCPR"] = metrics.average_precision_score(listTrue, listProbs, average="weighted")
+    tabMetricsAll[label][run][f"P@{k}"] = metrics.precision_score(trueTopK, probsTopK, labels=labels_considered, average="micro")
+
+    tabMetricsAll[label][run]["AUCROC"] = metrics.roc_auc_score(listTrue, listProbs, labels=labels_considered, average="micro")
+    tabMetricsAll[label][run]["AUCPR"] = metrics.average_precision_score(listTrue, listProbs, average="micro")
     tabMetricsAll[label][run]["RankAvgPrec"] = metrics.label_ranking_average_precision_score(listTrue, listProbs)
     c=metrics.coverage_error(listTrue, listProbs)
     tabMetricsAll[label][run]["CovErr"] = c-1
     tabMetricsAll[label][run]["CovErrNorm"] = (c-1)/nbOut
 
-    print(tabMetricsAll[label][run])
+    print("\t".join(map(str, tabMetricsAll[label][run].keys())).expandtabs(20))
+    print("\t".join(map(str, np.round(list(tabMetricsAll[label][run].values()), 4))).expandtabs(20))
 
     return tabMetricsAll
 
@@ -236,6 +237,7 @@ def saveResults(tabMetricsAll, folder, features, DS, fold, printRes=True, final=
     if "Results" not in os.listdir("./"): os.mkdir("./Results")
     if folder not in os.listdir("./Results"): os.mkdir("./Results/"+folder)
 
+    dicResAvg = {}
     if averaged:
         fAvg = open("Results/" + folder + f"/_{features}_{DS}_{fold}_Avg_Results.txt", "w+")
         fStd = open("Results/" + folder + f"/_{features}_{DS}_{fold}_Std_Results.txt", "w+")
@@ -326,14 +328,14 @@ except Exception as e:
     print("Using predefined parameters")
     folder = "Merovingien"
     features = [0]
-    output = 1
+    output = 2
     DS = [3]
-    nbInterp = [1]
-    nbClus = [3]
+    nbInterp = [3]
+    nbClus = [5]
     buildData = True
     seuil = 0
     folds = 5
-    nbRuns = 10
+    nbRuns = 100
 list_params = [(features, output, DS, nbInterp, nbClus, buildData, seuil, folds)]
 
 for features, output, DS, nbInterp, nbClus, buildData, seuil, folds in list_params:
@@ -348,7 +350,11 @@ for features, output, DS, nbInterp, nbClus, buildData, seuil, folds in list_para
         tabMetricsAll = {}
         for run in range(nbRuns):
             print(f"Scores SIMSBM_{nbInterp} - Fold {fold} - Run {run}")
-            thetas, p = read_params(folder, features, output, featToClus, nbClus, fold, run=run)
+            try:
+                thetas, p = read_params(folder, features, output, featToClus, nbClus, fold, run=run)
+            except:
+                print("Run not found")
+                continue
             nbOut = p.shape[-1]
 
             listTrue, listProbs = buildArraysProbs(folder, features, output, DS, thetas, p, featToClus, nbInterp)
@@ -357,6 +363,12 @@ for features, output, DS, nbInterp, nbClus, buildData, seuil, folds in list_para
         dicResAvg = saveResults(tabMetricsAll, folder, features, DS, fold, printRes=False, final=False, averaged=True)
         tabDicResAvg.append(dicResAvg)
 
-    for d in tabDicResAvg:
-        print(d)
+    print()
+    arrRes = []
+    for i, d in enumerate(tabDicResAvg):
+        if i==0: print("\t".join(map(str, d.keys())).expandtabs(20))
+        arrRes.append(list(d.values()))
+        print("\t".join(map(str, np.round(list(d.values()), 4))).expandtabs(20))
+    print()
+    print("\t".join(map(str, np.round(np.mean(arrRes, axis=0), 4))).expandtabs(20))
 

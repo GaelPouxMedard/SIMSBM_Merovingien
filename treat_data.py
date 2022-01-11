@@ -54,7 +54,7 @@ for s in dicData:
     featureObj.write(f"{s}\t{' '.join(dicData[s]['Objets'])}\n")
     if dicData[s]['Sexe'] != "indéterminé":
         featureSexe.write(f"{s}\t{dicData[s]['Sexe']}\n")
-    if dicData[s]['Classe_age'] != "nd":
+    if not dicData[s]['Classe_age'] in ["nd", "-1"]:
         featureAge.write(f"{s}\t{dicData[s]['Classe_age']}\n")
 
 featureObj.close()
