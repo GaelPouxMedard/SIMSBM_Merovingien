@@ -418,7 +418,7 @@ def runFit(alpha, nbClus, nbInterp, prec, nbRuns, maxCnt, features, output, fold
             print("######saved####### MAX L =", L)
         print("=============================== END EM ==========================")
 
-def runForOneDS():
+def runForOneDS(args):
     folder, DS, features, output, nbInterp, nbClus, buildData, seuil, lim, propTrainingSet, folds, prec, nbRuns, maxCnt = args
     if buildData:
         print("Build alpha training and alpha test (matrix of observations)")
