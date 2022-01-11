@@ -64,7 +64,7 @@ def readMatrix(filename):
     # return sparse.csr_matrix(new_data)
 
 # Saves the model's parameters theta, p
-def writeToFile_params(folder, thetas, p, maxL, features, output, featToClus, popFeat, nbClus, fold, run=-1):
+def writeToFile_params(folder, thetas, p, maxL, features, output, featToClus, popFeat, nbClus, fold, folds, run=-1):
     while True:
         try:
             s=""
@@ -329,7 +329,7 @@ def initVars(featToClus, popFeat, nbOutputs, nbNatures, nbClus, nbInterp):
     return thetas, p
 
 # Main loop of the EM algorithm, for 1 run
-def EMLoop(alpha, featToClus, popFeat, nbOutputs, nbNatures, nbClus, maxCnt, prec, folder, run, Cm, dicnnz, nbInterp, features, output, fold):
+def EMLoop(alpha, featToClus, popFeat, nbOutputs, nbNatures, nbClus, maxCnt, prec, folder, run, Cm, dicnnz, nbInterp, features, output, fold, folds):
     nbFeat = len(featToClus)
     thetas, p = initVars(featToClus, popFeat, nbOutputs, nbNatures, nbClus, nbInterp)
     maskedProbs = getAllProbs(dicnnz, [], np.moveaxis(p, -1, 0), thetas, featToClus, 0, nbFeat)
@@ -357,7 +357,7 @@ def EMLoop(alpha, featToClus, popFeat, nbOutputs, nbNatures, nbClus, maxCnt, pre
             if L > maxL:
                 maxThetas, maxP = thetas, p
                 maxL = L
-                writeToFile_params(folder, maxThetas, maxP, maxL, features, output, featToClus, popFeat, nbClus, fold, run)
+                writeToFile_params(folder, maxThetas, maxP, maxL, features, output, featToClus, popFeat, nbClus, fold, folds, run)
                 print("Saved")
             prevL = L
 
@@ -411,10 +411,10 @@ def runFit(folder, alpha, nbClus, nbInterp, DS, prec, nbRuns, maxCnt, features, 
     maxL = -1e100
     for i in range(nbRuns):
         print("RUN", i)
-        theta, p, L = EMLoop(alpha, featToClus, popFeat, nbOutputs, nbNatures, nbClus, maxCnt, prec, folder, i, Cm, dicnnz, nbInterp, features, output, fold)
+        theta, p, L = EMLoop(alpha, featToClus, popFeat, nbOutputs, nbNatures, nbClus, maxCnt, prec, folder, i, Cm, dicnnz, nbInterp, features, output, fold, folds)
         if L > maxL:
             maxL = L
-            writeToFile_params(folder + "/Final/", theta, p, L, features, output, featToClus, popFeat, nbClus, fold, -1)
+            writeToFile_params(folder + "/Final/", theta, p, L, features, output, featToClus, popFeat, nbClus, fold, folds, -1)
             print("######saved####### MAX L =", L)
         print("=============================== END EM ==========================")
 
