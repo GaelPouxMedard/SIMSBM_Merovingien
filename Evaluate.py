@@ -380,8 +380,9 @@ for features, output, DS, nbInterp, nbClus, buildData, seuil, folds in list_para
     arrRes = []
     for i, d in enumerate(tabDicResAvg):
         if i==0: print("\t".join(map(str, d.keys())).expandtabs(20))
-        arrRes.append(list(d.values()))
         print("\t".join(map(str, np.round(list(d.values()), 4))).expandtabs(20))
+        if len(d.values())!=0:
+            arrRes.append(list(d.values()))
     print()
     print("\t".join(map(str, np.round(np.mean(arrRes, axis=0), 4))).expandtabs(20))
 
