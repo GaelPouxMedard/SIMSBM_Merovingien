@@ -1,4 +1,5 @@
 from SIMSBM import runForOneDS
+from Evaluate import evaluate
 import multiprocessing
 import tqdm
 
@@ -30,5 +31,11 @@ if __name__ == "__main__":
         with tqdm.tqdm(total=len(list_params)) as progress:
             args = [(folder, DS, features, output, nbInterp, nbClus, buildData, seuil, lim, propTrainingSet, folds, prec, nbRuns, maxCnt) for features, output, DS, nbInterp, nbClus, buildData, seuil, folds in list_params]
             for i, res in enumerate(p.imap(runForOneDS, args)):
+                progress.update()
+
+    with multiprocessing.Pool(processes=15) as p:
+        with tqdm.tqdm(total=len(list_params)) as progress:
+            args =[(features, output, DS, nbInterp, nbClus, buildData, seuil, folds) for features, output, DS, nbInterp, nbClus, buildData, seuil, folds in list_params]
+            for i, res in enumerate(p.imap(evaluate, args)):
                 progress.update()
 

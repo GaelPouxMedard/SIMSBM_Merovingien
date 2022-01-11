@@ -38,7 +38,7 @@ def read_params(folder, features, output, featToClus, nbClus, fold, run=-1):
     p = readMatrix(folderParams + "T="+codeT+"_%.0f_" % (run)+s+"Inter_p.npy")
     return thetas, p
 
-def getDataTe(folder, featuresData, outputData, DS):
+def getDataTe(folder, featuresData, outputData, DS, fold):
     folderName = "Data/" + folder + "/"
 
     outToInt = {}
@@ -146,8 +146,8 @@ def getElemProb(c, thetas, p, featToClus):
 
     return v
 
-def buildArraysProbs(folder, featuresCons, outputCons, DS, thetas, p, featToClus, nbInterp):
-    features, outcome, featToInt, outToInt, IDsTe = getDataTe(folder, featuresCons, outputCons, DS)
+def buildArraysProbs(folder, featuresCons, outputCons, DS, thetas, p, featToClus, nbInterp, fold):
+    features, outcome, featToInt, outToInt, IDsTe = getDataTe(folder, featuresCons, outputCons, DS, fold)
 
     inds = getIndsMod(DS, nbInterp)
 
@@ -312,46 +312,9 @@ def saveResults(tabMetricsAll, folder, features, DS, nbInterp, nbClus, fold, pri
 
     return dicResAvg
 
+def evaluate(args):
+    features, output, DS, nbInterp, nbClus, buildData, seuil, folds = args
 
-try:
-    folder = sys.argv[1]
-    features = np.array(sys.argv[2].split(","), dtype=int)
-    output = int(sys.argv[3])
-    DS = np.array(sys.argv[4].split(","), dtype=int)
-    nbInterp = np.array(sys.argv[5].split(","), dtype=int)
-    nbClus = np.array(sys.argv[6].split(","), dtype=int)
-    buildData = bool(int(sys.argv[7]))
-    seuil = int(sys.argv[8])
-    folds = int(sys.argv[9])
-    nbRuns = int(sys.argv[10])
-except Exception as e:
-    print("Using predefined parameters")
-    folder = "Merovingien"
-    features = [0]
-    DS = [3]
-    nbInterp = [2]
-    output = 2
-    if output==1:
-        if nbInterp==[1]:
-            nbClus = [3]
-        elif nbInterp==[2]:
-            nbClus = [5]
-        elif nbInterp==[3]:
-            nbClus = [3]
-    else:
-        if nbInterp==[1]:
-            nbClus = [5]
-        elif nbInterp==[2]:
-            nbClus = [7]
-        elif nbInterp==[2]:
-            nbClus = [5]
-    buildData = True
-    seuil = 0
-    folds = 5
-    nbRuns = 100
-list_params = [(features, output, DS, nbInterp, nbClus, buildData, seuil, folds)]
-
-for features, output, DS, nbInterp, nbClus, buildData, seuil, folds in list_params:
     tabDicResAvg = []
     for fold in range(folds):
         featToClus = []
@@ -370,7 +333,7 @@ for features, output, DS, nbInterp, nbClus, buildData, seuil, folds in list_para
                 continue
             nbOut = p.shape[-1]
 
-            listTrue, listProbs = buildArraysProbs(folder, features, output, DS, thetas, p, featToClus, nbInterp)
+            listTrue, listProbs = buildArraysProbs(folder, features, output, DS, thetas, p, featToClus, nbInterp, fold)
             tabMetricsAll = scores(listTrue, listProbs, f"SIMSBM_{nbInterp}", tabMetricsAll, nbOut, run)
 
         dicResAvg = saveResults(tabMetricsAll, folder, features, DS, nbInterp, nbClus, fold, printRes=False, final=False, averaged=True)
@@ -385,4 +348,49 @@ for features, output, DS, nbInterp, nbClus, buildData, seuil, folds in list_para
             arrRes.append(list(d.values()))
     print()
     print("\t".join(map(str, np.round(np.mean(arrRes, axis=0), 4))).expandtabs(20))
+
+
+
+if __name__=="__main__":
+    try:
+        folder = sys.argv[1]
+        features = np.array(sys.argv[2].split(","), dtype=int)
+        output = int(sys.argv[3])
+        DS = np.array(sys.argv[4].split(","), dtype=int)
+        nbInterp = np.array(sys.argv[5].split(","), dtype=int)
+        nbClus = np.array(sys.argv[6].split(","), dtype=int)
+        buildData = bool(int(sys.argv[7]))
+        seuil = int(sys.argv[8])
+        folds = int(sys.argv[9])
+        nbRuns = int(sys.argv[10])
+    except Exception as e:
+        print("Using predefined parameters")
+        folder = "Merovingien"
+        features = [0]
+        DS = [3]
+        nbInterp = [2]
+        output = 2
+        if output==1:
+            if nbInterp==[1]:
+                nbClus = [3]
+            elif nbInterp==[2]:
+                nbClus = [5]
+            elif nbInterp==[3]:
+                nbClus = [3]
+        else:
+            if nbInterp==[1]:
+                nbClus = [5]
+            elif nbInterp==[2]:
+                nbClus = [7]
+            elif nbInterp==[2]:
+                nbClus = [5]
+        buildData = True
+        seuil = 0
+        folds = 5
+        nbRuns = 100
+    list_params = [(features, output, DS, nbInterp, nbClus, buildData, seuil, folds)]
+
+    for features, output, DS, nbInterp, nbClus, buildData, seuil, folds in list_params:
+        args = (features, output, DS, nbInterp, nbClus, buildData, seuil, folds)
+        evaluate(args)
 
