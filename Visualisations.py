@@ -167,7 +167,13 @@ def plotGraph2D(thetas, p, intToOut, intToFeat):
     plt.tight_layout()
     plt.show()
     
-    
+def plotRes():
+    folder = "Results/Merovingien/"
+    files = os.listdir(folder)
+    "_[0]_[3]_[2]_[7]_0_Avg_Results"
+
+    for file in files:
+        print(file)
     
 
 try:
@@ -204,6 +210,8 @@ except Exception as e:
     nbRuns = 10
 list_params = [(features, output, DS, nbInterp, nbClus, buildData, seuil, folds)]
 
+plotRes()
+sys.exit()
 for features, output, DS, nbInterp, nbClus, buildData, seuil, folds in list_params:
     tabDicResAvg = []
     for fold in range(folds):

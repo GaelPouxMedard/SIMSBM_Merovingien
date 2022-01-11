@@ -290,7 +290,7 @@ def saveResults(tabMetricsAll, folder, features, DS, nbInterp, nbClus, fold, pri
 
     if not os.path.exists("Results/" + folder + "/"):
         os.makedirs("Results/" + folder + "/")
-    with open("Results/" + folder + f"/_{txtFin}{features}_{DS}_{nbInterp}_{nbClus}_{fold}_Results.txt", "w+") as f:
+    with open("Results/" + folder + f"/{txtFin}{features}_{DS}_{nbInterp}_{nbClus}_{fold}_Results.txt", "w+") as f:
         firstPassage = True
         for label in sorted(list(tabMetricsAll.keys()), key=lambda x: "".join(list(reversed(x)))):
             if firstPassage:
