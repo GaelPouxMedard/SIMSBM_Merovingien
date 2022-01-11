@@ -8,6 +8,9 @@ from scipy.stats import sem
 import matplotlib.pyplot as plt
 import seaborn as sns
 
+if "Plots" not in os.listdir("."): os.mkdir("./Plots")
+if "Merovingien" not in os.listdir("./Plots"): os.mkdir("./Plots/Merovingien")
+
 def readMatrix(filename):
     try:
         return sparse.load_npz(filename.replace(".txt", ".npz"))
@@ -31,16 +34,16 @@ def read_params(folder, features, output, featToClus, nbClus, fold, run=-1):
     if run==-1:
         txtFin = "Final/"
 
-    codeT=""
+    codeSave=""
     for i in featToClus:
-        codeT += f"{features[i]}({nbClus[i]})-"
-    codeT += f"{output}"+"_fold-"+str(fold)+"of"+str(folds)
+        codeSave += f"{features[i]}({nbClus[i]})-"
+    codeSave += f"{output}"+"_fold-"+str(fold)+"of"+str(folds)
 
     thetas = []
     for i in range(len(features)):
-        thetas.append(readMatrix(folderParams+txtFin + "T="+codeT+"_%.0f_" % (run)+s+"theta_"+str(i)+"_Inter_theta.npy"))
+        thetas.append(readMatrix(folderParams+txtFin + "T="+codeSave+"_%.0f_" % (run)+s+"theta_"+str(i)+"_Inter_theta.npy"))
 
-    p = readMatrix(folderParams+txtFin + "T="+codeT+"_%.0f_" % (run)+s+"Inter_p.npy")
+    p = readMatrix(folderParams+txtFin + "T="+codeSave+"_%.0f_" % (run)+s+"Inter_p.npy")
 
 
     codeData = ""
@@ -54,15 +57,19 @@ def read_params(folder, features, output, featToClus, nbClus, fold, run=-1):
     with open(filenameData+"outToInt.txt", "r", encoding="utf-8") as f:
         for line in f:
             nom, ind = line.replace("\n", "").split("\t")
-            intToOut[int(ind)] = nom
+            intToOut[int(ind)] = nom.replace("_", " ").capitalize()
     for i in range(len(features)):
         intToFeat.append({})
         with open(filenameData+"featToInt_"+str(features[i])+".txt", "r", encoding="utf-8") as f:
             for line in f:
                 nom, ind = line.replace("\n", "").split("\t")
-                intToFeat[-1][int(ind)] = nom
+                intToFeat[-1][int(ind)] = nom.replace("_", " ").capitalize()
 
     return thetas, p, intToOut, intToFeat
+
+def savefig(name, codeSave=""):
+    folder = "Plots/Merovingien/"
+    plt.savefig(folder+codeSave+name+".pdf", dpi=600)
 
 def findClusters(mat):
     from sklearn.cluster import SpectralClustering
@@ -70,7 +77,17 @@ def findClusters(mat):
     cluster.fit_predict(mat)
     return cluster.labels_
 
-def plotThetasGraph(thetas, intToFeat):
+def writeClusters(thetas, codeSave):
+    with open(f"Plots/Merovingien/{codeSave}_composition_clusters.txt", "w+", encoding="utf-8") as f:
+        for num_clus, k in enumerate(thetas[0].T):
+            sorted_incides = list(reversed(np.argsort(k)))
+            f.write(f"Cluster {num_clus}\n")
+            for i in sorted_incides:
+                if k[i]>0.05:
+                    f.write(f"{np.round(k[i]*100)}% - {intToFeat[0][i]}\n")
+
+
+def plotThetas(thetas, intToFeat, codeSave):
     scaleFeat = 4.
     scaleClus = 30.
     scaleTypes = 1.
@@ -89,10 +106,9 @@ def plotThetasGraph(thetas, intToFeat):
 
         clusLab = findClusters(thetas[0])
         pos = 0
-        print(clusLab)
         for clus in range(len(clusLab)):
             for i in np.where(clusLab == clus)[0]:
-                plt.text(-1, (pos - nbFeat / 2) * scaleFeat + shift, intToFeat[type][i].replace("_", " ").capitalize(), ha="right", va="center", fontsize=11)
+                plt.text(-1, (pos - nbFeat / 2) * scaleFeat + shift, intToFeat[type][i], ha="right", va="center", fontsize=11)
                 for k in range(len(thetas[type][i])):
                     plt.plot([-1, 0], [(pos - nbFeat / 2) * scaleFeat + shift, (k - nbClus / 2) * scaleClus + shift], "k-", linewidth=thetas[type][i][k], alpha=thetas[type][i][k])
                 pos += 1
@@ -105,12 +121,13 @@ def plotThetasGraph(thetas, intToFeat):
 
     plt.axis("off")
     plt.tight_layout()
-    plt.show()
+
+    savefig("Thetas", codeSave)
 
     plt.close()
 
 
-def plotGraph1D(thetas, p, intToOut, intToFeat):
+def plotGraph1D(thetas, p, intToOut, intToFeat, codeSave):
     scaleFeat = 1.
     scaleClus = 10.
     scaleOut = 10.
@@ -128,13 +145,13 @@ def plotGraph1D(thetas, p, intToOut, intToFeat):
     pos = 0
     for clus in range(len(clusLab)):
         for i in np.where(clusLab==clus)[0]:
-            plt.text(-scalex, (pos - (nbFeat-1) / 2) * scaleFeat, intToFeat[0][i].replace("_", " ").capitalize()+" ", ha="right", va="center", fontsize=5)
+            plt.text(-scalex, (pos - (nbFeat-1) / 2) * scaleFeat, intToFeat[0][i]+" ", ha="right", va="center", fontsize=5)
             for k in range(nbClus):
                 plt.plot([-scalex, 0], [(pos - (nbFeat-1) / 2) * scaleFeat, (k - (nbClus-1) / 2) * scaleClus], "k-", linewidth=1., alpha=thetas[0][i][k])
             pos += 1
 
     for j in range(nbOut):
-        plt.text(scalex, (j - (nbOut-1) / 2) * scaleOut, intToOut[j].replace("_", " ").capitalize()+" ", ha="left", va="center", fontsize=11)
+        plt.text(scalex, (j - (nbOut-1) / 2) * scaleOut, intToOut[j]+" ", ha="left", va="center", fontsize=11)
         for k in range(nbClus):
             plt.plot([0, scalex], [(k - (nbClus-1) / 2) * scaleClus, (j - (nbOut-1) / 2) * scaleOut], "k-", linewidth=1., alpha=p[k][j])
             plt.plot(0, (k - (nbClus - 1) / 2) * scaleClus, "or", markersize=15)
@@ -142,12 +159,13 @@ def plotGraph1D(thetas, p, intToOut, intToFeat):
 
     plt.axis("off")
     plt.tight_layout()
-    plt.show()
+
+    savefig("Graphe_final", codeSave)
 
     plt.close()
 
 
-def plotGraph2D(thetas, p, intToOut, intToFeat):
+def plotGraph2D(thetas, p, intToOut, intToFeat, codeSave):
     size = 10
     nbOut = p.shape[-1]
     nbFeat = len(thetas[0])
@@ -165,8 +183,12 @@ def plotGraph2D(thetas, p, intToOut, intToFeat):
         plt.xlabel("Clusters")
 
     plt.tight_layout()
-    plt.show()
-    
+
+    savefig("Graphe_final", codeSave)
+
+    plt.close()
+
+
 def plotRes():
     folder = "Results/Merovingien/"
     files = os.listdir(folder)
@@ -174,7 +196,8 @@ def plotRes():
 
     for file in files:
         print(file)
-    
+
+    savefig("Results")
 
 try:
     folder = sys.argv[1]
@@ -211,7 +234,6 @@ except Exception as e:
 list_params = [(features, output, DS, nbInterp, nbClus, buildData, seuil, folds)]
 
 plotRes()
-sys.exit()
 for features, output, DS, nbInterp, nbClus, buildData, seuil, folds in list_params:
     tabDicResAvg = []
     for fold in range(folds):
@@ -221,17 +243,23 @@ for features, output, DS, nbInterp, nbClus, buildData, seuil, folds in list_para
                 featToClus.append(iter)
         featToClus = np.array(featToClus, dtype=int)
 
+        codeSave = ""
+        for i in featToClus:
+            codeSave += f"{features[i]}({nbClus[i]})-"
+        codeSave += f"{output}" + "_fold-" + str(fold) + "of" + str(folds)+"_"
+
         run = -1
         thetas, p, intToOut, intToFeat = read_params(folder, features, output, featToClus, nbClus, fold, run=run)
         print(intToFeat)
         print(intToOut)
         nbOut = p.shape[-1]
 
-        #plotThetasGraph(thetas, intToFeat)
+        writeClusters(thetas, codeSave)
+        plotThetas(thetas, intToFeat, codeSave)
         if nbInterp==[1]:
-            plotGraph1D(thetas, p, intToOut, intToFeat)
+            plotGraph1D(thetas, p, intToOut, intToFeat, codeSave)
         if nbInterp==[2]:
-            plotGraph2D(thetas, p, intToOut, intToFeat)
+            plotGraph2D(thetas, p, intToOut, intToFeat, codeSave)
 
 
 
