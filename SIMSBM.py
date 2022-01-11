@@ -378,7 +378,7 @@ def EMLoop(alpha, featToClus, popFeat, nbOutputs, nbNatures, nbClus, maxCnt, pre
 #// endregion
 
 
-def runFit(folder, alpha, nbClus, nbInterp, DS, prec, nbRuns, maxCnt, features, output, fold):
+def runFit(folder, alpha, nbClus, nbInterp, DS, prec, nbRuns, maxCnt, features, output, fold, folds):
     nbOutputs = alpha.shape[-1]
     popFeat = [l for l in alpha.shape[:-1]]
     nbNatures = len(nbClus)
@@ -437,7 +437,7 @@ def runForOneDS(args):
 
         alpha = reduceAlphaInter(alpha, DS, nbInterp)
 
-        runFit(folder, alpha, nbClus, nbInterp, DS, prec, nbRuns, maxCnt, features, output, fold)
+        runFit(folder, alpha, nbClus, nbInterp, DS, prec, nbRuns, maxCnt, features, output, fold, folds)
 
 
 
