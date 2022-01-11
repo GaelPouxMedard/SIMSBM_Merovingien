@@ -22,8 +22,8 @@ if __name__ == "__main__":
     list_params = []
 
     for output in [1, 2]:
-        for nbInterp in [1, 2, 3]:
-            for nbClus in [3, 4, 5, 6, 7, 8, 9, 10]:
+        for nbInterp in [[1], [2], [3]]:
+            for nbClus in [[3], [4], [5], [6], [7], [8], [9], [10]]:
                 list_params.append((features, output, DS, nbInterp, nbClus, buildData, seuil, folds))
 
     with multiprocessing.Pool(processes=15) as p:
