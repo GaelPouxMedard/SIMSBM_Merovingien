@@ -19,7 +19,7 @@ if __name__ == "__main__":
     nbClus = [5]
     buildData = True
     folds = 5
-    nbRuns = 100
+    nbRuns = 2
     list_params = []
 
     for output in [1, 2]:
@@ -27,15 +27,15 @@ if __name__ == "__main__":
             for nbClus in [[3], [4], [5], [6], [7], [8], [9], [10]]:
                 list_params.append((features, output, DS, nbInterp, nbClus, buildData, seuil, folds))
 
-    with multiprocessing.Pool(processes=15) as p:
-        with tqdm.tqdm(total=len(list_params)) as progress:
-            args = [(folder, DS, features, output, nbInterp, nbClus, buildData, seuil, lim, propTrainingSet, folds, prec, nbRuns, maxCnt) for features, output, DS, nbInterp, nbClus, buildData, seuil, folds in list_params]
-            for i, res in enumerate(p.imap(runForOneDS, args)):
-                progress.update()
-
-    # with multiprocessing.Pool(processes=15) as p:
+    # with multiprocessing.Pool(processes=7) as p:
     #     with tqdm.tqdm(total=len(list_params)) as progress:
-    #         args =[(features, output, DS, nbInterp, nbClus, buildData, seuil, folds) for features, output, DS, nbInterp, nbClus, buildData, seuil, folds in list_params]
-    #         for i, res in enumerate(p.imap(evaluate, args)):
+    #         args = [(folder, DS, features, output, nbInterp, nbClus, buildData, seuil, lim, propTrainingSet, folds, prec, nbRuns, maxCnt) for features, output, DS, nbInterp, nbClus, buildData, seuil, folds in list_params]
+    #         for i, res in enumerate(p.imap(runForOneDS, args)):
     #             progress.update()
+
+    with multiprocessing.Pool(processes=7) as p:
+        with tqdm.tqdm(total=len(list_params)) as progress:
+            args =[(folder, features, output, DS, nbInterp, nbClus, buildData, seuil, folds, nbRuns) for features, output, DS, nbInterp, nbClus, buildData, seuil, folds in list_params]
+            for i, res in enumerate(p.imap(evaluate, args)):
+                progress.update()
 

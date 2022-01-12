@@ -22,7 +22,7 @@ def readMatrix(filename):
             new_data = np.loadtxt(filename).reshape(dims)
         return new_data
 
-def read_params(folder, features, output, featToClus, nbClus, fold, run=-1):
+def read_params(folder, features, output, featToClus, nbClus, fold, folds, run=-1):
     s=""
     folderParams = "Output/" + folder + "/"
 
@@ -38,7 +38,7 @@ def read_params(folder, features, output, featToClus, nbClus, fold, run=-1):
     p = readMatrix(folderParams + "T="+codeT+"_%.0f_" % (run)+s+"Inter_p.npy")
     return thetas, p
 
-def getDataTe(folder, featuresData, outputData, DS, fold):
+def getDataTe(folder, featuresData, outputData, DS, fold, folds):
     folderName = "Data/" + folder + "/"
 
     outToInt = {}
@@ -146,8 +146,8 @@ def getElemProb(c, thetas, p, featToClus):
 
     return v
 
-def buildArraysProbs(folder, featuresCons, outputCons, DS, thetas, p, featToClus, nbInterp, fold):
-    features, outcome, featToInt, outToInt, IDsTe = getDataTe(folder, featuresCons, outputCons, DS, fold)
+def buildArraysProbs(folder, featuresCons, outputCons, DS, thetas, p, featToClus, nbInterp, fold, folds):
+    features, outcome, featToInt, outToInt, IDsTe = getDataTe(folder, featuresCons, outputCons, DS, fold, folds)
 
     inds = getIndsMod(DS, nbInterp)
 
@@ -232,16 +232,16 @@ def scores(listTrue, listProbs, label, tabMetricsAll, nbOut, run):
 
     return tabMetricsAll
 
-def saveResults(tabMetricsAll, folder, features, DS, nbInterp, nbClus, fold, printRes=True, final=False, averaged=True):
+def saveResults(tabMetricsAll, folder, features, output, DS, nbInterp, nbClus, fold, folds, printRes=True, final=False, averaged=True):
 
     if "Results" not in os.listdir("./"): os.mkdir("./Results")
     if folder not in os.listdir("./Results"): os.mkdir("./Results/"+folder)
 
     dicResAvg = {}
     if averaged:
-        fAvg = open("Results/" + folder + f"/_{features}_{DS}_{nbInterp}_{nbClus}_{fold}_Avg_Results.txt", "w+")
-        fStd = open("Results/" + folder + f"/_{features}_{DS}_{nbInterp}_{nbClus}_{fold}_Std_Results.txt", "w+")
-        fSem = open("Results/" + folder + f"/_{features}_{DS}_{nbInterp}_{nbClus}_{fold}_Sem_Results.txt", "w+")
+        fAvg = open("Results/" + folder + f"/_{fold}of{folds}_{features}_{output}_{DS}_{nbInterp}_{nbClus}_Avg_Results.txt", "w+")
+        fStd = open("Results/" + folder + f"/_{fold}of{folds}_{features}_{output}_{DS}_{nbInterp}_{nbClus}_Std_Results.txt", "w+")
+        fSem = open("Results/" + folder + f"/_{fold}of{folds}_{features}_{output}_{DS}_{nbInterp}_{nbClus}_Sem_Results.txt", "w+")
         fstPass = True
         for label in tabMetricsAll:
             dicResAllRuns = {}
@@ -283,14 +283,11 @@ def saveResults(tabMetricsAll, folder, features, DS, nbInterp, nbClus, fold, pri
             fSem.write("\n")
 
 
-    if final:
-        txtFin = "_Final_"
-    else:
-        txtFin = ""
+    txtFin = ""
 
     if not os.path.exists("Results/" + folder + "/"):
         os.makedirs("Results/" + folder + "/")
-    with open("Results/" + folder + f"/{txtFin}{features}_{DS}_{nbInterp}_{nbClus}_{fold}_Results.txt", "w+") as f:
+    with open("Results/" + folder + f"/{fold}of{folds}_{txtFin}{features}_{output}_{DS}_{nbInterp}_{nbClus}_Results.txt", "w+") as f:
         firstPassage = True
         for label in sorted(list(tabMetricsAll.keys()), key=lambda x: "".join(list(reversed(x)))):
             if firstPassage:
@@ -313,7 +310,7 @@ def saveResults(tabMetricsAll, folder, features, DS, nbInterp, nbClus, fold, pri
     return dicResAvg
 
 def evaluate(args):
-    features, output, DS, nbInterp, nbClus, buildData, seuil, folds = args
+    folder, features, output, DS, nbInterp, nbClus, buildData, seuil, folds, nbRuns = args
 
     tabDicResAvg = []
     for fold in range(folds):
@@ -327,16 +324,16 @@ def evaluate(args):
         for run in range(nbRuns):
             print(f"Scores SIMSBM_{nbInterp} - Fold {fold} - Run {run}")
             try:
-                thetas, p = read_params(folder, features, output, featToClus, nbClus, fold, run=run)
-            except:
-                print("Run not found")
+                thetas, p = read_params(folder, features, output, featToClus, nbClus, fold, folds, run=run)
+            except Exception as e:
+                print("Run not found", e)
                 continue
             nbOut = p.shape[-1]
 
-            listTrue, listProbs = buildArraysProbs(folder, features, output, DS, thetas, p, featToClus, nbInterp, fold)
+            listTrue, listProbs = buildArraysProbs(folder, features, output, DS, thetas, p, featToClus, nbInterp, fold, folds)
             tabMetricsAll = scores(listTrue, listProbs, f"SIMSBM_{nbInterp}", tabMetricsAll, nbOut, run)
 
-        dicResAvg = saveResults(tabMetricsAll, folder, features, DS, nbInterp, nbClus, fold, printRes=False, final=False, averaged=True)
+        dicResAvg = saveResults(tabMetricsAll, folder, features, output, DS, nbInterp, nbClus, fold, folds, printRes=False, final=False, averaged=True)
         tabDicResAvg.append(dicResAvg)
 
     print()
@@ -347,7 +344,8 @@ def evaluate(args):
         if len(d.values())!=0:
             arrRes.append(list(d.values()))
     print()
-    print("\t".join(map(str, np.round(np.mean(arrRes, axis=0), 4))).expandtabs(20))
+    if len(arrRes)!=0:
+        print("\t".join(map(str, np.round(np.mean(arrRes, axis=0), 4))).expandtabs(20))
 
 
 
@@ -369,7 +367,7 @@ if __name__=="__main__":
         features = [0]
         DS = [3]
         nbInterp = [2]
-        output = 2
+        output = 1
         if output==1:
             if nbInterp==[1]:
                 nbClus = [3]
@@ -391,6 +389,6 @@ if __name__=="__main__":
     list_params = [(features, output, DS, nbInterp, nbClus, buildData, seuil, folds)]
 
     for features, output, DS, nbInterp, nbClus, buildData, seuil, folds in list_params:
-        args = (features, output, DS, nbInterp, nbClus, buildData, seuil, folds)
+        args = (folder, features, output, DS, nbInterp, nbClus, buildData, seuil, folds, nbRuns)
         evaluate(args)
 
