@@ -19,7 +19,7 @@ if __name__ == "__main__":
     nbClus = [5]
     buildData = True
     folds = 5
-    nbRuns = 2
+    nbRuns = 100
     list_params = []
 
     for output in [1, 2]:
