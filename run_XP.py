@@ -19,7 +19,11 @@ if __name__ == "__main__":
     nbClus = [5]
     buildData = True
     folds = 5
+<<<<<<< HEAD
     nbRuns = 10
+=======
+    nbRuns = 100
+>>>>>>> refs/remotes/origin/main
     list_params = []
 
     for output in [1, 2]:
@@ -27,15 +31,24 @@ if __name__ == "__main__":
             for nbClus in [[3], [4], [5], [6], [7], [8], [9], [10]]:
                 list_params.append((features, output, DS, nbInterp, nbClus, buildData, seuil, folds))
 
+    with multiprocessing.Pool(processes=20) as p:
+        with tqdm.tqdm(total=len(list_params)) as progress:
+            args = [(folder, DS, features, output, nbInterp, nbClus, buildData, seuil, lim, propTrainingSet, folds, prec, nbRuns, maxCnt) for features, output, DS, nbInterp, nbClus, buildData, seuil, folds in list_params]
+            for i, res in enumerate(p.imap(runForOneDS, args)):
+                progress.update()
+
     # with multiprocessing.Pool(processes=7) as p:
     #     with tqdm.tqdm(total=len(list_params)) as progress:
-    #         args = [(folder, DS, features, output, nbInterp, nbClus, buildData, seuil, lim, propTrainingSet, folds, prec, nbRuns, maxCnt) for features, output, DS, nbInterp, nbClus, buildData, seuil, folds in list_params]
-    #         for i, res in enumerate(p.imap(runForOneDS, args)):
+    #         args =[(folder, features, output, DS, nbInterp, nbClus, buildData, seuil, folds, nbRuns) for features, output, DS, nbInterp, nbClus, buildData, seuil, folds in list_params]
+    #         for i, res in enumerate(p.imap(evaluate, args)):
     #             progress.update()
 
+<<<<<<< HEAD
     with multiprocessing.Pool(processes=4) as p:
         with tqdm.tqdm(total=len(list_params)) as progress:
             args =[(folder, features, output, DS, nbInterp, nbClus, buildData, seuil, folds, nbRuns) for features, output, DS, nbInterp, nbClus, buildData, seuil, folds in list_params]
             for i, res in enumerate(p.imap(evaluate, args)):
                 progress.update()
 
+=======
+>>>>>>> refs/remotes/origin/main
