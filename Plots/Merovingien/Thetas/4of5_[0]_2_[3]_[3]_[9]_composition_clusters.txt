@@ -1,0 +1,115 @@
+Cluster 0
+100.0% - Hachoir
+100.0% - Bague
+100.0% - Disque en bois de cerf
+100.0% - Bracelet
+100.0% - Fibule
+98.0% - Pendant/pendentif
+71.0% - Anneau(x) de châtelaine
+58.0% - Bol
+53.0% - Matière première
+36.0% - Châtelaine
+29.0% - Pot
+28.0% - Collier
+7.0% - Fusaïole
+Cluster 1
+100.0% - Coffre/coffret
+93.0% - Boucle d'oreille
+71.0% - Lot de perles (vrac)
+22.0% - Anneau(x) de châtelaine
+6.0% - Collier
+Cluster 2
+100.0% - Clé
+100.0% - Contenant du défunt/chambre funéraire
+80.0% - Clou(s)
+52.0% - Faune
+52.0% - Œuf
+18.0% - Fusaïole
+18.0% - Briquet
+10.0% - Châtelaine
+7.0% - Perle(s) de châtelaine
+7.0% - Lame de tisserand
+7.0% - Scramasaxe
+Cluster 3
+91.0% - Flèche
+81.0% - Scramasaxe
+65.0% - Aumônière/sacoche
+59.0% - Pierre(s) à feu
+59.0% - Fourreau
+47.0% - Couteau
+46.0% - Ceinture
+9.0% - Pot
+Cluster 4
+100.0% - Épingle
+100.0% - Cordelière/cingulum
+100.0% - Plat/assiette
+100.0% - Lance
+100.0% - Poinçon
+100.0% - Rouelle/plaque de châtelaine
+100.0% - Épée
+100.0% - Bouclier
+100.0% - Forces
+100.0% - Carquois
+100.0% - Hache
+100.0% - Éperon
+100.0% - Cornet
+100.0% - Pincette/pince à épiler
+100.0% - Seau
+100.0% - Pierre à aiguiser
+100.0% - Récipient
+100.0% - Cruche
+100.0% - Peigne/étui
+100.0% - Chaîne(tte)
+100.0% - Morceau de cotte de maille
+97.0% - Chaussures/jarretières
+73.0% - Pot verseur
+70.0% - Étui de peigne
+45.0% - Baudrier d'épée
+42.0% - Peigne
+29.0% - Lot de perles (vrac)
+24.0% - Faune
+21.0% - Gobelet
+20.0% - Vêtement
+12.0% - Fiche
+Cluster 5
+80.0% - Vêtement
+79.0% - Gobelet
+52.0% - Pot
+42.0% - Collier
+37.0% - Fourreau
+10.0% - Monnaie
+5.0% - Flèche
+Cluster 6
+93.0% - Lame de tisserand
+93.0% - Perle(s) de châtelaine
+90.0% - Monnaie
+75.0% - Fusaïole
+42.0% - Bol
+34.0% - Matière première
+29.0% - Pierre(s) à feu
+27.0% - Aumônière/sacoche
+23.0% - Faune
+22.0% - Pot verseur
+18.0% - Collier
+12.0% - Châtelaine
+Cluster 7
+100.0% - Carafe
+88.0% - Fiche
+55.0% - Baudrier d'épée
+25.0% - Couteau
+12.0% - Ceinture
+11.0% - Pierre(s) à feu
+6.0% - Anneau(x) de châtelaine
+6.0% - Collier
+Cluster 8
+82.0% - Briquet
+58.0% - Peigne
+48.0% - Œuf
+40.0% - Châtelaine
+40.0% - Ceinture
+30.0% - Étui de peigne
+24.0% - Couteau
+18.0% - Clou(s)
+11.0% - Scramasaxe
+10.0% - Matière première
+10.0% - Pot

@@ -1,0 +1,116 @@
+Cluster 0
+60.0% - Scramasaxe
+58.0% - Briquet
+58.0% - Pincette/pince à épiler
+50.0% - Fourreau
+48.0% - Fiche
+44.0% - Bouclier
+43.0% - Lance
+42.0% - Hache
+39.0% - Éperon
+38.0% - Aumônière/sacoche
+35.0% - Pierre(s) à feu
+35.0% - Flèche
+33.0% - Baudrier d'épée
+28.0% - Matière première
+26.0% - Récipient
+25.0% - Chaussures/jarretières
+24.0% - Monnaie
+23.0% - Poinçon
+21.0% - Pot verseur
+20.0% - Épée
+18.0% - Couteau
+16.0% - Carafe
+10.0% - Ceinture
+8.0% - Œuf
+8.0% - Pot
+5.0% - Fibule
+Cluster 1
+100.0% - Châtelaine
+100.0% - Clé
+100.0% - Pendant/pendentif
+100.0% - Contenant du défunt/chambre funéraire
+100.0% - Anneau(x) de châtelaine
+100.0% - Fusaïole
+100.0% - Clou(s)
+100.0% - Boucle d'oreille
+100.0% - Gobelet
+100.0% - Épingle
+87.0% - Collier
+81.0% - Coffre/coffret
+78.0% - Peigne
+64.0% - Lot de perles (vrac)
+64.0% - Faune
+51.0% - Fibule
+35.0% - Œuf
+25.0% - Ceinture
+20.0% - Pot verseur
+11.0% - Couteau
+11.0% - Aumônière/sacoche
+10.0% - Monnaie
+8.0% - Pot
+Cluster 2
+38.0% - Pierre(s) à feu
+36.0% - Scramasaxe
+35.0% - Fourreau
+33.0% - Pot
+31.0% - Éperon
+31.0% - Briquet
+29.0% - Poinçon
+26.0% - Pincette/pince à épiler
+26.0% - Monnaie
+24.0% - Bouclier
+22.0% - Ceinture
+19.0% - Hache
+16.0% - Récipient
+16.0% - Baudrier d'épée
+15.0% - Aumônière/sacoche
+15.0% - Carafe
+14.0% - Pot verseur
+14.0% - Matière première
+12.0% - Lot de perles (vrac)
+10.0% - Peigne
+10.0% - Flèche
+9.0% - Lance
+9.0% - Chaussures/jarretières
+9.0% - Fibule
+Cluster 3
+79.0% - Épée
+69.0% - Carafe
+66.0% - Chaussures/jarretières
+58.0% - Matière première
+58.0% - Récipient
+55.0% - Flèche
+51.0% - Baudrier d'épée
+48.0% - Lance
+48.0% - Poinçon
+48.0% - Fiche
+39.0% - Hache
+32.0% - Bouclier
+30.0% - Éperon
+27.0% - Pierre(s) à feu
+25.0% - Couteau
+21.0% - Aumônière/sacoche
+18.0% - Pot verseur
+16.0% - Pincette/pince à épiler
+16.0% - Ceinture
+14.0% - Monnaie
+13.0% - Faune
+11.0% - Briquet
+6.0% - Fibule
+6.0% - Peigne
+5.0% - Lot de perles (vrac)
+Cluster 4
+54.0% - Œuf
+49.0% - Pot
+45.0% - Couteau
+29.0% - Fibule
+26.0% - Pot verseur
+26.0% - Ceinture
+25.0% - Monnaie
+17.0% - Faune
+17.0% - Lot de perles (vrac)
+15.0% - Aumônière/sacoche
+15.0% - Coffre/coffret
+13.0% - Fourreau
+11.0% - Collier

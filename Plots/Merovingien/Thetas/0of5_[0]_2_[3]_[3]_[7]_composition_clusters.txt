@@ -1,0 +1,104 @@
+Cluster 0
+100.0% - Coffre/coffret
+100.0% - Bouteille
+100.0% - Cordelière/cingulum
+100.0% - Cornet
+100.0% - Baudrier d'épée
+100.0% - Bouclier
+100.0% - Épée
+100.0% - Seau
+100.0% - Lance
+100.0% - Matière première
+100.0% - Carquois
+100.0% - Forces
+100.0% - Pierre à aiguiser
+100.0% - Poinçon
+100.0% - Récipient
+100.0% - Chaîne(tte)
+100.0% - Fiche
+100.0% - Peigne/étui
+100.0% - Clou(s)
+100.0% - Pincette/pince à épiler
+100.0% - Plat/assiette
+100.0% - Cruche
+100.0% - Chaussures/jarretières
+72.0% - Pot verseur
+46.0% - Lot de perles (vrac)
+45.0% - Peigne
+40.0% - Boucle d'oreille
+32.0% - Fourreau
+16.0% - Carafe
+6.0% - Vêtement
+Cluster 1
+100.0% - Hachoir
+100.0% - Pendant/pendentif
+100.0% - Briquet
+100.0% - Disque en bois de cerf
+84.0% - Carafe
+11.0% - Étui de peigne
+10.0% - Bague
+9.0% - Bol
+Cluster 2
+96.0% - Épingle
+94.0% - Vêtement
+90.0% - Bague
+89.0% - Étui de peigne
+75.0% - Gobelet
+57.0% - Fourreau
+54.0% - Lot de perles (vrac)
+50.0% - Peigne
+10.0% - Pot
+7.0% - Ceinture
+Cluster 3
+99.0% - Flèche
+73.0% - Bol
+46.0% - Contenant du défunt/chambre funéraire
+38.0% - Pot
+23.0% - Monnaie
+18.0% - Clé
+15.0% - Fusaïole
+14.0% - Châtelaine
+11.0% - Boucle d'oreille
+9.0% - Fourreau
+8.0% - Couteau
+6.0% - Œuf
+Cluster 4
+89.0% - Pierre(s) à feu
+84.0% - Aumônière/sacoche
+77.0% - Monnaie
+69.0% - Fusaïole
+68.0% - Scramasaxe
+52.0% - Contenant du défunt/chambre funéraire
+36.0% - Couteau
+32.0% - Ceinture
+23.0% - Faune
+Cluster 5
+100.0% - Lame de tisserand
+100.0% - Perle(s) de châtelaine
+99.0% - Fibule
+39.0% - Châtelaine
+26.0% - Ceinture
+26.0% - Collier
+22.0% - Couteau
+21.0% - Pot verseur
+18.0% - Bol
+15.0% - Fusaïole
+12.0% - Anneau(x) de châtelaine
+9.0% - Pierre(s) à feu
+8.0% - Scramasaxe
+Cluster 6
+93.0% - Œuf
+88.0% - Anneau(x) de châtelaine
+82.0% - Clé
+72.0% - Faune
+65.0% - Collier
+52.0% - Pot
+48.0% - Boucle d'oreille
+48.0% - Châtelaine
+33.0% - Couteau
+30.0% - Ceinture
+24.0% - Scramasaxe
+21.0% - Gobelet
+12.0% - Aumônière/sacoche
+7.0% - Pot verseur
+5.0% - Peigne

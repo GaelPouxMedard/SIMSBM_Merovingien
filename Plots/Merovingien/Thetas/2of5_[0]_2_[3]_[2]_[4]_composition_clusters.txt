@@ -1,0 +1,111 @@
+Cluster 0
+100.0% - Hachoir
+100.0% - Disque en bois de cerf
+100.0% - Bracelet
+98.0% - Bol
+94.0% - Fibule
+93.0% - Clé
+87.0% - Lame de tisserand
+87.0% - Perle(s) de châtelaine
+81.0% - Briquet
+80.0% - Châtelaine
+76.0% - Pendant/pendentif
+72.0% - Bague
+70.0% - Matière première
+70.0% - Clou(s)
+65.0% - Fusaïole
+62.0% - Pot
+58.0% - Flèche
+56.0% - Œuf
+55.0% - Scramasaxe
+55.0% - Anneau(x) de châtelaine
+54.0% - Collier
+53.0% - Couteau
+51.0% - Ceinture
+51.0% - Monnaie
+47.0% - Contenant du défunt/chambre funéraire
+46.0% - Aumônière/sacoche
+42.0% - Pierre(s) à feu
+37.0% - Fourreau
+36.0% - Peigne
+29.0% - Faune
+17.0% - Gobelet
+13.0% - Vêtement
+8.0% - Épingle
+Cluster 1
+100.0% - Carafe
+77.0% - Fiche
+64.0% - Baudrier d'épée
+35.0% - Pierre(s) à feu
+33.0% - Couteau
+24.0% - Chaussures/jarretières
+23.0% - Ceinture
+22.0% - Scramasaxe
+22.0% - Aumônière/sacoche
+22.0% - Fourreau
+19.0% - Flèche
+Cluster 2
+100.0% - Rouelle/plaque de châtelaine
+100.0% - Bouteille
+100.0% - Étui de peigne
+100.0% - Plat/assiette
+100.0% - Cordelière/cingulum
+100.0% - Forces
+100.0% - Récipient
+100.0% - Seau
+100.0% - Pot verseur
+100.0% - Poinçon
+100.0% - Morceau de cotte de maille
+100.0% - Chaîne(tte)
+100.0% - Pierre à aiguiser
+100.0% - Cornet
+100.0% - Pincette/pince à épiler
+100.0% - Éperon
+100.0% - Lance
+100.0% - Épée
+100.0% - Bouclier
+100.0% - Hache
+100.0% - Carquois
+92.0% - Épingle
+87.0% - Vêtement
+83.0% - Gobelet
+76.0% - Chaussures/jarretières
+69.0% - Faune
+64.0% - Peigne
+53.0% - Contenant du défunt/chambre funéraire
+52.0% - Lot de perles (vrac)
+49.0% - Monnaie
+44.0% - Œuf
+41.0% - Fourreau
+37.0% - Boucle d'oreille
+36.0% - Baudrier d'épée
+35.0% - Fusaïole
+32.0% - Aumônière/sacoche
+32.0% - Coffre/coffret
+30.0% - Clou(s)
+30.0% - Matière première
+28.0% - Bague
+23.0% - Fiche
+23.0% - Flèche
+23.0% - Pierre(s) à feu
+23.0% - Collier
+22.0% - Scramasaxe
+19.0% - Briquet
+19.0% - Pot
+13.0% - Perle(s) de châtelaine
+13.0% - Lame de tisserand
+10.0% - Ceinture
+10.0% - Châtelaine
+7.0% - Clé
+6.0% - Fibule
+Cluster 3
+68.0% - Coffre/coffret
+63.0% - Boucle d'oreille
+45.0% - Anneau(x) de châtelaine
+45.0% - Lot de perles (vrac)
+24.0% - Pendant/pendentif
+24.0% - Collier
+18.0% - Pot
+16.0% - Ceinture
+14.0% - Couteau
+11.0% - Châtelaine

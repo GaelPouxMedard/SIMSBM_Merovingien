@@ -1,0 +1,107 @@
+Cluster 0
+100.0% - Poinçon
+100.0% - Cordelière/cingulum
+100.0% - Bouteille
+100.0% - Épée
+100.0% - Bouclier
+100.0% - Forces
+100.0% - Chaussures/jarretières
+100.0% - Carquois
+100.0% - Récipient
+100.0% - Briquet
+100.0% - Hache
+100.0% - Éperon
+100.0% - Rouelle/plaque de châtelaine
+100.0% - Pincette/pince à épiler
+100.0% - Morceau de cotte de maille
+100.0% - Chaîne(tte)
+100.0% - Pierre à aiguiser
+100.0% - Lance
+100.0% - Seau
+100.0% - Peigne/étui
+100.0% - Cruche
+97.0% - Pot verseur
+96.0% - Épingle
+95.0% - Gobelet
+94.0% - Vêtement
+94.0% - Faune
+93.0% - Étui de peigne
+85.0% - Œuf
+84.0% - Peigne
+78.0% - Contenant du défunt/chambre funéraire
+78.0% - Clou(s)
+74.0% - Monnaie
+67.0% - Fourreau
+67.0% - Bague
+67.0% - Pot
+67.0% - Aumônière/sacoche
+67.0% - Collier
+66.0% - Clé
+66.0% - Ceinture
+66.0% - Pierre(s) à feu
+64.0% - Matière première
+63.0% - Perle(s) de châtelaine
+63.0% - Lame de tisserand
+61.0% - Châtelaine
+61.0% - Fusaïole
+61.0% - Fibule
+59.0% - Lot de perles (vrac)
+53.0% - Scramasaxe
+52.0% - Couteau
+50.0% - Flèche
+39.0% - Fiche
+35.0% - Anneau(x) de châtelaine
+34.0% - Bol
+28.0% - Baudrier d'épée
+21.0% - Pendant/pendentif
+21.0% - Coffre/coffret
+Cluster 1
+97.0% - Boucle d'oreille
+79.0% - Coffre/coffret
+72.0% - Baudrier d'épée
+61.0% - Fiche
+40.0% - Lot de perles (vrac)
+39.0% - Anneau(x) de châtelaine
+36.0% - Pendant/pendentif
+30.0% - Couteau
+28.0% - Flèche
+26.0% - Pierre(s) à feu
+22.0% - Scramasaxe
+20.0% - Ceinture
+16.0% - Fourreau
+15.0% - Aumônière/sacoche
+12.0% - Collier
+9.0% - Pot
+5.0% - Châtelaine
+Cluster 2
+100.0% - Hachoir
+100.0% - Bracelet
+66.0% - Bol
+43.0% - Pendant/pendentif
+39.0% - Fibule
+39.0% - Fusaïole
+37.0% - Lame de tisserand
+37.0% - Perle(s) de châtelaine
+36.0% - Matière première
+34.0% - Clé
+33.0% - Châtelaine
+33.0% - Bague
+26.0% - Monnaie
+25.0% - Anneau(x) de châtelaine
+25.0% - Scramasaxe
+24.0% - Pot
+22.0% - Clou(s)
+22.0% - Flèche
+22.0% - Contenant du défunt/chambre funéraire
+21.0% - Collier
+18.0% - Couteau
+18.0% - Aumônière/sacoche
+16.0% - Fourreau
+16.0% - Peigne
+15.0% - Œuf
+14.0% - Ceinture
+8.0% - Pierre(s) à feu
+7.0% - Étui de peigne
+6.0% - Faune
+6.0% - Vêtement
+5.0% - Gobelet

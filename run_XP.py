@@ -19,7 +19,7 @@ if __name__ == "__main__":
     nbClus = [5]
     buildData = True
     folds = 5
-    nbRuns = 2
+    nbRuns = 10
     list_params = []
 
     for output in [1, 2]:
@@ -33,7 +33,7 @@ if __name__ == "__main__":
     #         for i, res in enumerate(p.imap(runForOneDS, args)):
     #             progress.update()
 
-    with multiprocessing.Pool(processes=7) as p:
+    with multiprocessing.Pool(processes=4) as p:
         with tqdm.tqdm(total=len(list_params)) as progress:
             args =[(folder, features, output, DS, nbInterp, nbClus, buildData, seuil, folds, nbRuns) for features, output, DS, nbInterp, nbClus, buildData, seuil, folds in list_params]
             for i, res in enumerate(p.imap(evaluate, args)):

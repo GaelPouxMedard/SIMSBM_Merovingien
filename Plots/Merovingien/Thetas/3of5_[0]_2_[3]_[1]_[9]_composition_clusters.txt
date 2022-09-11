@@ -1,0 +1,306 @@
+Cluster 0
+100.0% - Disque en bois de cerf
+100.0% - Bracelet
+30.0% - Châtelaine
+29.0% - Matière première
+27.0% - Briquet
+26.0% - Pot
+21.0% - Fibule
+19.0% - Clou(s)
+19.0% - Flèche
+16.0% - Couteau
+15.0% - Œuf
+14.0% - Aumônière/sacoche
+12.0% - Peigne
+12.0% - Scramasaxe
+11.0% - Pierre(s) à feu
+9.0% - Collier
+9.0% - Bol
+9.0% - Monnaie
+8.0% - Fourreau
+7.0% - Étui de peigne
+6.0% - Anneau(x) de châtelaine
+6.0% - Ceinture
+Cluster 1
+46.0% - Lame de tisserand
+39.0% - Éperon
+30.0% - Monnaie
+26.0% - Seau
+26.0% - Bouclier
+25.0% - Contenant du défunt/chambre funéraire
+24.0% - Étui de peigne
+23.0% - Pot
+23.0% - Pincette/pince à épiler
+22.0% - Fiche
+22.0% - Hache
+21.0% - Épingle
+21.0% - Briquet
+21.0% - Pierre(s) à feu
+21.0% - Perle(s) de châtelaine
+18.0% - Bol
+18.0% - Fourreau
+17.0% - Épée
+17.0% - Collier
+16.0% - Matière première
+16.0% - Clou(s)
+16.0% - Aumônière/sacoche
+15.0% - Lot de perles (vrac)
+15.0% - Œuf
+15.0% - Chaîne(tte)
+15.0% - Plat/assiette
+14.0% - Cordelière/cingulum
+14.0% - Peigne
+14.0% - Poinçon
+13.0% - Anneau(x) de châtelaine
+13.0% - Rouelle/plaque de châtelaine
+13.0% - Coffre/coffret
+13.0% - Bouteille
+13.0% - Récipient
+12.0% - Lance
+12.0% - Pot verseur
+12.0% - Couteau
+12.0% - Chaussures/jarretières
+11.0% - Vêtement
+10.0% - Carquois
+10.0% - Cruche
+10.0% - Baudrier d'épée
+10.0% - Gobelet
+9.0% - Scramasaxe
+8.0% - Fibule
+8.0% - Flèche
+7.0% - Boucle d'oreille
+7.0% - Faune
+7.0% - Bague
+7.0% - Peigne/étui
+6.0% - Morceau de cotte de maille
+5.0% - Clé
+Cluster 2
+49.0% - Boucle d'oreille
+43.0% - Coffre/coffret
+34.0% - Pendant/pendentif
+24.0% - Anneau(x) de châtelaine
+21.0% - Lot de perles (vrac)
+8.0% - Collier
+Cluster 3
+71.0% - Récipient
+60.0% - Cornet
+58.0% - Morceau de cotte de maille
+58.0% - Plat/assiette
+54.0% - Rouelle/plaque de châtelaine
+50.0% - Carquois
+48.0% - Chaîne(tte)
+47.0% - Contenant du défunt/chambre funéraire
+47.0% - Lance
+47.0% - Perle(s) de châtelaine
+43.0% - Bol
+42.0% - Poinçon
+42.0% - Vêtement
+38.0% - Clou(s)
+37.0% - Fibule
+36.0% - Peigne
+36.0% - Matière première
+36.0% - Forces
+35.0% - Baudrier d'épée
+35.0% - Épingle
+35.0% - Bague
+32.0% - Seau
+32.0% - Collier
+30.0% - Aumônière/sacoche
+29.0% - Faune
+28.0% - Pot
+26.0% - Peigne/étui
+25.0% - Épée
+25.0% - Clé
+24.0% - Fusaïole
+24.0% - Œuf
+23.0% - Pierre(s) à feu
+23.0% - Pendant/pendentif
+23.0% - Pincette/pince à épiler
+23.0% - Bouteille
+23.0% - Châtelaine
+22.0% - Scramasaxe
+21.0% - Fourreau
+21.0% - Couteau
+20.0% - Pot verseur
+20.0% - Éperon
+20.0% - Bouclier
+18.0% - Flèche
+18.0% - Fiche
+16.0% - Anneau(x) de châtelaine
+14.0% - Boucle d'oreille
+14.0% - Coffre/coffret
+13.0% - Gobelet
+11.0% - Cordelière/cingulum
+10.0% - Hache
+9.0% - Lot de perles (vrac)
+8.0% - Chaussures/jarretières
+7.0% - Cruche
+7.0% - Lame de tisserand
+7.0% - Briquet
+Cluster 4
+100.0% - Carafe
+15.0% - Fiche
+12.0% - Baudrier d'épée
+6.0% - Pierre(s) à feu
+5.0% - Couteau
+Cluster 5
+25.0% - Ceinture
+20.0% - Briquet
+19.0% - Fusaïole
+19.0% - Anneau(x) de châtelaine
+18.0% - Scramasaxe
+16.0% - Flèche
+15.0% - Œuf
+12.0% - Matière première
+12.0% - Collier
+11.0% - Fourreau
+10.0% - Monnaie
+9.0% - Faune
+8.0% - Fibule
+7.0% - Bol
+6.0% - Pierre(s) à feu
+Cluster 6
+44.0% - Lot de perles (vrac)
+34.0% - Forces
+27.0% - Lame de tisserand
+25.0% - Gobelet
+24.0% - Baudrier d'épée
+22.0% - Fusaïole
+22.0% - Pendant/pendentif
+22.0% - Fiche
+21.0% - Cruche
+21.0% - Ceinture
+20.0% - Boucle d'oreille
+20.0% - Clé
+20.0% - Cordelière/cingulum
+18.0% - Seau
+18.0% - Perle(s) de châtelaine
+18.0% - Hache
+16.0% - Morceau de cotte de maille
+16.0% - Monnaie
+16.0% - Pincette/pince à épiler
+15.0% - Scramasaxe
+14.0% - Vêtement
+13.0% - Rouelle/plaque de châtelaine
+13.0% - Coffre/coffret
+13.0% - Pot verseur
+13.0% - Châtelaine
+12.0% - Cornet
+12.0% - Épée
+12.0% - Fourreau
+12.0% - Éperon
+11.0% - Bague
+11.0% - Clou(s)
+11.0% - Aumônière/sacoche
+10.0% - Carquois
+10.0% - Flèche
+10.0% - Bouteille
+9.0% - Chaussures/jarretières
+8.0% - Pierre(s) à feu
+8.0% - Peigne/étui
+8.0% - Anneau(x) de châtelaine
+7.0% - Œuf
+7.0% - Lance
+6.0% - Plat/assiette
+6.0% - Fibule
+6.0% - Bol
+6.0% - Bouclier
+6.0% - Récipient
+5.0% - Poinçon
+5.0% - Pot
+Cluster 7
+34.0% - Hache
+33.0% - Étui de peigne
+29.0% - Monnaie
+24.0% - Couteau
+24.0% - Bague
+22.0% - Peigne/étui
+22.0% - Fiche
+21.0% - Gobelet
+20.0% - Chaussures/jarretières
+20.0% - Ceinture
+19.0% - Pincette/pince à épiler
+18.0% - Faune
+18.0% - Bouclier
+17.0% - Morceau de cotte de maille
+17.0% - Fourreau
+16.0% - Châtelaine
+16.0% - Peigne
+16.0% - Pot verseur
+15.0% - Aumônière/sacoche
+15.0% - Bouteille
+15.0% - Collier
+15.0% - Pierre(s) à feu
+14.0% - Flèche
+14.0% - Contenant du défunt/chambre funéraire
+14.0% - Forces
+13.0% - Clé
+12.0% - Lame de tisserand
+11.0% - Rouelle/plaque de châtelaine
+11.0% - Chaîne(tte)
+11.0% - Perle(s) de châtelaine
+11.0% - Briquet
+11.0% - Éperon
+10.0% - Cruche
+9.0% - Vêtement
+9.0% - Lot de perles (vrac)
+9.0% - Cordelière/cingulum
+8.0% - Œuf
+7.0% - Carquois
+7.0% - Pot
+7.0% - Cornet
+7.0% - Clou(s)
+6.0% - Pendant/pendentif
+5.0% - Scramasaxe
+5.0% - Anneau(x) de châtelaine
+5.0% - Épingle
+Cluster 8
+51.0% - Cruche
+50.0% - Chaussures/jarretières
+46.0% - Cordelière/cingulum
+42.0% - Épée
+39.0% - Bouteille
+38.0% - Poinçon
+37.0% - Peigne/étui
+37.0% - Clé
+35.0% - Pot verseur
+32.0% - Faune
+31.0% - Étui de peigne
+30.0% - Bouclier
+30.0% - Lance
+29.0% - Épingle
+27.0% - Gobelet
+26.0% - Fusaïole
+26.0% - Chaîne(tte)
+24.0% - Vêtement
+23.0% - Bague
+23.0% - Carquois
+20.0% - Pincette/pince à épiler
+19.0% - Seau
+19.0% - Plat/assiette
+19.0% - Éperon
+18.0% - Ceinture
+17.0% - Hache
+17.0% - Cornet
+17.0% - Baudrier d'épée
+16.0% - Œuf
+16.0% - Fibule
+16.0% - Forces
+14.0% - Scramasaxe
+14.0% - Coffre/coffret
+14.0% - Peigne
+13.0% - Pendant/pendentif
+11.0% - Bol
+11.0% - Flèche
+10.0% - Pierre(s) à feu
+10.0% - Couteau
+10.0% - Anneau(x) de châtelaine
+10.0% - Briquet
+10.0% - Fourreau
+9.0% - Contenant du défunt/chambre funéraire
+9.0% - Clou(s)
+8.0% - Châtelaine
+8.0% - Rouelle/plaque de châtelaine
+8.0% - Lame de tisserand
+7.0% - Récipient
+6.0% - Aumônière/sacoche

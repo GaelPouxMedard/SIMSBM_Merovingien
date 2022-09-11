@@ -1,0 +1,111 @@
+Cluster 0
+44.0% - Lot de perles (vrac)
+40.0% - Ceinture
+39.0% - Faune
+24.0% - Coffre/coffret
+23.0% - Collier
+21.0% - Œuf
+14.0% - Monnaie
+12.0% - Chaussures/jarretières
+12.0% - Fourreau
+12.0% - Peigne
+11.0% - Pot verseur
+7.0% - Couteau
+6.0% - Aumônière/sacoche
+Cluster 1
+81.0% - Pincette/pince à épiler
+57.0% - Briquet
+53.0% - Bouclier
+53.0% - Pierre(s) à feu
+45.0% - Lance
+43.0% - Aumônière/sacoche
+43.0% - Cordelière/cingulum
+42.0% - Fourreau
+36.0% - Carafe
+36.0% - Flèche
+35.0% - Baudrier d'épée
+34.0% - Fibule
+33.0% - Matière première
+33.0% - Couteau
+28.0% - Épée
+25.0% - Scramasaxe
+25.0% - Pot verseur
+23.0% - Peigne
+21.0% - Pot
+19.0% - Monnaie
+19.0% - Faune
+17.0% - Ceinture
+12.0% - Poinçon
+10.0% - Œuf
+10.0% - Lot de perles (vrac)
+7.0% - Fiche
+Cluster 2
+100.0% - Boucle d'oreille
+100.0% - Gobelet
+100.0% - Clé
+100.0% - Contenant du défunt/chambre funéraire
+100.0% - Châtelaine
+100.0% - Fusaïole
+84.0% - Chaussures/jarretières
+67.0% - Coffre/coffret
+53.0% - Collier
+41.0% - Lot de perles (vrac)
+22.0% - Œuf
+20.0% - Monnaie
+18.0% - Peigne
+17.0% - Faune
+9.0% - Pot verseur
+8.0% - Couteau
+6.0% - Aumônière/sacoche
+Cluster 3
+61.0% - Poinçon
+47.0% - Matière première
+46.0% - Carafe
+38.0% - Bouclier
+37.0% - Fiche
+33.0% - Baudrier d'épée
+33.0% - Scramasaxe
+30.0% - Fibule
+30.0% - Épée
+30.0% - Aumônière/sacoche
+29.0% - Monnaie
+28.0% - Couteau
+27.0% - Pot
+23.0% - Pot verseur
+22.0% - Peigne
+21.0% - Cordelière/cingulum
+19.0% - Ceinture
+18.0% - Œuf
+18.0% - Lance
+16.0% - Briquet
+14.0% - Collier
+13.0% - Pincette/pince à épiler
+10.0% - Flèche
+9.0% - Fourreau
+Cluster 4
+56.0% - Fiche
+54.0% - Flèche
+44.0% - Pot
+43.0% - Pierre(s) à feu
+42.0% - Scramasaxe
+41.0% - Épée
+37.0% - Lance
+37.0% - Cordelière/cingulum
+35.0% - Fourreau
+33.0% - Fibule
+33.0% - Pot verseur
+32.0% - Baudrier d'épée
+29.0% - Œuf
+27.0% - Briquet
+27.0% - Poinçon
+25.0% - Peigne
+24.0% - Faune
+24.0% - Couteau
+21.0% - Ceinture
+20.0% - Matière première
+19.0% - Monnaie
+18.0% - Carafe
+15.0% - Aumônière/sacoche
+9.0% - Collier
+9.0% - Bouclier
+6.0% - Pincette/pince à épiler

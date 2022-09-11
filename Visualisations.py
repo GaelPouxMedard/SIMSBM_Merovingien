@@ -8,6 +8,7 @@ from scipy.stats import sem
 import matplotlib.pyplot as plt
 from copy import copy
 import seaborn as sns
+import pandas as pd
 
 if "Plots" not in os.listdir("."): os.mkdir("./Plots")
 if "Merovingien" not in os.listdir("./Plots"): os.mkdir("./Plots/Merovingien")
@@ -68,9 +69,16 @@ def read_params(folder, features, output, featToClus, nbClus, fold, run=-1):
 
     return thetas, p, intToOut, intToFeat
 
-def savefig(name, codeSave=""):
+def savefig(name, codeSave="", subfolder=""):
     folder = "Plots/Merovingien/"
-    plt.savefig(folder+codeSave+name+".pdf", dpi=600)
+    if subfolder !="":
+        curfol = folder
+        for fol in subfolder.split("/"):
+            if fol not in os.listdir(curfol) and fol!="":
+                os.mkdir(curfol+fol)
+            curfol += fol+"/"
+
+    plt.savefig(folder+subfolder+codeSave+name+".pdf", dpi=600)
 
 def findClusters(mat):
     from sklearn.cluster import SpectralClustering
@@ -79,14 +87,14 @@ def findClusters(mat):
     return cluster.labels_
 
 def writeClusters(thetas, codeSave):
-    with open(f"Plots/Merovingien/{codeSave}composition_clusters.txt", "w+", encoding="utf-8") as f:
+    if "Thetas" not in os.listdir("Plots/Merovingien"): os.mkdir("Plots/Merovingien/Thetas/")
+    with open(f"Plots/Merovingien/Thetas/{codeSave}composition_clusters.txt", "w+", encoding="utf-8") as f:
         for num_clus, k in enumerate(thetas[0].T):
             sorted_incides = list(reversed(np.argsort(k)))
             f.write(f"Cluster {num_clus}\n")
             for i in sorted_incides:
                 if k[i]>0.05:
                     f.write(f"{np.round(k[i]*100)}% - {intToFeat[0][i]}\n")
-
 
 def plotThetas(thetas, intToFeat, codeSave):
     scaleFeat = 4.
@@ -123,10 +131,10 @@ def plotThetas(thetas, intToFeat, codeSave):
     plt.axis("off")
     plt.tight_layout()
 
-    savefig("Thetas", codeSave)
+
+    savefig("Thetas", codeSave, subfolder="Thetas/")
 
     plt.close()
-
 
 def plotGraph1D(thetas, p, intToOut, intToFeat, codeSave):
     scaleFeat = 1.
@@ -161,10 +169,9 @@ def plotGraph1D(thetas, p, intToOut, intToFeat, codeSave):
     plt.axis("off")
     plt.tight_layout()
 
-    savefig("Graphe_final", codeSave)
+    savefig("Graphe_final", codeSave, subfolder="Inter=1/")
 
     plt.close()
-
 
 def plotGraph2D(thetas, p, intToOut, intToFeat, codeSave):
     size = 10
@@ -178,23 +185,22 @@ def plotGraph2D(thetas, p, intToOut, intToFeat, codeSave):
 
     for o in range(nbOut):
         plt.subplot(1, nbOut, o+1)
-        sns.heatmap(p[:, :, o], linewidths=0.03, cmap="afmhot_r", square=True, cbar_kws={"shrink": 0.55, "label": "Membership"}, vmin=0, vmax=1)
+        sns.heatmap(np.round(p[:, :, o]*100), linewidths=0.03, cmap="afmhot_r", square=True, cbar_kws={"shrink": 0.55, "label": "Membership"}, fmt='g', vmin=0, vmax=100, annot=True, cbar=False)
         plt.gca().invert_yaxis()
         plt.title(intToOut[o].capitalize())
         plt.xlabel("Clusters")
 
     plt.tight_layout()
 
-    savefig("Graphe_final", codeSave)
+    savefig("Graphe_final", codeSave, subfolder="Inter=2/")
 
     plt.close()
-
 
 def readRes():
     folder = "Results/Merovingien/"
     files = os.listdir(folder)
 
-    metricsToExclude = ["CovErr", "CovErrNorm"]
+    metricsToExclude = ["CovErr", "CovErrNorm", "Acc", "P@1", "RankAvgPrec"]
 
     dicAvg, dicStd = {}, {}
     matAvg, matStd = [], []
@@ -237,11 +243,9 @@ def readRes():
                 if res == '' or lab in metricsToExclude: continue
                 dicStd[features][output][DS][nbInterp][nbClus][fold][lab] = float(res)
                 matStd.append([fold, features, output, DS, nbInterp, nbClus, lab, float(res)])
-                
 
     return np.array(matAvg, dtype=object), np.array(matStd, dtype=object)
 
-    
 def plotRes():
     matAvg, matStd = readRes()
 
@@ -250,8 +254,10 @@ def plotRes():
         dicToPlotx = {}
         dicToPlotAvg = {}
         dicToPlotStd = {}
-        for val, err in zip(matAvg, matStd):
-            valName = copy(val)
+
+        for val_base, err in zip(matAvg, matStd):
+            valName = val_base.copy()
+            val = val_base.copy()
             for wt in range(len(whatToPlot)):
                 if names[whatToPlot[wt]]=="fold": val[whatToPlot[wt]]=val[whatToPlot[wt]].split("of")[0]
                 valName[whatToPlot[wt]] = "All"
@@ -288,16 +294,23 @@ def plotRes():
                 plt.ylabel("Metrics")
                 plt.legend()
                 plt.tight_layout()
-                nameFig = ""
-                if whatToPlot == [0]: nameFig = "Folds"
-                if whatToPlot == [4]: nameFig = "Interp"
-                if whatToPlot == [5]: nameFig = "Clusters"
-                savefig(nameFig, codeSave=redKey)
+                nameFig, subf = "", ""
+                if whatToPlot == [0]:
+                    nameFig = "Folds"
+                    subf = "Folds/"
+                if whatToPlot == [4]:
+                    nameFig = "Interp"
+                    subf = "Interps/"
+                if whatToPlot == [5]:
+                    nameFig = "Clusters"
+                    subf = "Clusters/"
+
+                savefig(nameFig, codeSave=redKey, subfolder="Metrics/"+subf)
                 plt.close()
 
         elif len(whatToPlot)==2:
             for redKey in dicToPlotx:
-                label = "Acc"
+                label = "Acc@1"
                 if label not in dicToPlotAvg[redKey]: continue
 
                 arrx, arry = set(), set()
@@ -317,7 +330,7 @@ def plotRes():
 
                 matHeatAvg = sparse.COO(list(zip(*coords)), data=dicToPlotAvg[redKey][label]).todense()
 
-                sns.heatmap(matHeatAvg, cmap="afmhot_r", linewidth=0.03, vmin=0, vmax=1)
+                sns.heatmap(np.round(matHeatAvg*100), cmap="afmhot_r", linewidth=0.03, vmin=0, vmax=100, square=True, annot=True, cbar=False, fmt='g')
 
                 plt.xlabel(names[whatToPlot[1]])
                 plt.ylabel(names[whatToPlot[0]])
@@ -329,9 +342,183 @@ def plotRes():
                 nameFig = ""
                 if whatToPlot == [4, 5]:
                     nameFig = "ClusvsInterp"
-                savefig(nameFig, codeSave=redKey)
+                savefig(nameFig, codeSave=redKey, subfolder="Metrics/Heatmaps/")
                 plt.close()
-                
+
+def plotInput1D(thetas, p, intToOut, intToFeat, codeSave):
+    def get_label_rotation(angle, offset):
+        # Rotation must be specified in degrees :(
+        rotation = np.rad2deg(angle + offset)
+        if angle <= np.pi:
+            alignment = "right"
+            rotation = rotation + 180
+        else:
+            alignment = "left"
+        return rotation, alignment
+
+    def add_labels(angles, values, labels, offset, ax):
+
+        # This is the space between the end of the bar and the label
+        padding = 4
+
+        # Iterate over angles, values, and labels, to add all of them.
+        for angle, value, label, in zip(angles, values, labels):
+            angle = angle
+
+            # Obtain text rotation and alignment
+            rotation, alignment = get_label_rotation(angle, offset)
+
+            # And finally add the text
+            ax.text(
+                x=angle,
+                y=value + padding,
+                s=label,
+                ha=alignment,
+                va="center",
+                rotation=rotation,
+                rotation_mode="anchor"
+            )
+
+    names, values, group = [], [], []
+    for i in range(len(thetas[0])):
+        prob = thetas[0][i].dot(p)
+        for o in range(len(prob)):
+            if prob[o]>0.05:
+                names.append(intToFeat[0][i])
+                values.append(prob[o]*100)
+                group.append(intToOut[o])
+
+    df = pd.DataFrame({
+        "name": names,
+        "value": values,
+        "group": group
+    })
+    df_sorted = (
+        df
+            .groupby(["group"])
+            .apply(lambda x: x.sort_values(["value"], ascending = False))
+            .reset_index(drop=True)
+    )
+
+    VALUES = df_sorted["value"].values
+    LABELS = df_sorted["name"].values
+    GROUP = df_sorted["group"].values
+
+    PAD = 3
+    ANGLES_N = len(VALUES) + PAD * len(np.unique(GROUP))
+
+    ANGLES = np.linspace(0, 2 * np.pi, num=ANGLES_N, endpoint=False)
+    WIDTH = (2 * np.pi) / len(ANGLES)
+
+    offset = 0
+    IDXS = []
+    GROUP_LAB, GROUPS_SIZE = np.unique(GROUP, return_counts=True)
+    for size in GROUPS_SIZE:
+        IDXS += list(range(offset + PAD, offset + size + PAD))
+        offset += size + PAD
+
+    OFFSET = np.pi / 2
+
+    fig, ax = plt.subplots(figsize=(20, 10), subplot_kw={"projection": "polar"})
+
+    ax.set_theta_offset(OFFSET)
+    ax.set_ylim(-100, 100)
+    ax.set_frame_on(False)
+    ax.xaxis.grid(False)
+    ax.yaxis.grid(False)
+    ax.set_xticks([])
+    ax.set_yticks([])
+
+    COLORS = []
+    for i, size in enumerate(GROUPS_SIZE):
+        for _ in range(size):
+            c = f"C{i}"
+            if GROUP_LAB[i]=="Masculin": c="blue"
+            if GROUP_LAB[i]=="Féminin": c="pink"
+            COLORS.append(c)
+
+    # Add bars to represent ...
+    ax.bar(
+        ANGLES[IDXS], VALUES, width=WIDTH, color=COLORS,
+        edgecolor="white", linewidth=2
+    )
+
+    add_labels(ANGLES[IDXS], VALUES, LABELS, OFFSET, ax)
+
+    offset = 0
+    for group, size in zip(GROUP_LAB, GROUPS_SIZE):
+        # Add line below bars
+        x1 = np.linspace(ANGLES[offset + PAD], ANGLES[offset + size + PAD - 1], num=50)
+        ax.plot(x1, [-5] * 50, color="#333333")
+
+        # Add text to indicate group
+        ax.text(
+            np.mean(x1), -20, group, color="#333333", fontsize=14,
+            fontweight="bold", ha="center", va="center", rotation=np.mean(x1)*180/np.pi
+        )
+
+        # Add reference lines at 20, 40, 60, and 80
+        x2 = np.linspace(ANGLES[offset], ANGLES[offset + PAD - 1], num=50)
+        ax.plot(x2, [20] * 50, color="#bebebe", lw=0.8)
+        ax.plot(x2, [40] * 50, color="#bebebe", lw=0.8)
+        ax.plot(x2, [60] * 50, color="#bebebe", lw=0.8)
+        ax.plot(x2, [80] * 50, color="#bebebe", lw=0.8)
+
+        offset += size + PAD
+
+    savefig("CircBarPlot_input_to_output", codeSave, subfolder="Inter=1/InputToOutput/")
+    plt.close()
+
+def plotInput2D(thetas, p, intToOut, intToFeat, codeSave):
+    import scipy.cluster.hierarchy as sch
+    matHeatAvg = thetas[0].dot(thetas[0].dot(p))
+    xlabels = ylabels = np.array([intToFeat[0][i] for i in range(len(thetas[0]))])
+
+    plt.figure(figsize=(5*p.shape[-1], 5))
+
+    Y = sch.linkage(np.max(matHeatAvg, axis=-1), method='centroid')
+    Z = sch.dendrogram(Y, orientation='right', no_plot=True)
+    index = Z['leaves']
+
+    for o in range(p.shape[-1]):
+        xlabels_new = xlabels[index]
+        ylabels_new = ylabels[index]
+
+        matHeatAvg[:, :, o] = matHeatAvg[index,:, o]
+        matHeatAvg[:, :, o] = matHeatAvg[:,index, o]
+
+        plt.subplot(1, p.shape[-1], o+1)
+        sns.heatmap(np.round(matHeatAvg[:, :, o]*100), cmap="afmhot_r", linewidth=0.03, vmin=0, vmax=100, square=True, annot=False, cbar=True, fmt='g')
+
+        plt.xticks(0.5+np.array(list(range(len(xlabels)))), xlabels_new, fontsize=3, rotation=90)
+        plt.yticks(0.5+np.array(list(range(len(ylabels)))), ylabels_new, fontsize=3)
+        plt.gca().invert_yaxis()
+        plt.title(intToOut[o])
+
+    plt.tight_layout()
+    savefig("Heatmap_input_to_output", codeSave=codeSave, subfolder="Inter=2/InputToOutput/")
+    plt.close()
+
+def writeInput3D(thetas, p, intToOut, intToFeat, codeSave):
+    pio = thetas[0].dot(thetas[0].dot(thetas[0].dot(p)))
+    pio = np.round(pio*100)
+    txt = ""
+    for o in range(pio.shape[-1]):
+        txt += intToOut[o].upper()+"\n"
+        for i in [i_tmp for _, i_tmp in reversed(sorted(zip(pio[:, :, :, o].sum(axis=(1,2)), list(range(len(pio))))))]:
+            if np.mean(pio[i, :, :, o])<5: continue
+            txt += intToFeat[0][i].upper()+f"({np.round(np.mean(pio[i, :, :, o]))}%)"+"\n"
+            for j in [i_tmp for _, i_tmp in reversed(sorted(zip(pio[i, :, :, o].sum(axis=(1)), list(range(len(pio))))))]:
+                if np.mean(pio[i, j, :, o])<5: continue
+                txt += "-- "+intToFeat[0][j].upper()+f"({np.round(np.mean(pio[i, j, :, o]))}%)"+"\n"
+                for k in [i_tmp for _, i_tmp in reversed(sorted(zip(pio[i, j, :, o], list(range(len(pio))))))]:
+                    if pio[i, j, k, o]<5: continue
+                    txt += "---- "+intToFeat[0][k].upper()+f"({pio[i, j, k, o]}%)"+"\n"
+        txt += "\n\n"
+
+    if "Inter=3" not in os.listdir("Plots/Merovingien"): os.mkdir("Plots/Merovingien/Inter=3/")
+    with open("Plots/Merovingien/Inter=3/"+codeSave+"readmap.txt", "w+", encoding="utf-8") as f:
+        f.write(txt)
 
 try:
     folder = sys.argv[1]
@@ -349,26 +536,36 @@ except Exception as e:
     folder = "Merovingien"
     features = [0]
     DS = [3]
-    nbInterp = [2]
-    output = 1
+    nbInterp = [1]
+    output = 2
     if output==1:
         if nbInterp==[1]:
             nbClus = [3]
         if nbInterp==[2]:
             nbClus = [5]
+        if nbInterp==[3]:
+            nbClus = [7]
     else:
         if nbInterp==[1]:
             nbClus = [5]
         if nbInterp==[2]:
             nbClus = [7]
+        if nbInterp==[3]:
+            nbClus = [9]
     buildData = True
     seuil = 0
     folds = 5
     nbRuns = 10
 list_params = [(features, output, DS, nbInterp, nbClus, buildData, seuil, folds)]
 
-plotRes()
+for output in [1, 2]:
+    for nbInterp in [[1], [2], [3]]:
+        for nbClus in [[3], [4], [5], [6], [7], [8], [9], [10]]:
+            pass
+            list_params.append((features, output, DS, nbInterp, nbClus, buildData, seuil, folds))
 
+
+plotRes()
 for features, output, DS, nbInterp, nbClus, buildData, seuil, folds in list_params:
     tabDicResAvg = []
     for fold in range(folds):
@@ -380,18 +577,31 @@ for features, output, DS, nbInterp, nbClus, buildData, seuil, folds in list_para
 
         codeSave = f"{fold}of{folds}_{features}_{output}_{DS}_{nbInterp}_{nbClus}_"
 
-        run = -1
-        thetas, p, intToOut, intToFeat = read_params(folder, features, output, featToClus, nbClus, fold, run=run)
-        print(intToFeat)
-        print(intToOut)
-        nbOut = p.shape[-1]
+        try:
+            run = -1
+            thetas, p, intToOut, intToFeat = read_params(folder, features, output, featToClus, nbClus, fold, run=run)
+            # Valeur hors limite erreur informatique last digits
+            p[p>1]=1.;p[p<0]=0.
+            for i in range(len(thetas)):
+                thetas[i][thetas[i]>1]=1.
+                thetas[i][thetas[i]<0]=0.
+            print(intToFeat)
+            print(intToOut)
+            nbOut = p.shape[-1]
 
-        writeClusters(thetas, codeSave)
-        plotThetas(thetas, intToFeat, codeSave)
-        if nbInterp==[1]:
-            plotGraph1D(thetas, p, intToOut, intToFeat, codeSave)
-        if nbInterp==[2]:
-            plotGraph2D(thetas, p, intToOut, intToFeat, codeSave)
+            if nbInterp==[1]:
+                plotInput1D(thetas, p, intToOut, intToFeat, codeSave)
+                plotGraph1D(thetas, p, intToOut, intToFeat, codeSave)
+            if nbInterp==[2]:
+                plotInput2D(thetas, p, intToOut, intToFeat, codeSave)
+                plotGraph2D(thetas, p, intToOut, intToFeat, codeSave)
+            if nbInterp==[3]:
+                writeInput3D(thetas, p, intToOut, intToFeat, codeSave)
+
+            writeClusters(thetas, codeSave)
+            plotThetas(thetas, intToFeat, codeSave)
+        except:
+            print("Run manquant")
 
 
 

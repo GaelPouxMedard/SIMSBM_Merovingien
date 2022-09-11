@@ -1,0 +1,107 @@
+Cluster 0
+95.0% - Flèche
+34.0% - Pot
+11.0% - Bol
+9.0% - Contenant du défunt/chambre funéraire
+7.0% - Couteau
+Cluster 1
+88.0% - Étui de peigne
+82.0% - Vêtement
+79.0% - Épingle
+65.0% - Bague
+52.0% - Gobelet
+44.0% - Fourreau
+43.0% - Peigne
+42.0% - Lot de perles (vrac)
+Cluster 2
+96.0% - Œuf
+64.0% - Pot
+63.0% - Faune
+48.0% - Collier
+41.0% - Gobelet
+41.0% - Châtelaine
+31.0% - Ceinture
+19.0% - Scramasaxe
+17.0% - Couteau
+9.0% - Pot verseur
+5.0% - Peigne
+5.0% - Clé
+Cluster 3
+100.0% - Cornet
+100.0% - Cordelière/cingulum
+100.0% - Clou(s)
+100.0% - Lance
+100.0% - Poinçon
+100.0% - Coffre/coffret
+100.0% - Bouteille
+100.0% - Épée
+100.0% - Bouclier
+100.0% - Fiche
+100.0% - Matière première
+100.0% - Forces
+100.0% - Carquois
+100.0% - Récipient
+100.0% - Pincette/pince à épiler
+100.0% - Baudrier d'épée
+100.0% - Chaîne(tte)
+100.0% - Seau
+100.0% - Peigne/étui
+100.0% - Pierre à aiguiser
+100.0% - Cruche
+100.0% - Plat/assiette
+83.0% - Chaussures/jarretières
+56.0% - Lot de perles (vrac)
+56.0% - Pot verseur
+54.0% - Boucle d'oreille
+52.0% - Peigne
+18.0% - Vêtement
+15.0% - Épingle
+11.0% - Fourreau
+7.0% - Gobelet
+Cluster 4
+100.0% - Carafe
+100.0% - Monnaie
+80.0% - Fusaïole
+61.0% - Aumônière/sacoche
+43.0% - Pierre(s) à feu
+41.0% - Fourreau
+29.0% - Scramasaxe
+24.0% - Faune
+17.0% - Chaussures/jarretières
+14.0% - Couteau
+10.0% - Anneau(x) de châtelaine
+10.0% - Contenant du défunt/chambre funéraire
+Cluster 5
+100.0% - Hachoir
+100.0% - Disque en bois de cerf
+100.0% - Pendant/pendentif
+100.0% - Briquet
+35.0% - Bague
+32.0% - Bol
+15.0% - Fibule
+10.0% - Châtelaine
+9.0% - Collier
+8.0% - Étui de peigne
+Cluster 6
+95.0% - Clé
+90.0% - Anneau(x) de châtelaine
+81.0% - Contenant du défunt/chambre funéraire
+69.0% - Ceinture
+57.0% - Pierre(s) à feu
+50.0% - Scramasaxe
+44.0% - Boucle d'oreille
+37.0% - Couteau
+35.0% - Pot verseur
+34.0% - Aumônière/sacoche
+6.0% - Collier
+5.0% - Épingle
+Cluster 7
+100.0% - Lame de tisserand
+100.0% - Perle(s) de châtelaine
+85.0% - Fibule
+57.0% - Bol
+49.0% - Châtelaine
+37.0% - Collier
+24.0% - Couteau
+18.0% - Fusaïole
+14.0% - Faune

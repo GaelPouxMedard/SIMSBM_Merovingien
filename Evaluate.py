@@ -220,6 +220,10 @@ def scores(listTrue, listProbs, label, tabMetricsAll, nbOut, run):
 
     tabMetricsAll[label][run][f"P@{k}"] = metrics.precision_score(trueTopK, probsTopK, labels=labels_considered, average="micro")
 
+    listTrue_flat = np.argpartition(listTrue, -1, axis=1)[:, -1]
+    listProbs_flat = np.argpartition(listProbs, -1, axis=1)[:, -1]
+    tabMetricsAll[label][run][f"Acc@1"] = np.sum((listTrue_flat==listProbs_flat).astype(int))/len(listTrue_flat)
+
     tabMetricsAll[label][run]["AUCROC"] = metrics.roc_auc_score(listTrue, listProbs, labels=labels_considered, average="micro")
     tabMetricsAll[label][run]["AUCPR"] = metrics.average_precision_score(listTrue, listProbs, average="micro")
     tabMetricsAll[label][run]["RankAvgPrec"] = metrics.label_ranking_average_precision_score(listTrue, listProbs)

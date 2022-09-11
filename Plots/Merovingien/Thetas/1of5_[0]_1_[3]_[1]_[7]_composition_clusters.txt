@@ -1,0 +1,155 @@
+Cluster 0
+79.0% - Bouclier
+74.0% - Matière première
+73.0% - Baudrier d'épée
+72.0% - Épée
+60.0% - Chaussures/jarretières
+60.0% - Aumônière/sacoche
+59.0% - Poinçon
+50.0% - Briquet
+45.0% - Fiche
+43.0% - Récipient
+41.0% - Pierre(s) à feu
+31.0% - Hache
+28.0% - Carafe
+26.0% - Pincette/pince à épiler
+22.0% - Monnaie
+20.0% - Fourreau
+18.0% - Lance
+17.0% - Pot
+15.0% - Couteau
+13.0% - Ceinture
+12.0% - Pot verseur
+9.0% - Flèche
+8.0% - Œuf
+7.0% - Lot de perles (vrac)
+5.0% - Faune
+Cluster 1
+50.0% - Récipient
+46.0% - Scramasaxe
+43.0% - Carafe
+37.0% - Flèche
+36.0% - Monnaie
+36.0% - Poinçon
+35.0% - Chaussures/jarretières
+33.0% - Lance
+31.0% - Pot
+30.0% - Éperon
+25.0% - Pincette/pince à épiler
+25.0% - Pierre(s) à feu
+24.0% - Briquet
+23.0% - Couteau
+23.0% - Fourreau
+22.0% - Pot verseur
+19.0% - Baudrier d'épée
+19.0% - Matière première
+18.0% - Hache
+17.0% - Fiche
+16.0% - Fibule
+16.0% - Bouclier
+12.0% - Épée
+10.0% - Peigne
+9.0% - Lot de perles (vrac)
+9.0% - Ceinture
+7.0% - Faune
+6.0% - Aumônière/sacoche
+Cluster 2
+58.0% - Fusaïole
+56.0% - Pendant/pendentif
+55.0% - Clé
+47.0% - Coffre/coffret
+45.0% - Clou(s)
+38.0% - Contenant du défunt/chambre funéraire
+35.0% - Peigne
+34.0% - Lot de perles (vrac)
+31.0% - Anneau(x) de châtelaine
+28.0% - Châtelaine
+25.0% - Collier
+24.0% - Gobelet
+21.0% - Fibule
+20.0% - Faune
+16.0% - Œuf
+10.0% - Monnaie
+9.0% - Pot verseur
+8.0% - Ceinture
+Cluster 3
+60.0% - Épingle
+45.0% - Anneau(x) de châtelaine
+39.0% - Châtelaine
+37.0% - Fusaïole
+37.0% - Contenant du défunt/chambre funéraire
+31.0% - Coffre/coffret
+30.0% - Boucle d'oreille
+27.0% - Faune
+23.0% - Fibule
+23.0% - Œuf
+20.0% - Collier
+19.0% - Couteau
+18.0% - Clou(s)
+18.0% - Pot
+17.0% - Gobelet
+9.0% - Ceinture
+8.0% - Pot verseur
+8.0% - Peigne
+8.0% - Clé
+7.0% - Lot de perles (vrac)
+5.0% - Pendant/pendentif
+Cluster 4
+68.0% - Éperon
+54.0% - Scramasaxe
+54.0% - Flèche
+51.0% - Hache
+49.0% - Fourreau
+49.0% - Pincette/pince à épiler
+49.0% - Lance
+37.0% - Fiche
+34.0% - Pierre(s) à feu
+30.0% - Carafe
+25.0% - Briquet
+23.0% - Couteau
+21.0% - Pot verseur
+16.0% - Épée
+13.0% - Monnaie
+13.0% - Œuf
+12.0% - Ceinture
+8.0% - Baudrier d'épée
+8.0% - Matière première
+7.0% - Aumônière/sacoche
+7.0% - Récipient
+6.0% - Poinçon
+Cluster 5
+66.0% - Boucle d'oreille
+58.0% - Gobelet
+47.0% - Collier
+39.0% - Pendant/pendentif
+38.0% - Clé
+37.0% - Clou(s)
+37.0% - Épingle
+34.0% - Peigne
+32.0% - Châtelaine
+27.0% - Lot de perles (vrac)
+26.0% - Contenant du défunt/chambre funéraire
+25.0% - Anneau(x) de châtelaine
+17.0% - Faune
+15.0% - Fibule
+14.0% - Œuf
+10.0% - Pot verseur
+8.0% - Monnaie
+8.0% - Couteau
+7.0% - Ceinture
+6.0% - Coffre/coffret
+5.0% - Fusaïole
+5.0% - Aumônière/sacoche
+Cluster 6
+43.0% - Ceinture
+24.0% - Œuf
+24.0% - Pot
+23.0% - Faune
+18.0% - Pot verseur
+17.0% - Fibule
+14.0% - Lot de perles (vrac)
+14.0% - Aumônière/sacoche
+13.0% - Coffre/coffret
+10.0% - Monnaie
+8.0% - Couteau
+6.0% - Peigne

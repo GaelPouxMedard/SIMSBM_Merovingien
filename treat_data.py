@@ -36,9 +36,9 @@ with open("Data/data.csv", "r") as f:
         setAge.append(data_line[10])
 
 
-print(np.unique(setObj, return_counts=True))
-print(np.unique(setAge, return_counts=True))
-print(np.unique(setSexe, return_counts=True))
+print(len(set(setObj)), np.unique(setObj, return_counts=True))
+print(len(setAge), np.unique(setAge, return_counts=True))
+print(len(setSexe), np.unique(setSexe, return_counts=True))
 
 tabNumObj = []
 for s in dicData:
@@ -50,13 +50,17 @@ if "Data" not in os.listdir("."):
 featureObj = open("Data/Merovingien/feature_0.txt", "w+", encoding="utf-8")
 featureSexe = open("Data/Merovingien/feature_1.txt", "w+", encoding="utf-8")
 featureAge = open("Data/Merovingien/feature_2.txt", "w+", encoding="utf-8")
+setObj = set()
 for s in dicData:
-    featureObj.write(f"{s}\t{' '.join(dicData[s]['Objets'])}\n")
-    if dicData[s]['Sexe'] != "indéterminé":
+    print(dicData[s]['Objets'])
+    if dicData[s]['Objets'] != []:
+        featureObj.write(f"{s}\t{' '.join(dicData[s]['Objets'])}\n")
+    if dicData[s]['Sexe'] not in ["indéterminé", "-1", ""]:
         featureSexe.write(f"{s}\t{dicData[s]['Sexe']}\n")
-    if not dicData[s]['Classe_age'] in ["nd", "-1"]:
+    if not dicData[s]['Classe_age'] in ["nd", "-1", ""]:
         featureAge.write(f"{s}\t{dicData[s]['Classe_age']}\n")
 
+print(len(setObj))
 featureObj.close()
 featureSexe.close()
 featureAge.close()

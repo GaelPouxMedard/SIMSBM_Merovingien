@@ -1,0 +1,107 @@
+Cluster 0
+100.0% - Pierre(s) à feu
+100.0% - Anneau(x) de châtelaine
+97.0% - Scramasaxe
+90.0% - Aumônière/sacoche
+86.0% - Clé
+85.0% - Ceinture
+85.0% - Contenant du défunt/chambre funéraire
+80.0% - Couteau
+66.0% - Collier
+48.0% - Châtelaine
+43.0% - Faune
+40.0% - Pot
+35.0% - Fusaïole
+24.0% - Œuf
+17.0% - Gobelet
+15.0% - Épingle
+9.0% - Lot de perles (vrac)
+7.0% - Peigne
+Cluster 1
+99.0% - Monnaie
+87.0% - Flèche
+74.0% - Bol
+54.0% - Fusaïole
+45.0% - Pot
+13.0% - Fourreau
+11.0% - Boucle d'oreille
+10.0% - Aumônière/sacoche
+9.0% - Châtelaine
+7.0% - Bague
+6.0% - Gobelet
+Cluster 2
+100.0% - Hachoir
+100.0% - Briquet
+100.0% - Disque en bois de cerf
+100.0% - Pendant/pendentif
+27.0% - Fibule
+26.0% - Bol
+15.0% - Contenant du défunt/chambre funéraire
+14.0% - Clé
+13.0% - Flèche
+11.0% - Collier
+8.0% - Châtelaine
+8.0% - Étui de peigne
+7.0% - Couteau
+7.0% - Ceinture
+6.0% - Bague
+6.0% - Perle(s) de châtelaine
+6.0% - Lame de tisserand
+Cluster 3
+100.0% - Carafe
+90.0% - Étui de peigne
+86.0% - Bague
+81.0% - Vêtement
+74.0% - Épingle
+56.0% - Gobelet
+40.0% - Fourreau
+39.0% - Peigne
+38.0% - Lot de perles (vrac)
+33.0% - Chaussures/jarretières
+Cluster 4
+94.0% - Lame de tisserand
+94.0% - Perle(s) de châtelaine
+73.0% - Fibule
+72.0% - Œuf
+45.0% - Faune
+35.0% - Châtelaine
+35.0% - Pot verseur
+34.0% - Boucle d'oreille
+22.0% - Collier
+15.0% - Pot
+12.0% - Couteau
+11.0% - Fusaïole
+8.0% - Ceinture
+Cluster 5
+100.0% - Cornet
+100.0% - Baudrier d'épée
+100.0% - Pierre à aiguiser
+100.0% - Plat/assiette
+100.0% - Lance
+100.0% - Coffre/coffret
+100.0% - Épée
+100.0% - Bouclier
+100.0% - Matière première
+100.0% - Carquois
+100.0% - Cordelière/cingulum
+100.0% - Forces
+100.0% - Poinçon
+100.0% - Fiche
+100.0% - Récipient
+100.0% - Chaîne(tte)
+100.0% - Peigne/étui
+100.0% - Clou(s)
+100.0% - Pincette/pince à épiler
+100.0% - Seau
+100.0% - Bouteille
+100.0% - Cruche
+67.0% - Chaussures/jarretières
+65.0% - Pot verseur
+54.0% - Lot de perles (vrac)
+53.0% - Peigne
+52.0% - Boucle d'oreille
+46.0% - Fourreau
+21.0% - Gobelet
+19.0% - Vêtement
+11.0% - Épingle
+8.0% - Faune

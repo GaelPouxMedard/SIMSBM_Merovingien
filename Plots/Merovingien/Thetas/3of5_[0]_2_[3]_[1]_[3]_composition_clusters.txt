@@ -1,0 +1,101 @@
+Cluster 0
+100.0% - Carafe
+39.0% - Boucle d'oreille
+34.0% - Coffre/coffret
+27.0% - Pendant/pendentif
+26.0% - Fiche
+21.0% - Baudrier d'épée
+19.0% - Anneau(x) de châtelaine
+16.0% - Lot de perles (vrac)
+12.0% - Couteau
+10.0% - Pierre(s) à feu
+8.0% - Ceinture
+8.0% - Scramasaxe
+7.0% - Flèche
+6.0% - Fourreau
+6.0% - Aumônière/sacoche
+6.0% - Collier
+Cluster 1
+100.0% - Bracelet
+100.0% - Disque en bois de cerf
+39.0% - Briquet
+36.0% - Matière première
+32.0% - Châtelaine
+28.0% - Flèche
+28.0% - Pot
+25.0% - Fibule
+23.0% - Œuf
+23.0% - Scramasaxe
+20.0% - Ceinture
+19.0% - Clou(s)
+18.0% - Couteau
+17.0% - Anneau(x) de châtelaine
+17.0% - Aumônière/sacoche
+17.0% - Collier
+15.0% - Monnaie
+15.0% - Peigne
+15.0% - Pierre(s) à feu
+15.0% - Fourreau
+14.0% - Bol
+14.0% - Fusaïole
+7.0% - Étui de peigne
+6.0% - Faune
+Cluster 2
+100.0% - Carquois
+100.0% - Hache
+100.0% - Épée
+100.0% - Bouclier
+100.0% - Bouteille
+100.0% - Poinçon
+100.0% - Lance
+100.0% - Forces
+100.0% - Plat/assiette
+100.0% - Cornet
+100.0% - Rouelle/plaque de châtelaine
+100.0% - Récipient
+100.0% - Bague
+100.0% - Éperon
+100.0% - Cordelière/cingulum
+100.0% - Pincette/pince à épiler
+100.0% - Morceau de cotte de maille
+100.0% - Chaîne(tte)
+100.0% - Seau
+100.0% - Peigne/étui
+100.0% - Cruche
+100.0% - Perle(s) de châtelaine
+100.0% - Clé
+100.0% - Lame de tisserand
+100.0% - Contenant du défunt/chambre funéraire
+100.0% - Vêtement
+97.0% - Chaussures/jarretières
+97.0% - Pot verseur
+96.0% - Gobelet
+96.0% - Épingle
+93.0% - Faune
+93.0% - Étui de peigne
+86.0% - Fusaïole
+86.0% - Bol
+85.0% - Peigne
+85.0% - Monnaie
+82.0% - Lot de perles (vrac)
+81.0% - Clou(s)
+79.0% - Fourreau
+79.0% - Baudrier d'épée
+77.0% - Collier
+77.0% - Aumônière/sacoche
+77.0% - Œuf
+75.0% - Pierre(s) à feu
+75.0% - Fibule
+74.0% - Fiche
+73.0% - Pendant/pendentif
+72.0% - Ceinture
+69.0% - Scramasaxe
+69.0% - Couteau
+69.0% - Pot
+66.0% - Coffre/coffret
+65.0% - Châtelaine
+65.0% - Flèche
+64.0% - Matière première
+64.0% - Anneau(x) de châtelaine
+61.0% - Briquet
+58.0% - Boucle d'oreille

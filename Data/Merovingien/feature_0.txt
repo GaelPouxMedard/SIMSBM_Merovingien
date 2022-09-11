@@ -2,11 +2,8 @@
 0005	ceinture contenant_du_défunt/chambre_funéraire pot_verseur fusaïole peigne couteau collier ceinture faune œuf faune œuf
 0014	peigne couteau faune faune faune
 0015	baudrier_d'épée ceinture flèche ceinture pot faune faune
-0016	
-0020	
 0024	ceinture
 0025	châtelaine anneau(x)_de_châtelaine rouelle/plaque_de_châtelaine peigne couteau étui_de_peigne pendant/pendentif pendant/pendentif pendant/pendentif lot_de_perles_(vrac) boucle_d'oreille boucle_d'oreille
-0026	
 0033	pot
 0035	boucle_d'oreille pot ceinture scramasaxe aumônière/sacoche pierre(s)_à_feu
 0036	scramasaxe fourreau couteau fourreau ceinture pot pot œuf peigne ceinture châtelaine couteau bracelet
@@ -197,7 +194,6 @@
 0147	pot ceinture épée fourreau aumônière/sacoche couteau lance bouclier
 0149	lance bouclier bol épée fourreau ceinture aumônière/sacoche couteau
 0155	collier
-0156	
 0157	couteau
 0159	gobelet fusaïole bol faune bassin fibule fibule collier collier fibule fibule châtelaine couteau anneau(x)_de_châtelaine forces couteau pendant/pendentif aumônière/sacoche épingle pierre(s)_à_feu briquet chaussures/jarretières
 0161	gobelet ceinture carquois flèche flèche flèche flèche scramasaxe aumônière/sacoche pierre(s)_à_feu monnaie couteau fourreau

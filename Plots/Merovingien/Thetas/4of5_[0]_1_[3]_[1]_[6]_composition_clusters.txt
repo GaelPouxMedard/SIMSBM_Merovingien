@@ -1,0 +1,110 @@
+Cluster 0
+85.0% - Épingle
+69.0% - Anneau(x) de châtelaine
+65.0% - Coffre/coffret
+55.0% - Peigne
+54.0% - Boucle d'oreille
+42.0% - Pendant/pendentif
+41.0% - Fibule
+35.0% - Contenant du défunt/chambre funéraire
+35.0% - Collier
+31.0% - Châtelaine
+31.0% - Gobelet
+29.0% - Chaussures/jarretières
+28.0% - Clé
+27.0% - Faune
+26.0% - Clou(s)
+26.0% - Œuf
+24.0% - Fusaïole
+21.0% - Ceinture
+20.0% - Couteau
+18.0% - Pot
+10.0% - Lot de perles (vrac)
+8.0% - Pot verseur
+6.0% - Monnaie
+Cluster 1
+25.0% - Aumônière/sacoche
+24.0% - Pot verseur
+15.0% - Œuf
+14.0% - Pot
+12.0% - Couteau
+10.0% - Chaussures/jarretières
+9.0% - Faune
+Cluster 2
+26.0% - Aumônière/sacoche
+23.0% - Monnaie
+21.0% - Pot
+11.0% - Chaussures/jarretières
+10.0% - Ceinture
+10.0% - Pot verseur
+10.0% - Collier
+6.0% - Faune
+Cluster 3
+100.0% - Carafe
+100.0% - Pierre(s) à feu
+99.0% - Flèche
+93.0% - Briquet
+90.0% - Épée
+87.0% - Bouclier
+82.0% - Scramasaxe
+69.0% - Poinçon
+66.0% - Fiche
+61.0% - Récipient
+57.0% - Lance
+37.0% - Pincette/pince à épiler
+35.0% - Ceinture
+33.0% - Cordelière/cingulum
+30.0% - Pot verseur
+30.0% - Pot
+29.0% - Monnaie
+27.0% - Hache
+25.0% - Couteau
+19.0% - Fourreau
+17.0% - Aumônière/sacoche
+12.0% - Faune
+10.0% - Éperon
+Cluster 4
+90.0% - Lot de perles (vrac)
+76.0% - Fusaïole
+74.0% - Clou(s)
+72.0% - Clé
+69.0% - Gobelet
+69.0% - Châtelaine
+65.0% - Contenant du défunt/chambre funéraire
+59.0% - Fibule
+58.0% - Pendant/pendentif
+50.0% - Collier
+50.0% - Chaussures/jarretières
+46.0% - Boucle d'oreille
+43.0% - Peigne
+38.0% - Faune
+35.0% - Coffre/coffret
+31.0% - Anneau(x) de châtelaine
+25.0% - Ceinture
+23.0% - Œuf
+15.0% - Épingle
+15.0% - Couteau
+12.0% - Pot verseur
+8.0% - Monnaie
+6.0% - Aumônière/sacoche
+Cluster 5
+90.0% - Éperon
+81.0% - Fourreau
+73.0% - Hache
+67.0% - Cordelière/cingulum
+63.0% - Pincette/pince à épiler
+43.0% - Lance
+39.0% - Récipient
+34.0% - Fiche
+34.0% - Monnaie
+32.0% - Œuf
+31.0% - Poinçon
+26.0% - Aumônière/sacoche
+26.0% - Couteau
+18.0% - Scramasaxe
+15.0% - Pot verseur
+15.0% - Pot
+13.0% - Bouclier
+10.0% - Épée
+8.0% - Faune
+7.0% - Briquet

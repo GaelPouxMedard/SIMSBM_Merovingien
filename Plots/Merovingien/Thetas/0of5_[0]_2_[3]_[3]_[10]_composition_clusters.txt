@@ -1,0 +1,105 @@
+Cluster 0
+100.0% - Monnaie
+87.0% - Fusaïole
+68.0% - Fourreau
+62.0% - Bol
+51.0% - Contenant du défunt/chambre funéraire
+46.0% - Pierre(s) à feu
+41.0% - Aumônière/sacoche
+35.0% - Scramasaxe
+12.0% - Pot
+11.0% - Couteau
+6.0% - Faune
+Cluster 1
+100.0% - Carafe
+85.0% - Étui de peigne
+83.0% - Épingle
+35.0% - Peigne
+34.0% - Lot de perles (vrac)
+25.0% - Chaussures/jarretières
+21.0% - Fourreau
+Cluster 2
+100.0% - Lame de tisserand
+100.0% - Perle(s) de châtelaine
+93.0% - Fibule
+24.0% - Châtelaine
+21.0% - Collier
+15.0% - Étui de peigne
+10.0% - Fusaïole
+Cluster 3
+100.0% - Gobelet
+83.0% - Pot verseur
+81.0% - Vêtement
+22.0% - Faune
+20.0% - Aumônière/sacoche
+Cluster 4
+100.0% - Clou(s)
+100.0% - Chaîne(tte)
+100.0% - Matière première
+100.0% - Forces
+100.0% - Carquois
+100.0% - Cornet
+100.0% - Bouteille
+100.0% - Coffre/coffret
+100.0% - Épée
+100.0% - Baudrier d'épée
+100.0% - Cordelière/cingulum
+100.0% - Seau
+100.0% - Poinçon
+100.0% - Peigne/étui
+100.0% - Lance
+100.0% - Bouclier
+100.0% - Récipient
+100.0% - Fiche
+100.0% - Pierre à aiguiser
+100.0% - Plat/assiette
+100.0% - Cruche
+100.0% - Pincette/pince à épiler
+75.0% - Chaussures/jarretières
+66.0% - Lot de perles (vrac)
+61.0% - Peigne
+53.0% - Boucle d'oreille
+19.0% - Vêtement
+17.0% - Épingle
+12.0% - Fourreau
+9.0% - Pot verseur
+Cluster 5
+100.0% - Flèche
+43.0% - Contenant du défunt/chambre funéraire
+16.0% - Pot
+15.0% - Clé
+13.0% - Châtelaine
+7.0% - Couteau
+Cluster 6
+100.0% - Bague
+73.0% - Pot
+51.0% - Collier
+24.0% - Ceinture
+17.0% - Œuf
+14.0% - Couteau
+Cluster 7
+100.0% - Anneau(x) de châtelaine
+85.0% - Clé
+76.0% - Œuf
+71.0% - Faune
+63.0% - Châtelaine
+26.0% - Collier
+18.0% - Couteau
+11.0% - Scramasaxe
+5.0% - Contenant du défunt/chambre funéraire
+Cluster 8
+70.0% - Ceinture
+54.0% - Pierre(s) à feu
+45.0% - Scramasaxe
+44.0% - Couteau
+42.0% - Boucle d'oreille
+39.0% - Aumônière/sacoche
+9.0% - Pot verseur
+Cluster 9
+100.0% - Hachoir
+100.0% - Disque en bois de cerf
+100.0% - Pendant/pendentif
+100.0% - Briquet
+38.0% - Bol
+7.0% - Fibule
+6.0% - Boucle d'oreille

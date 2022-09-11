@@ -1,0 +1,103 @@
+Cluster 0
+100.0% - Pendant/pendentif
+100.0% - Bracelet
+96.0% - Fibule
+95.0% - Bague
+82.0% - Châtelaine
+81.0% - Anneau(x) de châtelaine
+75.0% - Hachoir
+67.0% - Collier
+56.0% - Pot
+51.0% - Peigne
+45.0% - Œuf
+41.0% - Bol
+27.0% - Étui de peigne
+24.0% - Perle(s) de châtelaine
+24.0% - Lame de tisserand
+19.0% - Couteau
+18.0% - Matière première
+17.0% - Faune
+17.0% - Fusaïole
+14.0% - Ceinture
+11.0% - Clou(s)
+9.0% - Pot verseur
+5.0% - Aumônière/sacoche
+Cluster 1
+90.0% - Baudrier d'épée
+85.0% - Boucle d'oreille
+84.0% - Coffre/coffret
+77.0% - Fiche
+53.0% - Lot de perles (vrac)
+30.0% - Couteau
+21.0% - Ceinture
+20.0% - Pierre(s) à feu
+19.0% - Anneau(x) de châtelaine
+16.0% - Épingle
+Cluster 2
+100.0% - Monnaie
+97.0% - Flèche
+94.0% - Scramasaxe
+93.0% - Clé
+86.0% - Fourreau
+84.0% - Clou(s)
+82.0% - Matière première
+78.0% - Fusaïole
+78.0% - Contenant du défunt/chambre funéraire
+76.0% - Lame de tisserand
+76.0% - Perle(s) de châtelaine
+73.0% - Aumônière/sacoche
+65.0% - Pierre(s) à feu
+59.0% - Bol
+51.0% - Couteau
+43.0% - Ceinture
+27.0% - Gobelet
+25.0% - Hachoir
+19.0% - Vêtement
+18.0% - Pot
+9.0% - Œuf
+8.0% - Faune
+5.0% - Pot verseur
+Cluster 3
+100.0% - Rouelle/plaque de châtelaine
+100.0% - Carquois
+100.0% - Hache
+100.0% - Éperon
+100.0% - Briquet
+100.0% - Poinçon
+100.0% - Épée
+100.0% - Pincette/pince à épiler
+100.0% - Cordelière/cingulum
+100.0% - Bouclier
+100.0% - Récipient
+100.0% - Lance
+100.0% - Chaussures/jarretières
+100.0% - Cruche
+100.0% - Peigne/étui
+100.0% - Seau
+100.0% - Pierre à aiguiser
+100.0% - Forces
+100.0% - Bouteille
+100.0% - Chaîne(tte)
+100.0% - Morceau de cotte de maille
+86.0% - Pot verseur
+77.0% - Vêtement
+77.0% - Épingle
+75.0% - Faune
+73.0% - Étui de peigne
+72.0% - Gobelet
+49.0% - Peigne
+46.0% - Œuf
+45.0% - Lot de perles (vrac)
+29.0% - Collier
+25.0% - Pot
+23.0% - Fiche
+22.0% - Ceinture
+18.0% - Aumônière/sacoche
+17.0% - Contenant du défunt/chambre funéraire
+16.0% - Coffre/coffret
+15.0% - Pierre(s) à feu
+14.0% - Châtelaine
+11.0% - Fourreau
+10.0% - Boucle d'oreille
+10.0% - Baudrier d'épée
+7.0% - Clé
