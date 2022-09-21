@@ -343,7 +343,7 @@ def EMLoop(alpha, featToClus, popFeat, nbOutputs, nbNatures, nbClus, maxCnt, pre
         #print(i)
         if num_iterations%10==0:  # Computes the likelihood and possibly save the results every 10 iterations
             L = likelihood(alpha, Pfo)
-            print(f"Run {run} - Iter {num_iterations} - Feat {features} - Interps {nbInterp} - L={L}")
+            print(f"Run {run} - Iter {num_iterations} - Feat {features} - Interps {nbInterp} - Clus {nbClus} - Fold {fold+1}/{folds} - L={L}")
 
             if ((L - prevL) / abs(L)) < prec:
                 cnt += num_iterations-prec_iteration
@@ -454,7 +454,6 @@ if __name__ == "__main__":
 
     prec = 1e-5  # Stopping threshold : when relative variation of the likelihood over 10 steps is < to prec
     maxCnt = 30  # Number of consecutive times the relative variation is lesser than prec for the algorithm to stop
-    saveToFile = True
     propTrainingSet = 0.7
     lim = -1
 

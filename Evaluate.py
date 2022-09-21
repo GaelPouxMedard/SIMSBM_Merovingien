@@ -25,6 +25,8 @@ def readMatrix(filename):
 def read_params(folder, features, output, featToClus, nbClus, fold, folds, run=-1):
     s=""
     folderParams = "Output/" + folder + "/"
+    if run == -1:
+        folderParams += "Final/"
 
     codeT=""
     for i in featToClus:
@@ -193,23 +195,23 @@ def buildArraysProbs(folder, featuresCons, outputCons, DS, thetas, p, featToClus
 
 
 
-def scores(listTrue, listProbs, label, tabMetricsAll, nbOut, run):
+def scores(listTrue, listProbs, label, tabMetricsAll, nbOut, fold):
     labels_considered = np.where(np.sum(listTrue, axis=0)!=0)[0]
     nanmask = np.isnan(listProbs)
     if np.any(nanmask):
         print(f"CAREFUL !!!!! {np.sum(nanmask.astype(int))} NANs IN PROBA !!!")
         listProbs[nanmask] = 0
     if label not in tabMetricsAll: tabMetricsAll[label]={}
-    if run not in tabMetricsAll[label]: tabMetricsAll[label][run]={}
+    if fold not in tabMetricsAll[label]: tabMetricsAll[label][fold]={}
 
-    tabMetricsAll[label][run]["F1"], tabMetricsAll[label][run]["Acc"] = 0, 0
+    tabMetricsAll[label][fold]["F1"], tabMetricsAll[label][fold]["Acc"] = 0, 0
     for thres in np.linspace(0, 1, 1001):
         F1 = metrics.f1_score(listTrue, (listProbs>thres).astype(int), labels=labels_considered, average="micro")
         acc = metrics.accuracy_score(listTrue, (listProbs>thres).astype(int))
-        if F1 > tabMetricsAll[label][run]["F1"]:
-            tabMetricsAll[label][run]["F1"] = F1
-        if acc > tabMetricsAll[label][run]["Acc"]:
-            tabMetricsAll[label][run]["Acc"] = acc
+        if F1 > tabMetricsAll[label][fold]["F1"]:
+            tabMetricsAll[label][fold]["F1"] = F1
+        if acc > tabMetricsAll[label][fold]["Acc"]:
+            tabMetricsAll[label][fold]["Acc"] = acc
 
     k = 1  # Si k=1, sklearn considère les 0 et 1 comme des classes, mais de fait on prédit jamais 0 dans un P@k...
     topk = np.argpartition(listProbs, -k, axis=1)[:, -k:]
@@ -218,21 +220,21 @@ def scores(listTrue, listProbs, label, tabMetricsAll, nbOut, run):
         probsTopK[row][topk[row]] = 1.
     trueTopK = listTrue
 
-    tabMetricsAll[label][run][f"P@{k}"] = metrics.precision_score(trueTopK, probsTopK, labels=labels_considered, average="micro")
+    tabMetricsAll[label][fold][f"P@{k}"] = metrics.precision_score(trueTopK, probsTopK, labels=labels_considered, average="micro")
 
     listTrue_flat = np.argpartition(listTrue, -1, axis=1)[:, -1]
     listProbs_flat = np.argpartition(listProbs, -1, axis=1)[:, -1]
-    tabMetricsAll[label][run][f"Acc@1"] = np.sum((listTrue_flat==listProbs_flat).astype(int))/len(listTrue_flat)
+    tabMetricsAll[label][fold][f"Acc@1"] = np.sum((listTrue_flat==listProbs_flat).astype(int))/len(listTrue_flat)
 
-    tabMetricsAll[label][run]["AUCROC"] = metrics.roc_auc_score(listTrue, listProbs, labels=labels_considered, average="micro")
-    tabMetricsAll[label][run]["AUCPR"] = metrics.average_precision_score(listTrue, listProbs, average="micro")
-    tabMetricsAll[label][run]["RankAvgPrec"] = metrics.label_ranking_average_precision_score(listTrue, listProbs)
+    tabMetricsAll[label][fold]["AUCROC"] = metrics.roc_auc_score(listTrue, listProbs, labels=labels_considered, average="micro")
+    tabMetricsAll[label][fold]["AUCPR"] = metrics.average_precision_score(listTrue, listProbs, average="micro")
+    tabMetricsAll[label][fold]["RankAvgPrec"] = metrics.label_ranking_average_precision_score(listTrue, listProbs)
     c=metrics.coverage_error(listTrue, listProbs)
-    tabMetricsAll[label][run]["CovErr"] = c-1
-    tabMetricsAll[label][run]["CovErrNorm"] = (c-1)/nbOut
+    tabMetricsAll[label][fold]["CovErr"] = c-1
+    tabMetricsAll[label][fold]["CovErrNorm"] = (c-1)/nbOut
 
-    print("\t".join(map(str, tabMetricsAll[label][run].keys())).expandtabs(20))
-    print("\t".join(map(str, np.round(list(tabMetricsAll[label][run].values()), 4))).expandtabs(20))
+    print("\t".join(map(str, tabMetricsAll[label][fold].keys())).expandtabs(20))
+    print("\t".join(map(str, np.round(list(tabMetricsAll[label][fold].values()), 4))).expandtabs(20))
 
     return tabMetricsAll
 
@@ -243,26 +245,26 @@ def saveResults(tabMetricsAll, folder, features, output, DS, nbInterp, nbClus, f
 
     dicResAvg = {}
     if averaged:
-        fAvg = open("Results/" + folder + f"/_{fold}of{folds}_{features}_{output}_{DS}_{nbInterp}_{nbClus}_Avg_Results.txt", "w+")
-        fStd = open("Results/" + folder + f"/_{fold}of{folds}_{features}_{output}_{DS}_{nbInterp}_{nbClus}_Std_Results.txt", "w+")
-        fSem = open("Results/" + folder + f"/_{fold}of{folds}_{features}_{output}_{DS}_{nbInterp}_{nbClus}_Sem_Results.txt", "w+")
+        fAvg = open("Results/" + folder + f"/_{features}_{output}_{DS}_{nbInterp}_{nbClus}_Avg_Results.txt", "w+")
+        fStd = open("Results/" + folder + f"/_{features}_{output}_{DS}_{nbInterp}_{nbClus}_Std_Results.txt", "w+")
+        fSem = open("Results/" + folder + f"/_{features}_{output}_{DS}_{nbInterp}_{nbClus}_Sem_Results.txt", "w+")
         fstPass = True
         for label in tabMetricsAll:
-            dicResAllRuns = {}
+            dicResAllFolds = {}
             dicResAvg = {}
             dicResStd = {}
             dicResSem = {}
-            for run in tabMetricsAll[label]:
-                for metric in tabMetricsAll[label][run]:
-                    if metric not in dicResAllRuns: dicResAllRuns[metric] = []
+            for fold in tabMetricsAll[label]:
+                for metric in tabMetricsAll[label][fold]:
+                    if metric not in dicResAllFolds: dicResAllFolds[metric] = []
 
-                    dicResAllRuns[metric].append(tabMetricsAll[label][run][metric])
+                    dicResAllFolds[metric].append(tabMetricsAll[label][fold][metric])
 
             if fstPass:
                 fAvg.write("\t")
                 fStd.write("\t")
                 fSem.write("\t")
-                for metric in dicResAllRuns:
+                for metric in dicResAllFolds:
                     fAvg.write(metric+"\t")
                     fStd.write(metric+"\t")
                     fSem.write(metric+"\t")
@@ -274,10 +276,10 @@ def saveResults(tabMetricsAll, folder, features, output, DS, nbInterp, nbClus, f
             fAvg.write(label+"\t")
             fStd.write(label+"\t")
             fSem.write(label+"\t")
-            for metric in dicResAllRuns:
-                dicResAvg[metric] = np.mean(dicResAllRuns[metric])
-                dicResStd[metric] = np.std(dicResAllRuns[metric])
-                dicResSem[metric] = sem(dicResAllRuns[metric])
+            for metric in dicResAllFolds:
+                dicResAvg[metric] = np.mean(dicResAllFolds[metric])
+                dicResStd[metric] = np.std(dicResAllFolds[metric])
+                dicResSem[metric] = sem(dicResAllFolds[metric])
 
                 fAvg.write("%.4f\t" % (dicResAvg[metric]))
                 fStd.write("%.4f\t" % (dicResStd[metric]))
@@ -291,32 +293,34 @@ def saveResults(tabMetricsAll, folder, features, output, DS, nbInterp, nbClus, f
 
     if not os.path.exists("Results/" + folder + "/"):
         os.makedirs("Results/" + folder + "/")
-    with open("Results/" + folder + f"/{fold}of{folds}_{txtFin}{features}_{output}_{DS}_{nbInterp}_{nbClus}_Results.txt", "w+") as f:
+    with open("Results/" + folder + f"/{txtFin}{features}_{output}_{DS}_{nbInterp}_{nbClus}_Results.txt", "w+") as f:
         firstPassage = True
         for label in sorted(list(tabMetricsAll.keys()), key=lambda x: "".join(list(reversed(x)))):
             if firstPassage:
-                f.write("\trun\t")
-                for run in tabMetricsAll[label]:
-                    for metric in tabMetricsAll[label][run]:
+                f.write("\tfold\t")
+                for fold in tabMetricsAll[label]:
+                    for metric in tabMetricsAll[label][fold]:
                         f.write(metric+"\t")
                     f.write("\n")
                     firstPassage = False
                     break
 
-            for run in tabMetricsAll[label]:
-                f.write(label+"\t"+str(run)+"\t")
-                for metric in tabMetricsAll[label][run]:
-                    f.write("%.4f\t" % (tabMetricsAll[label][run][metric]))
+            for fold in tabMetricsAll[label]:
+                f.write(label+"\t"+str(fold)+"\t")
+                for metric in tabMetricsAll[label][fold]:
+                    f.write("%.4f\t" % (tabMetricsAll[label][fold][metric]))
                 f.write("\n")
                 if printRes:
-                    print(label + " " + str(tabMetricsAll[label][run]))
+                    print(label + " " + str(tabMetricsAll[label][fold]))
 
     return dicResAvg
 
 def evaluate(args):
-    folder, features, output, DS, nbInterp, nbClus, buildData, seuil, folds, nbRuns = args
+    folder, features, output, DS, nbInterp, nbClus, seuil, folds, nbRuns = args
 
     tabDicResAvg = []
+    tabMetricsAll = {}
+    run = -1
     for fold in range(folds):
         featToClus = []
         for iter, interp in enumerate(nbInterp):
@@ -324,18 +328,16 @@ def evaluate(args):
                 featToClus.append(iter)
         featToClus = np.array(featToClus, dtype=int)
 
-        tabMetricsAll = {}
-        for run in range(nbRuns):
-            print(f"Scores SIMSBM_{nbInterp} - Fold {fold} - Run {run}")
-            try:
-                thetas, p = read_params(folder, features, output, featToClus, nbClus, fold, folds, run=run)
-            except Exception as e:
-                print("Run not found", e)
-                continue
-            nbOut = p.shape[-1]
+        print(f"Scores SIMSBM_{nbInterp} - Fold {fold} - Run {run}")
+        try:
+            thetas, p = read_params(folder, features, output, featToClus, nbClus, fold, folds, run=run)
+        except Exception as e:
+            print("Run not found", e)
+            continue
+        nbOut = p.shape[-1]
 
-            listTrue, listProbs = buildArraysProbs(folder, features, output, DS, thetas, p, featToClus, nbInterp, fold, folds)
-            tabMetricsAll = scores(listTrue, listProbs, f"SIMSBM_{nbInterp}", tabMetricsAll, nbOut, run)
+        listTrue, listProbs = buildArraysProbs(folder, features, output, DS, thetas, p, featToClus, nbInterp, fold, folds)
+        tabMetricsAll = scores(listTrue, listProbs, f"SIMSBM_{nbInterp}", tabMetricsAll, nbOut, fold)
 
         dicResAvg = saveResults(tabMetricsAll, folder, features, output, DS, nbInterp, nbClus, fold, folds, printRes=False, final=False, averaged=True)
         tabDicResAvg.append(dicResAvg)
@@ -351,7 +353,18 @@ def evaluate(args):
     if len(arrRes)!=0:
         print("\t".join(map(str, np.round(np.mean(arrRes, axis=0), 4))).expandtabs(20))
 
+def evaluate_all():
+    from run_all import folder, features, DS, folds, nbRuns, list_output, list_nbInterp, list_nbClus, prec, maxCnt, lim, seuil, propTrainingSet, num_processes
+    list_params = []
 
+    for output in list_output:
+        for nbInterp in list_nbInterp:
+            for nbClus in list_nbClus:
+                list_params.append((features, output, DS, nbInterp, nbClus, seuil, folds))
+
+    for features, output, DS, nbInterp, nbClus, seuil, folds in list_params:
+        args = (folder, features, output, DS, nbInterp, nbClus, seuil, folds, nbRuns)
+        evaluate(args)
 
 if __name__=="__main__":
     try:
@@ -386,13 +399,12 @@ if __name__=="__main__":
                 nbClus = [7]
             elif nbInterp==[2]:
                 nbClus = [5]
-        buildData = True
         seuil = 0
         folds = 5
         nbRuns = 100
-    list_params = [(features, output, DS, nbInterp, nbClus, buildData, seuil, folds)]
+        list_params = [(features, output, DS, nbInterp, nbClus, seuil, folds)]
 
-    for features, output, DS, nbInterp, nbClus, buildData, seuil, folds in list_params:
-        args = (folder, features, output, DS, nbInterp, nbClus, buildData, seuil, folds, nbRuns)
-        evaluate(args)
+        for features, output, DS, nbInterp, nbClus, seuil, folds in list_params:
+            args = (folder, features, output, DS, nbInterp, nbClus, seuil, folds, nbRuns)
+            evaluate(args)
 

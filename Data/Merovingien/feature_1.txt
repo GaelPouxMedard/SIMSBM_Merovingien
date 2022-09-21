@@ -1,13 +1,10 @@
 0004	masculin
-0005	féminin
-0014	féminin
-0024	féminin
-0033	masculin
 0058	masculin
 0075	masculin
+0089	masculin
 0093	masculin
 0096	masculin
-0101	féminin
+0100	masculin
 1001	masculin
 1005	masculin
 1008	masculin
@@ -23,10 +20,10 @@
 2079	masculin
 0046	masculin
 0050	féminin
-0054	féminin
+0054	masculin
 0059	féminin
 0061	masculin
-0064	féminin
+0064	masculin
 0065	masculin
 0083	féminin
 1002	féminin
@@ -49,7 +46,6 @@
 1049	masculin
 1061	féminin
 1084	féminin
-0003	féminin
 0006	féminin
 0186	féminin
 0291	féminin
@@ -57,3 +53,8 @@
 0435	masculin
 0535	féminin
 0660	masculin
+0112	féminin
+0027	masculin
+0029	masculin
+0037	féminin
+0038	masculin

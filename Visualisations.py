@@ -28,7 +28,7 @@ def readMatrix(filename):
             new_data = np.loadtxt(filename).reshape(dims)
         return new_data
 
-def read_params(folder, features, output, featToClus, nbClus, fold, run=-1):
+def read_params(folder, features, output, featToClus, nbClus, DS, fold, folds, run=-1):
     s=""
     folderParams = "Output/" + folder + "/"
 
@@ -71,6 +71,8 @@ def read_params(folder, features, output, featToClus, nbClus, fold, run=-1):
 
 def savefig(name, codeSave="", subfolder=""):
     folder = "Plots/Merovingien/"
+    if "Plots" not in os.listdir("./"): os.mkdir("./Plots")
+    if "Merovingien" not in os.listdir("./Plots/"): os.mkdir("./Plots/Merovingien/")
     if subfolder !="":
         curfol = folder
         for fol in subfolder.split("/"):
@@ -86,7 +88,7 @@ def findClusters(mat):
     cluster.fit_predict(mat)
     return cluster.labels_
 
-def writeClusters(thetas, codeSave):
+def writeClusters(thetas, codeSave, intToFeat):
     if "Thetas" not in os.listdir("Plots/Merovingien"): os.mkdir("Plots/Merovingien/Thetas/")
     with open(f"Plots/Merovingien/Thetas/{codeSave}composition_clusters.txt", "w+", encoding="utf-8") as f:
         for num_clus, k in enumerate(thetas[0].T):
@@ -202,28 +204,32 @@ def readRes():
 
     metricsToExclude = ["CovErr", "CovErrNorm", "Acc", "P@1", "RankAvgPrec"]
 
-    dicAvg, dicStd = {}, {}
-    matAvg, matStd = [], []
+    dicAvg, dicStd, dicSem = {}, {}, {}
+    matAvg, matStd, matSem = [], [], []
     for file in files:
         if file[0]!="_": continue
         if "Avg_Results" not in file: continue
         
         params = file.split("_")
-        fold, features, output, DS, nbInterp, nbClus = params[1:7]
+        features, output, DS, nbInterp, nbClus = params[1:6]
 
         if features not in dicAvg: dicAvg[features]={}
         if output not in dicAvg: dicAvg[features][output]={}
         if DS not in dicAvg[features][output]: dicAvg[features][output][DS]={}
         if nbInterp not in dicAvg[features][output][DS]: dicAvg[features][output][DS][nbInterp]={}
         if nbClus not in dicAvg[features][output][DS][nbInterp]: dicAvg[features][output][DS][nbInterp][nbClus]={}
-        if fold not in dicAvg[features][output][DS][nbInterp][nbClus]: dicAvg[features][output][DS][nbInterp][nbClus][fold]={}
 
         if features not in dicStd: dicStd[features]={}
         if output not in dicStd: dicStd[features][output]={}
         if DS not in dicStd[features][output]: dicStd[features][output][DS]={}
         if nbInterp not in dicStd[features][output][DS]: dicStd[features][output][DS][nbInterp]={}
         if nbClus not in dicStd[features][output][DS][nbInterp]: dicStd[features][output][DS][nbInterp][nbClus]={}
-        if fold not in dicStd[features][output][DS][nbInterp][nbClus]: dicStd[features][output][DS][nbInterp][nbClus][fold]={}
+        
+        if features not in dicSem: dicSem[features]={}
+        if output not in dicSem: dicSem[features][output]={}
+        if DS not in dicSem[features][output]: dicSem[features][output][DS]={}
+        if nbInterp not in dicSem[features][output][DS]: dicSem[features][output][DS][nbInterp]={}
+        if nbClus not in dicSem[features][output][DS][nbInterp]: dicSem[features][output][DS][nbInterp][nbClus]={}
 
 
         with open(folder + file, 'r') as f:
@@ -232,8 +238,8 @@ def readRes():
 
             for lab, res in zip(labels[1:], results[1:]):
                 if res == '' or lab in metricsToExclude: continue
-                dicAvg[features][output][DS][nbInterp][nbClus][fold][lab] = float(res)
-                matAvg.append([fold, features, output, DS, nbInterp, nbClus, lab, float(res)])
+                dicAvg[features][output][DS][nbInterp][nbClus][lab] = float(res)
+                matAvg.append([features, output, DS, nbInterp, nbClus, lab, float(res)])
 
         with open(folder + file.replace("Avg", "Std"), 'r') as f:
             labels = f.readline().replace("\n", "").split("\t")
@@ -241,42 +247,54 @@ def readRes():
 
             for lab, res in zip(labels[1:], results[1:]):
                 if res == '' or lab in metricsToExclude: continue
-                dicStd[features][output][DS][nbInterp][nbClus][fold][lab] = float(res)
-                matStd.append([fold, features, output, DS, nbInterp, nbClus, lab, float(res)])
+                dicStd[features][output][DS][nbInterp][nbClus][lab] = float(res)
+                matStd.append([features, output, DS, nbInterp, nbClus, lab, float(res)])
 
-    return np.array(matAvg, dtype=object), np.array(matStd, dtype=object)
+        with open(folder + file.replace("Avg", "Sem"), 'r') as f:  # Bc déjà changé avant
+            labels = f.readline().replace("\n", "").split("\t")
+            results = f.readline().replace("\n", "").split("\t")
+
+            for lab, res in zip(labels[1:], results[1:]):
+                if res == '' or lab in metricsToExclude: continue
+                dicSem[features][output][DS][nbInterp][nbClus][lab] = float(res)
+                matSem.append([features, output, DS, nbInterp, nbClus, lab, float(res)])
+
+    return np.array(matAvg, dtype=object), np.array(matStd, dtype=object), np.array(matSem, dtype=object)
 
 def plotRes():
-    matAvg, matStd = readRes()
+    matAvg, matStd, matSem = readRes()
 
-    names = ["fold", "features", "output", "DS", "nbInterp", "nbClus"]
-    for whatToPlot in [[4, 5], [0], [4], [5]]:
+    names = ["features", "output", "DS", "nbInterp", "nbClus"]
+    for whatToPlot in [[3, 4], [3], [4]]:
         dicToPlotx = {}
         dicToPlotAvg = {}
         dicToPlotStd = {}
+        dicToPlotSem = {}
 
-        for val_base, err in zip(matAvg, matStd):
+        for val_base, std, sem in zip(matAvg, matStd, matSem):
             valName = val_base.copy()
             val = val_base.copy()
             for wt in range(len(whatToPlot)):
-                if names[whatToPlot[wt]]=="fold": val[whatToPlot[wt]]=val[whatToPlot[wt]].split("of")[0]
                 valName[whatToPlot[wt]] = "All"
 
-            redKey = f"{valName[0]}_{valName[1]}_{valName[2]}_{valName[3]}_{valName[4]}_{valName[5]}_"
+            redKey = f"{valName[0]}_{valName[1]}_{valName[2]}_{valName[3]}_{valName[4]}_"
 
             if redKey not in dicToPlotAvg:
                 dicToPlotx[redKey] = {}
                 dicToPlotAvg[redKey] = {}
                 dicToPlotStd[redKey] = {}
-            if val[-2] not in dicToPlotx[redKey]:
+                dicToPlotSem[redKey] = {}
+            if val[-2] not in dicToPlotx[redKey]:  # -2 = label
                 dicToPlotx[redKey][val[-2]] = []
                 dicToPlotAvg[redKey][val[-2]] = []
                 dicToPlotStd[redKey][val[-2]] = []
+                dicToPlotSem[redKey][val[-2]] = []
 
             coord = tuple([float(val[whatToPlot[wt]].replace("]", "").replace("[", "")) for wt in range(len(whatToPlot))])
             dicToPlotx[redKey][val[-2]].append(coord)
             dicToPlotAvg[redKey][val[-2]].append(val[-1])
-            dicToPlotStd[redKey][val[-2]].append(err[-1])
+            dicToPlotStd[redKey][val[-2]].append(std[-1])
+            dicToPlotSem[redKey][val[-2]].append(sem[-1])
 
         if len(whatToPlot)==1:
             for redKey in dicToPlotx:
@@ -285,28 +303,33 @@ def plotRes():
                     dicToPlotAvg[redKey][label] = np.array([x for _, x in sorted(zip(dicToPlotx[redKey][label], dicToPlotAvg[redKey][label]))])
                     dicToPlotStd[redKey][label] = np.array([x for _, x in sorted(zip(dicToPlotx[redKey][label], dicToPlotStd[redKey][label]))])
                     dicToPlotx[redKey][label] = np.array([x for _, x in sorted(zip(dicToPlotx[redKey][label], dicToPlotx[redKey][label]))])
+            for err in ["sem", "std", ""]:
+                for redKey in dicToPlotx:
+                    for label in dicToPlotAvg[redKey]:
+                        plt.plot(dicToPlotx[redKey][label], dicToPlotAvg[redKey][label], label=label)
+                        if err =="std":
+                            plt.fill_between(dicToPlotx[redKey][label], dicToPlotAvg[redKey][label]-dicToPlotStd[redKey][label], dicToPlotAvg[redKey][label]+dicToPlotStd[redKey][label], alpha=0.3)
+                        elif err == "sem":
+                            plt.fill_between(dicToPlotx[redKey][label], dicToPlotAvg[redKey][label]-dicToPlotSem[redKey][label], dicToPlotAvg[redKey][label]+dicToPlotSem[redKey][label], alpha=0.3)
 
-                    plt.plot(dicToPlotx[redKey][label], dicToPlotAvg[redKey][label], label=label)
-                    plt.fill_between(dicToPlotx[redKey][label], dicToPlotAvg[redKey][label]-dicToPlotStd[redKey][label], dicToPlotAvg[redKey][label]+dicToPlotStd[redKey][label], alpha=0.3)
-
-                plt.title(str(list(zip(names, redKey.split("_")))))
-                plt.xlabel(names[whatToPlot[0]])
-                plt.ylabel("Metrics")
-                plt.legend()
-                plt.tight_layout()
-                nameFig, subf = "", ""
-                if whatToPlot == [0]:
-                    nameFig = "Folds"
-                    subf = "Folds/"
-                if whatToPlot == [4]:
-                    nameFig = "Interp"
-                    subf = "Interps/"
-                if whatToPlot == [5]:
-                    nameFig = "Clusters"
-                    subf = "Clusters/"
-
-                savefig(nameFig, codeSave=redKey, subfolder="Metrics/"+subf)
-                plt.close()
+                    plt.title(str(list(zip(names, redKey.split("_")))))
+                    plt.gca().set_title(str(list(zip(names, redKey.split("_")))), loc='center', wrap=True)
+                    plt.ylim([0.5, 1])
+                    plt.xlabel(names[whatToPlot[0]])
+                    plt.ylabel("Metrics")
+                    plt.legend()
+                    plt.tight_layout()
+                    nameFig, subf = "", ""
+                    if whatToPlot == [3]:
+                        nameFig = "Interp"
+                        subf = "Interps/"
+                    if whatToPlot == [4]:
+                        nameFig = "Clusters"
+                        subf = "Clusters/"
+                    nameFig += err
+    
+                    savefig(nameFig, codeSave=redKey, subfolder="Metrics/"+subf)
+                    plt.close()
 
         elif len(whatToPlot)==2:
             for redKey in dicToPlotx:
@@ -337,6 +360,7 @@ def plotRes():
                 plt.gca().set_xticklabels([int(v) for i, v in sorted(valToIndy_inv.items())])
                 plt.gca().set_yticklabels([int(v) for i, v in sorted(valToIndx_inv.items())])
                 plt.title(str(list(zip(names, redKey.split("_")))))
+                plt.gca().set_title(str(list(zip(names, redKey.split("_")))), loc='center', wrap=True)
                 plt.gca().invert_yaxis()
                 plt.tight_layout()
                 nameFig = ""
@@ -520,66 +544,32 @@ def writeInput3D(thetas, p, intToOut, intToFeat, codeSave):
     with open("Plots/Merovingien/Inter=3/"+codeSave+"readmap.txt", "w+", encoding="utf-8") as f:
         f.write(txt)
 
-try:
-    folder = sys.argv[1]
-    features = np.array(sys.argv[2].split(","), dtype=int)
-    output = int(sys.argv[3])
-    DS = np.array(sys.argv[4].split(","), dtype=int)
-    nbInterp = np.array(sys.argv[5].split(","), dtype=int)
-    nbClus = np.array(sys.argv[6].split(","), dtype=int)
-    buildData = bool(int(sys.argv[7]))
-    seuil = int(sys.argv[8])
-    folds = int(sys.argv[9])
-    nbRuns = int(sys.argv[10])
-except Exception as e:
-    print("Using predefined parameters")
-    folder = "Merovingien"
-    features = [0]
-    DS = [3]
-    nbInterp = [1]
-    output = 2
-    if output==1:
-        if nbInterp==[1]:
-            nbClus = [3]
-        if nbInterp==[2]:
-            nbClus = [5]
-        if nbInterp==[3]:
-            nbClus = [7]
-    else:
-        if nbInterp==[1]:
-            nbClus = [5]
-        if nbInterp==[2]:
-            nbClus = [7]
-        if nbInterp==[3]:
-            nbClus = [9]
-    buildData = True
-    seuil = 0
-    folds = 5
-    nbRuns = 10
-list_params = [(features, output, DS, nbInterp, nbClus, buildData, seuil, folds)]
+def visualize_all():
+    from run_all import folder, features, DS, folds, nbRuns, list_output, list_nbInterp, list_nbClus, prec, maxCnt, lim, seuil, propTrainingSet, num_processes
+    list_params = []
 
-for output in [1, 2]:
-    for nbInterp in [[1], [2], [3]]:
-        for nbClus in [[3], [4], [5], [6], [7], [8], [9], [10]]:
-            pass
-            list_params.append((features, output, DS, nbInterp, nbClus, buildData, seuil, folds))
+    for output in list_output:
+        for nbInterp in list_nbInterp:
+            buildData = True
+            for nbClus in list_nbClus:
+                list_params.append((features, output, DS, nbInterp, nbClus, buildData, seuil, folds))
+                buildData = False
 
 
-plotRes()
-for features, output, DS, nbInterp, nbClus, buildData, seuil, folds in list_params:
-    tabDicResAvg = []
-    for fold in range(folds):
-        featToClus = []
-        for iter, interp in enumerate(nbInterp):
-            for i in range(interp):
-                featToClus.append(iter)
-        featToClus = np.array(featToClus, dtype=int)
+    plotRes()
+    for features, output, DS, nbInterp, nbClus, buildData, seuil, folds in list_params:
+        for fold in range(folds):
+            featToClus = []
+            for iter, interp in enumerate(nbInterp):
+                for i in range(interp):
+                    featToClus.append(iter)
+            featToClus = np.array(featToClus, dtype=int)
 
-        codeSave = f"{fold}of{folds}_{features}_{output}_{DS}_{nbInterp}_{nbClus}_"
+            codeSave = f"{features}_{output}_{DS}_{nbInterp}_{nbClus}_"
+            print(codeSave)
 
-        try:
-            run = -1
-            thetas, p, intToOut, intToFeat = read_params(folder, features, output, featToClus, nbClus, fold, run=run)
+            run = -1  # Only final run
+            thetas, p, intToOut, intToFeat = read_params(folder, features, output, featToClus, nbClus, DS, fold, folds, run=run)
             # Valeur hors limite erreur informatique last digits
             p[p>1]=1.;p[p<0]=0.
             for i in range(len(thetas)):
@@ -587,7 +577,6 @@ for features, output, DS, nbInterp, nbClus, buildData, seuil, folds in list_para
                 thetas[i][thetas[i]<0]=0.
             print(intToFeat)
             print(intToOut)
-            nbOut = p.shape[-1]
 
             if nbInterp==[1]:
                 plotInput1D(thetas, p, intToOut, intToFeat, codeSave)
@@ -598,10 +587,94 @@ for features, output, DS, nbInterp, nbClus, buildData, seuil, folds in list_para
             if nbInterp==[3]:
                 writeInput3D(thetas, p, intToOut, intToFeat, codeSave)
 
-            writeClusters(thetas, codeSave)
+            writeClusters(thetas, codeSave, intToFeat)
             plotThetas(thetas, intToFeat, codeSave)
-        except:
-            print("Run manquant")
+            # except Exception as e:
+            #     print("Run manquant -", e)
+
+
+if __name__ == "__main__":
+    try:
+        folder = sys.argv[1]
+        features = np.array(sys.argv[2].split(","), dtype=int)
+        output = int(sys.argv[3])
+        DS = np.array(sys.argv[4].split(","), dtype=int)
+        nbInterp = np.array(sys.argv[5].split(","), dtype=int)
+        nbClus = np.array(sys.argv[6].split(","), dtype=int)
+        buildData = bool(int(sys.argv[7]))
+        seuil = int(sys.argv[8])
+        folds = int(sys.argv[9])
+        nbRuns = int(sys.argv[10])
+    except Exception as e:
+        print("Using predefined parameters")
+        folder = "Merovingien"
+        features = [0]
+        DS = [3]
+        nbInterp = [1]
+        output = 2
+        if output==1:
+            if nbInterp==[1]:
+                nbClus = [3]
+            if nbInterp==[2]:
+                nbClus = [5]
+            if nbInterp==[3]:
+                nbClus = [7]
+        else:
+            if nbInterp==[1]:
+                nbClus = [5]
+            if nbInterp==[2]:
+                nbClus = [7]
+            if nbInterp==[3]:
+                nbClus = [9]
+        buildData = True
+        seuil = 0
+        folds = 5
+        nbRuns = 10
+    list_params = [(features, output, DS, nbInterp, nbClus, buildData, seuil, folds)]
+
+    for output in [1, 2]:
+        for nbInterp in [[1], [2], [3]]:
+            for nbClus in [[3], [4], [5], [6], [7], [8], [9], [10]]:
+                pass
+                list_params.append((features, output, DS, nbInterp, nbClus, buildData, seuil, folds))
+
+
+    plotRes()
+    for features, output, DS, nbInterp, nbClus, buildData, seuil, folds in list_params:
+        for fold in range(folds):
+            featToClus = []
+            for iter, interp in enumerate(nbInterp):
+                for i in range(interp):
+                    featToClus.append(iter)
+            featToClus = np.array(featToClus, dtype=int)
+
+            codeSave = f"{fold}of{folds}_{features}_{output}_{DS}_{nbInterp}_{nbClus}_"
+
+            try:
+                run = -1
+                thetas, p, intToOut, intToFeat = read_params(folder, features, output, featToClus, nbClus, DS, fold, folds, run=run)
+                # Valeur hors limite erreur informatique last digits
+                p[p>1]=1.;p[p<0]=0.
+                for i in range(len(thetas)):
+                    thetas[i][thetas[i]>1]=1.
+                    thetas[i][thetas[i]<0]=0.
+                print(intToFeat)
+                print(intToOut)
+                nbOut = p.shape[-1]
+
+                if nbInterp==[1]:
+                    plotInput1D(thetas, p, intToOut, intToFeat, codeSave)
+                    plotGraph1D(thetas, p, intToOut, intToFeat, codeSave)
+                if nbInterp==[2]:
+                    plotInput2D(thetas, p, intToOut, intToFeat, codeSave)
+                    plotGraph2D(thetas, p, intToOut, intToFeat, codeSave)
+                if nbInterp==[3]:
+                    writeInput3D(thetas, p, intToOut, intToFeat, codeSave)
+
+                writeClusters(thetas, codeSave, intToFeat)
+                plotThetas(thetas, intToFeat, codeSave)
+            except:
+                print("Run manquant")
 
 
 

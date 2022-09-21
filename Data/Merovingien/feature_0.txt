@@ -1,15 +1,16 @@
 0004	ceinture couteau pot
-0005	ceinture contenant_du_défunt/chambre_funéraire pot_verseur fusaïole peigne couteau collier ceinture faune œuf faune œuf
-0014	peigne couteau faune faune faune
-0015	baudrier_d'épée ceinture flèche ceinture pot faune faune
-0024	ceinture
-0025	châtelaine anneau(x)_de_châtelaine rouelle/plaque_de_châtelaine peigne couteau étui_de_peigne pendant/pendentif pendant/pendentif pendant/pendentif lot_de_perles_(vrac) boucle_d'oreille boucle_d'oreille
-0033	pot
-0035	boucle_d'oreille pot ceinture scramasaxe aumônière/sacoche pierre(s)_à_feu
-0036	scramasaxe fourreau couteau fourreau ceinture pot pot œuf peigne ceinture châtelaine couteau bracelet
+0005	ceinture contenant_du_défunt/chambre_funéraire pot_verseur fusaïole peigne couteau collier ceinture faune œuf faune œuf ceinture aumônière/sacoche pierre_à_aiguiser pierre(s)_à_feu clou(s) monnaie bouclier baudrier_d'épée flèche flèche pot briquet
+0014	peigne couteau faune faune faune pot collier collier œuf faune faune
+0015	baudrier_d'épée ceinture flèche ceinture pot faune faune pot peigne œuf œuf œuf faune faune baudrier_d'épée flèche flèche
+0020	scramasaxe fourreau ceinture pierre_à_aiguiser pierre(s)_à_feu briquet clou(s) fiche
+0024	ceinture ceinture œuf œuf clou(s)
+0025	châtelaine anneau(x)_de_châtelaine rouelle/plaque_de_châtelaine peigne couteau étui_de_peigne pendant/pendentif pendant/pendentif pendant/pendentif lot_de_perles_(vrac) boucle_d'oreille boucle_d'oreille pot ceinture clou(s) scramasaxe
+0033	pot pot
+0035	boucle_d'oreille pot ceinture scramasaxe aumônière/sacoche pierre(s)_à_feu épée couteau fiche clou(s) ceinture pot pot
+0036	scramasaxe fourreau couteau fourreau ceinture pot pot œuf peigne ceinture châtelaine couteau bracelet collier boucle_d'oreille boucle_d'oreille ceinture fusaïole pot
 0058	pot couteau ceinture
 0068	récipient
-0069	couteau
+0069	couteau épée éperon couteau
 0070	boucle_d'oreille boucle_d'oreille fibule collier ceinture faune baudrier_d'épée
 0074	récipient clou(s)
 0075	pot ceinture
@@ -17,14 +18,14 @@
 0081	pot plat/assiette clou(s) lot_de_perles_(vrac) ceinture
 0082	pot
 0088	ceinture
-0089	pot
+0089	pot ceinture
 0093	lance flèche bouclier épée fourreau baudrier_d'épée scramasaxe fourreau ceinture aumônière/sacoche couteau lame_de_tisserand peigne carquois flèche ceinture éperon
 0094	ceinture
 0095	couteau
 0096	lance ceinture
 0099	boucle_d'oreille boucle_d'oreille collier ceinture
-0100	poinçon
-0101	boucle_d'oreille boucle_d'oreille ceinture
+0100	poinçon ceinture couteau châtelaine
+0101	boucle_d'oreille boucle_d'oreille ceinture boucle_d'oreille
 0103	pot
 1001	couteau ceinture fourreau
 1003	scramasaxe ceinture flèche
@@ -63,9 +64,9 @@
 1074	scramasaxe fourreau lance lot_de_perles_(vrac) ceinture fourreau chaussures/jarretières chaussures/jarretières faune hache flèche flèche flèche flèche carquois contenant_du_défunt/chambre_funéraire scramasaxe couteau ceinture couteau
 2078	pot
 2079	pot
-0012	ceinture fiche couteau pierre(s)_à_feu aumônière/sacoche scramasaxe fourreau couteau flèche couteau ceinture baudrier_d'épée
-0017	couteau ceinture ceinture fiche pot baudrier_d'épée épée bouclier
-0019	lance bassin peigne gobelet faune faune épée baudrier_d'épée scramasaxe fourreau ceinture aumônière/sacoche couteau couteau forces fiche pierre(s)_à_feu bouclier
+0012	ceinture fiche couteau pierre(s)_à_feu aumônière/sacoche scramasaxe fourreau couteau flèche couteau ceinture baudrier_d'épée pot forces collier récipient bol chaîne(tte) châtelaine couteau faune
+0017	couteau ceinture ceinture fiche pot baudrier_d'épée épée bouclier scramasaxe pot clou(s) ceinture
+0019	lance bassin peigne gobelet faune faune épée baudrier_d'épée scramasaxe fourreau ceinture aumônière/sacoche couteau couteau forces fiche pierre(s)_à_feu bouclier épée fourreau pot ceinture lance
 0028	lance bouclier pot pot faune faune œuf ceinture baudrier_d'épée flèche gobelet
 0031	pot œuf faune collier ceinture épingle châtelaine couteau aumônière/sacoche chaussures/jarretières
 0044	boucle_d'oreille
@@ -74,18 +75,18 @@
 0050	gobelet fusaïole faune faune collier ceinture châtelaine couteau monnaie
 0052	couteau
 0053	pot carquois flèche flèche pierre(s)_à_feu couteau
-0054	collier boucle_d'oreille boucle_d'oreille ceinture
+0054	collier boucle_d'oreille boucle_d'oreille ceinture épée baudrier_d'épée pierre(s)_à_feu aumônière/sacoche couteau pot pot lance faune œuf peigne
 0055	pot peigne cornet flèche flèche flèche flèche ceinture couteau aumônière/sacoche scramasaxe fourreau poinçon pot
 0057	ceinture aumônière/sacoche couteau couteau ceinture briquet pierre(s)_à_feu scramasaxe flèche flèche flèche ceinture fibule ceinture
 0059	pot fusaïole ceinture
 0060	faune
 0061	chaussures/jarretières carafe faune
 0063	ceinture scramasaxe fourreau aumônière/sacoche flèche flèche flèche carquois baudrier_d'épée pierre(s)_à_feu faune
-0064	fibule
+0064	fibule ceinture
 0065	flèche ceinture pierre(s)_à_feu aumônière/sacoche
 0071	épée fourreau baudrier_d'épée scramasaxe fourreau ceinture couteau
 0079	pot pot baudrier_d'épée pierre(s)_à_feu
-0080	ceinture couteau
+0080	ceinture couteau couteau
 0083	gobelet couteau lot_de_perles_(vrac)
 0084	pot ceinture aumônière/sacoche couteau pierre(s)_à_feu flèche flèche carquois
 0086	pot gobelet œuf ceinture collier
@@ -182,9 +183,9 @@
 1084	ceinture collier
 1085	scramasaxe pierre(s)_à_feu couteau flèche
 1086	ceinture couteau
-0002	lance peigne bouclier pot ceinture couteau épée fourreau couteau aumônière/sacoche faune
-0003	collier fibule peigne collier ceinture châtelaine anneau(x)_de_châtelaine couteau épingle aumônière/sacoche gobelet faune faune œuf
-0006	fusaïole pierre(s)_à_feu pot gobelet collier pendant/pendentif ceinture perle(s)_de_châtelaine épingle couteau anneau(x)_de_châtelaine châtelaine bague faune œuf faune œuf
+0002	lance peigne bouclier pot ceinture couteau épée fourreau couteau aumônière/sacoche faune fibule ceinture collier ceinture
+0003	collier fibule peigne collier ceinture châtelaine anneau(x)_de_châtelaine couteau épingle aumônière/sacoche gobelet faune faune œuf pot pot ceinture couteau scramasaxe épée fourreau baudrier_d'épée lance
+0006	fusaïole pierre(s)_à_feu pot gobelet collier pendant/pendentif ceinture perle(s)_de_châtelaine épingle couteau anneau(x)_de_châtelaine châtelaine bague faune œuf faune œuf pot œuf œuf fibule fibule chaîne(tte) chaussures/jarretières chaussures/jarretières chaussures/jarretières aumônière/sacoche fibule faune lot_de_perles_(vrac) lot_de_perles_(vrac) écuelle coffre/coffret faune châtelaine pendant/pendentif peigne lot_de_perles_(vrac) récipient couteau
 0121	épée forces lance bouclier ceinture pot faune faune faune faune gobelet faune
 0124	scramasaxe fourreau ceinture aumônière/sacoche fiche bouclier lance
 0125	collier peigne pot
@@ -244,3 +245,34 @@
 0655	collier
 0659	collier couteau
 0660	pot peigne
+0102	collier
+0109	seau bassin gobelet faune faune faune faune faune faune bracelet bague lot_de_perles_(vrac) fibule fibule ceinture châtelaine peigne pendant/pendentif cuillère chaussures/jarretières couteau clou(s) fibule
+0112	couteau
+0446	boucle_d'oreille boucle_d'oreille collier ceinture
+0617	collier
+0625	ceinture
+0706	ceinture
+0707	ceinture couteau
+0708	ceinture clou(s) fourreau scramasaxe
+0709	collier ceinture
+0728	ceinture clou(s) briquet
+0763	scramasaxe fourreau ceinture couteau briquet collier
+0001	aumônière/sacoche épingle clou(s) fiche pierre(s)_à_feu châtelaine flore lot_de_perles_(vrac) peigne étui_de_peigne récipient clou(s) récipient
+0011	couteau récipient cruche faune œuf collier peigne
+0018	pot scramasaxe clou(s) aiguille pincette/pince_à_épiler fibule récipient pierre(s)_à_feu pierre(s)_à_feu pierre(s)_à_feu pierre(s)_à_feu pierre(s)_à_feu
+0021	pot peigne
+0023	couteau pierre(s)_à_feu clou(s)
+0027	scramasaxe peigne ceinture couteau couteau clou(s) pierre(s)_à_feu fiche
+0029	épée couteau clou(s) fibule bouclier œuf œuf œuf peigne pot pot
+0030	fibule collier couteau fusaïole
+0032	pot pierre(s)_à_feu clou(s)
+0034	ceinture couteau fusaïole châtelaine
+0037	collier couteau bague châtelaine disque_en_bois_de_cerf peigne perle(s)_de_châtelaine pot pot fusaïole aiguille
+0038	épée lance pot bouclier pot faune faune faune faune œuf peigne poinçon ceinture baudrier_d'épée fourreau
+0041	collier ceinture
+0008	pot épée bouclier lance couteau faune
+0009	collier couteau ceinture lance fiche
+0010	collier bol
+0042	récipient récipient
+0051	ceinture
+0007	peigne lot_de_perles_(vrac) fusaïole ceinture couteau récipient récipient
