@@ -10,9 +10,6 @@ from copy import copy
 import seaborn as sns
 import pandas as pd
 
-if "Plots" not in os.listdir("."): os.mkdir("./Plots")
-if "Merovingien" not in os.listdir("./Plots"): os.mkdir("./Plots/Merovingien")
-
 def readMatrix(filename):
     try:
         return sparse.load_npz(filename.replace(".txt", ".npz"))
