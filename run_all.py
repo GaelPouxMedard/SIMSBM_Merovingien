@@ -21,7 +21,7 @@ seuil = 0
 num_processes = 6
 
 if __name__ == "__main__":
-    # treat_all()
-    # os.system("python run_XP.py")  # For multiprocessing
-    # evaluate_all()
+    treat_all()
+    os.system("python run_XP.py")  # For multiprocessing
+    evaluate_all()
     visualize_all()

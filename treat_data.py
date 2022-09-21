@@ -5,6 +5,7 @@ def treat_all():
     dicData = {}
     columns_considered = ["Sepulture", "Statut", "Objets", "Nombre_indiv", "Sexe", "Classe_age"]
     setObj, setAge, setSexe = [], [], []
+    if "Merovingien" not in os.listdir("Data"): os.mkdir("Data\\Merovingien\\")
     with open("Data/data.csv", "r") as f:
         columns = f.readline()
         print("\t".join(columns.split(";")))
@@ -79,7 +80,7 @@ if __name__ == "__main__":
     dicData = {}
     columns_considered = ["Sepulture", "Statut", "Objets", "Nombre_indiv", "Sexe", "Classe_age"]
     setObj, setAge, setSexe = [], [], []
-    setTemp = set()
+    setPlaces = set()
     with open("Data/data.csv", "r") as f:
         columns = f.readline()
         print("\t".join(columns.split(";")))
@@ -100,6 +101,8 @@ if __name__ == "__main__":
 
             data_line[10] = data_line[10].replace("adolescent", "adulte")  # APPROXIMATION
             data_line[10] = data_line[10].replace("adulte mature-âgé", "adulte")  # APPROXIMATION
+
+            setPlaces.add(data_line[0])
 
             if data_line[1] not in dicData:
                 dicData[data_line[1]] = {}
@@ -138,5 +141,7 @@ if __name__ == "__main__":
     print("Tombes adulte mature-âgé :", len([1 for k in dicData if dicData[k]["Classe_age"]=="adulte mature-âgé"]))
     print("Tombes immature :", len([1 for k in dicData if dicData[k]["Classe_age"]=="immature"]))
 
+    for place in setPlaces:
+        print(place)
 
 
