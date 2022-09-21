@@ -19,11 +19,9 @@ if __name__ == "__main__":
     nbClus = [5]
     buildData = True
     folds = 5
-<<<<<<< HEAD
-    nbRuns = 10
-=======
+
     nbRuns = 100
->>>>>>> refs/remotes/origin/main
+    nbRuns = 10
     list_params = []
 
     for output in [1, 2]:
@@ -42,13 +40,3 @@ if __name__ == "__main__":
     #         args =[(folder, features, output, DS, nbInterp, nbClus, buildData, seuil, folds, nbRuns) for features, output, DS, nbInterp, nbClus, buildData, seuil, folds in list_params]
     #         for i, res in enumerate(p.imap(evaluate, args)):
     #             progress.update()
-
-<<<<<<< HEAD
-    with multiprocessing.Pool(processes=4) as p:
-        with tqdm.tqdm(total=len(list_params)) as progress:
-            args =[(folder, features, output, DS, nbInterp, nbClus, buildData, seuil, folds, nbRuns) for features, output, DS, nbInterp, nbClus, buildData, seuil, folds in list_params]
-            for i, res in enumerate(p.imap(evaluate, args)):
-                progress.update()
-
-=======
->>>>>>> refs/remotes/origin/main
