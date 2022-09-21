@@ -15,6 +15,18 @@ def treat_all():
             data_line[7] = data_line[7].replace(" ?", "")
             data_line[10] = data_line[10].replace("non_identifié", "indéterminé")
 
+            data_line[8] = data_line[8].replace(" ?", "")
+            data_line[9] = data_line[9].replace(" ?", "")
+            if data_line[7] not in ["féminin", "masculin"]:
+                if data_line[8] not in ["", "indéterminé"]:
+                    data_line[7] = data_line[8]
+                if data_line[9] not in ["", "indéterminé"]:
+                    data_line[7] = data_line[9]
+
+            data_line[10] = data_line[10].replace("adolescent", "adulte")  # APPROXIMATION
+            data_line[10] = data_line[10].replace("adulte mature-âgé", "adulte")  # APPROXIMATION
+
+
             if data_line[1] not in dicData:
                 dicData[data_line[1]] = {}
                 dicData[data_line[1]]["Statut"] = "-1"
@@ -67,6 +79,7 @@ if __name__ == "__main__":
     dicData = {}
     columns_considered = ["Sepulture", "Statut", "Objets", "Nombre_indiv", "Sexe", "Classe_age"]
     setObj, setAge, setSexe = [], [], []
+    setTemp = set()
     with open("Data/data.csv", "r") as f:
         columns = f.readline()
         print("\t".join(columns.split(";")))
@@ -76,6 +89,17 @@ if __name__ == "__main__":
             data_line[3] = data_line[3].replace(" ", "_")
             data_line[7] = data_line[7].replace(" ?", "")
             data_line[10] = data_line[10].replace("non_identifié", "indéterminé")
+
+            data_line[8] = data_line[8].replace(" ?", "")
+            data_line[9] = data_line[9].replace(" ?", "")
+            if data_line[7] not in ["féminin", "masculin"]:
+                if data_line[8] not in ["", "indéterminé"]:
+                    data_line[7] = data_line[8]
+                if data_line[9] not in ["", "indéterminé"]:
+                    data_line[7] = data_line[9]
+
+            data_line[10] = data_line[10].replace("adolescent", "adulte")  # APPROXIMATION
+            data_line[10] = data_line[10].replace("adulte mature-âgé", "adulte")  # APPROXIMATION
 
             if data_line[1] not in dicData:
                 dicData[data_line[1]] = {}
@@ -101,10 +125,18 @@ if __name__ == "__main__":
 
 
     print(len(dicData))
-    print(np.unique(setSexe, return_counts=True))
-    print(np.unique(setAge, return_counts=True))
+    print("Nombre objets", np.unique(setSexe, return_counts=True))
+    print("Nombre objets", np.unique(setAge, return_counts=True))
+    print()
     print("Tombes avec sexe :", len([1 for k in dicData if dicData[k]["Sexe"]!="-1"]))
+    print("Tombes féminin :", len([1 for k in dicData if dicData[k]["Sexe"]=="féminin"]))
+    print("Tombes masculin :", len([1 for k in dicData if dicData[k]["Sexe"]=="masculin"]))
+    print()
     print("Tombes avec age :", len([1 for k in dicData if dicData[k]["Classe_age"]!="-1"]))
+    print("Tombes adolescent :", len([1 for k in dicData if dicData[k]["Classe_age"]=="adolescent"]))
+    print("Tombes adulte :", len([1 for k in dicData if dicData[k]["Classe_age"]=="adulte"]))
+    print("Tombes adulte mature-âgé :", len([1 for k in dicData if dicData[k]["Classe_age"]=="adulte mature-âgé"]))
+    print("Tombes immature :", len([1 for k in dicData if dicData[k]["Classe_age"]=="immature"]))
 
 
 

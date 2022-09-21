@@ -565,7 +565,7 @@ def visualize_all():
                     featToClus.append(iter)
             featToClus = np.array(featToClus, dtype=int)
 
-            codeSave = f"{features}_{output}_{DS}_{nbInterp}_{nbClus}_"
+            codeSave = f"{features}_{output}_{DS}_{nbInterp}_{nbClus}_{fold}_"
             print(codeSave)
 
             run = -1  # Only final run
