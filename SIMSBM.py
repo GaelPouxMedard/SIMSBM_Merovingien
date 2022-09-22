@@ -358,7 +358,7 @@ def EMLoop(alpha, featToClus, popFeat, nbOutputs, nbNatures, nbClus, maxCnt, pre
                 maxThetas, maxP = thetas, p
                 maxL = L
                 writeToFile_params(folder, maxThetas, maxP, maxL, features, output, featToClus, popFeat, nbClus, fold, folds, run)
-                print("Saved")
+                # print("Saved")
             prevL = L
 
         maskedProbs = getAllProbs(dicnnz, [], np.moveaxis(p, -1, 0), thetas, featToClus, 0, nbFeat)

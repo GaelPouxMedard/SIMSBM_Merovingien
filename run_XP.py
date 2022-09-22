@@ -5,7 +5,8 @@ import tqdm
 
 
 def run_all_XP():
-    from run_all import folder, features, DS, folds, nbRuns, list_output, list_nbInterp, list_nbClus, prec, maxCnt, lim, seuil, propTrainingSet, num_processes, buildData
+    from run_all import folder, features, DS, folds, nbRuns, list_output, list_nbInterp, list_nbClus, prec, maxCnt, lim, seuil, propTrainingSet, num_processes
+    buildData = False
     list_params = []
 
     for nbInterp in list_nbInterp:
