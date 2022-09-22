@@ -545,16 +545,14 @@ def visualize_all():
     from run_all import folder, features, DS, folds, nbRuns, list_output, list_nbInterp, list_nbClus, prec, maxCnt, lim, seuil, propTrainingSet, num_processes
     list_params = []
 
-    for output in list_output:
-        for nbInterp in list_nbInterp:
-            buildData = True
-            for nbClus in list_nbClus:
-                list_params.append((features, output, DS, nbInterp, nbClus, buildData, seuil, folds))
-                buildData = False
+    for nbInterp in list_nbInterp:
+        for nbClus in list_nbClus:
+            for output in list_output:
+                list_params.append((features, output, DS, nbInterp, nbClus, seuil, folds))
 
 
     plotRes()
-    for features, output, DS, nbInterp, nbClus, buildData, seuil, folds in list_params:
+    for features, output, DS, nbInterp, nbClus, seuil, folds in list_params:
         for fold in range(folds):
             featToClus = []
             for iter, interp in enumerate(nbInterp):
@@ -598,10 +596,9 @@ if __name__ == "__main__":
         DS = np.array(sys.argv[4].split(","), dtype=int)
         nbInterp = np.array(sys.argv[5].split(","), dtype=int)
         nbClus = np.array(sys.argv[6].split(","), dtype=int)
-        buildData = bool(int(sys.argv[7]))
-        seuil = int(sys.argv[8])
-        folds = int(sys.argv[9])
-        nbRuns = int(sys.argv[10])
+        seuil = int(sys.argv[7])
+        folds = int(sys.argv[8])
+        nbRuns = int(sys.argv[9])
     except Exception as e:
         print("Using predefined parameters")
         folder = "Merovingien"
@@ -623,21 +620,20 @@ if __name__ == "__main__":
                 nbClus = [7]
             if nbInterp==[3]:
                 nbClus = [9]
-        buildData = True
         seuil = 0
         folds = 5
         nbRuns = 10
-    list_params = [(features, output, DS, nbInterp, nbClus, buildData, seuil, folds)]
+    list_params = [(features, output, DS, nbInterp, nbClus, seuil, folds)]
 
     for output in [1, 2]:
         for nbInterp in [[1], [2], [3]]:
             for nbClus in [[3], [4], [5], [6], [7], [8], [9], [10]]:
                 pass
-                list_params.append((features, output, DS, nbInterp, nbClus, buildData, seuil, folds))
+                list_params.append((features, output, DS, nbInterp, nbClus, seuil, folds))
 
 
     plotRes()
-    for features, output, DS, nbInterp, nbClus, buildData, seuil, folds in list_params:
+    for features, output, DS, nbInterp, nbClus, seuil, folds in list_params:
         for fold in range(folds):
             featToClus = []
             for iter, interp in enumerate(nbInterp):
