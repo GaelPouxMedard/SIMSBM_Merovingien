@@ -12,7 +12,7 @@ def treat_all():
         f.readline()
         for line in f:
             data_line = list(map(str.lower, line.split(";")))
-            if data_line[3] not in data_line: data_line[data_line[3]] = 0
+            if data_line[3] not in cntobj: cntobj[data_line[3]] = 0
             cntobj[data_line[3]] += 1
 
     if "Merovingien" not in os.listdir("Data"): os.mkdir("Data\\Merovingien\\")
