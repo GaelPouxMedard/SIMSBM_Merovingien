@@ -179,7 +179,8 @@ def buildArraysProbs(folder, featuresCons, outputCons, DS, thetas, p, featToClus
             karray = np.array(k)
 
             # [inds] important car réduit le DS au modèle considéré
-            tempProb.append(getElemProb(karray[inds], thetas, p, featToClus))
+            prob = getElemProb(karray[inds], thetas, p, featToClus)
+            tempProb.append(prob)
 
             index_obs += 1
             nb+=1
@@ -200,7 +201,7 @@ def scores(listTrue, listProbs, label, tabMetricsAll, nbOut, fold):
     nanmask = np.isnan(listProbs)
     if np.any(nanmask):
         print(f"CAREFUL !!!!! {np.sum(nanmask.astype(int))} NANs IN PROBA !!!")
-        listProbs[nanmask] = 0
+        pause()
     if label not in tabMetricsAll: tabMetricsAll[label]={}
     if fold not in tabMetricsAll[label]: tabMetricsAll[label][fold]={}
 
@@ -232,6 +233,7 @@ def scores(listTrue, listProbs, label, tabMetricsAll, nbOut, fold):
     c=metrics.coverage_error(listTrue, listProbs)
     tabMetricsAll[label][fold]["CovErr"] = c-1
     tabMetricsAll[label][fold]["CovErrNorm"] = (c-1)/nbOut
+    tabMetricsAll[label][fold]["Freq"] = np.max(np.mean(listTrue, axis=0))
 
     print("\t".join(map(str, tabMetricsAll[label][fold].keys())).expandtabs(20))
     print("\t".join(map(str, np.round(list(tabMetricsAll[label][fold].values()), 4))).expandtabs(20))
@@ -316,7 +318,7 @@ def saveResults(tabMetricsAll, folder, features, output, DS, nbInterp, nbClus, f
     return dicResAvg
 
 def evaluate(args):
-    folder, features, output, DS, nbInterp, nbClus, seuil, folds, nbRuns = args
+    folder, folder_out, features, output, DS, nbInterp, nbClus, seuil, folds, nbRuns = args
 
     tabDicResAvg = []
     tabMetricsAll = {}
@@ -339,7 +341,7 @@ def evaluate(args):
         listTrue, listProbs = buildArraysProbs(folder, features, output, DS, thetas, p, featToClus, nbInterp, fold, folds)
         tabMetricsAll = scores(listTrue, listProbs, f"SIMSBM_{nbInterp}", tabMetricsAll, nbOut, fold)
 
-        dicResAvg = saveResults(tabMetricsAll, folder, features, output, DS, nbInterp, nbClus, fold, folds, printRes=False, final=False, averaged=True)
+        dicResAvg = saveResults(tabMetricsAll, folder_out, features, output, DS, nbInterp, nbClus, fold, folds, printRes=False, final=False, averaged=True)
         tabDicResAvg.append(dicResAvg)
 
     print()
@@ -354,7 +356,7 @@ def evaluate(args):
         print("\t".join(map(str, np.round(np.mean(arrRes, axis=0), 4))).expandtabs(20))
 
 def evaluate_all():
-    from run_all import folder, features, DS, folds, nbRuns, list_output, list_nbInterp, list_nbClus, prec, maxCnt, lim, seuil, propTrainingSet, num_processes
+    from run_all import folder, folder_out, features, DS, folds, nbRuns, list_output, list_nbInterp, list_nbClus, prec, maxCnt, lim, seuil, propTrainingSet, num_processes
     list_params = []
 
     for nbInterp in list_nbInterp:
@@ -363,7 +365,7 @@ def evaluate_all():
                 list_params.append((features, output, DS, nbInterp, nbClus, seuil, folds))
 
     for features, output, DS, nbInterp, nbClus, seuil, folds in list_params:
-        args = (folder, features, output, DS, nbInterp, nbClus, seuil, folds, nbRuns)
+        args = (folder, folder_out, features, output, DS, nbInterp, nbClus, seuil, folds, nbRuns)
         evaluate(args)
 
 if __name__=="__main__":

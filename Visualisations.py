@@ -66,10 +66,10 @@ def read_params(folder, features, output, featToClus, nbClus, DS, fold, folds, r
 
     return thetas, p, intToOut, intToFeat
 
-def savefig(name, codeSave="", subfolder=""):
-    folder = "Plots/Merovingien/"
+def savefig(name, folder_out="", codeSave="", subfolder=""):
+    folder = "Plots/"+folder_out+"/"
     if "Plots" not in os.listdir("./"): os.mkdir("./Plots")
-    if "Merovingien" not in os.listdir("./Plots/"): os.mkdir("./Plots/Merovingien/")
+    if folder_out not in os.listdir("./Plots/"): os.mkdir("./Plots/"+folder_out+"/")
     if subfolder !="":
         curfol = folder
         for fol in subfolder.split("/"):
@@ -95,7 +95,7 @@ def writeClusters(thetas, codeSave, intToFeat):
                 if k[i]>0.05:
                     f.write(f"{np.round(k[i]*100)}% - {intToFeat[0][i]}\n")
 
-def plotThetas(thetas, intToFeat, codeSave):
+def plotThetas(thetas, intToFeat, codeSave, folder_out):
     scaleFeat = 4.
     scaleClus = 30.
     scaleTypes = 1.
@@ -131,11 +131,11 @@ def plotThetas(thetas, intToFeat, codeSave):
     plt.tight_layout()
 
 
-    savefig("Thetas", codeSave, subfolder="Thetas/")
+    savefig("Thetas", folder_out, codeSave, subfolder="Thetas/")
 
     plt.close()
 
-def plotGraph1D(thetas, p, intToOut, intToFeat, codeSave):
+def plotGraph1D(thetas, p, intToOut, intToFeat, codeSave, folder_out):
     scaleFeat = 1.
     scaleClus = 10.
     scaleOut = 10.
@@ -168,11 +168,11 @@ def plotGraph1D(thetas, p, intToOut, intToFeat, codeSave):
     plt.axis("off")
     plt.tight_layout()
 
-    savefig("Graphe_final", codeSave, subfolder="Inter=1/")
+    savefig("Graphe_final", folder_out, codeSave, subfolder="Inter=1/")
 
     plt.close()
 
-def plotGraph2D(thetas, p, intToOut, intToFeat, codeSave):
+def plotGraph2D(thetas, p, intToOut, intToFeat, codeSave, folder_out):
     size = 10
     nbOut = p.shape[-1]
     nbFeat = len(thetas[0])
@@ -191,12 +191,12 @@ def plotGraph2D(thetas, p, intToOut, intToFeat, codeSave):
 
     plt.tight_layout()
 
-    savefig("Graphe_final", codeSave, subfolder="Inter=2/")
+    savefig("Graphe_final", folder_out, codeSave, subfolder="Inter=2/")
 
     plt.close()
 
-def readRes():
-    folder = "Results/Merovingien/"
+def readRes(folder_out):
+    folder = "Results/"+folder_out+"/"
     files = os.listdir(folder)
 
     metricsToExclude = ["CovErr", "CovErrNorm", "Acc", "P@1", "RankAvgPrec"]
@@ -258,8 +258,8 @@ def readRes():
 
     return np.array(matAvg, dtype=object), np.array(matStd, dtype=object), np.array(matSem, dtype=object)
 
-def plotRes():
-    matAvg, matStd, matSem = readRes()
+def plotRes(folder_out):
+    matAvg, matStd, matSem = readRes(folder_out)
 
     names = ["features", "output", "DS", "nbInterp", "nbClus"]
     for whatToPlot in [[3, 4], [3], [4]]:
@@ -325,7 +325,7 @@ def plotRes():
                         subf = "Clusters/"
                     nameFig += err
     
-                    savefig(nameFig, codeSave=redKey, subfolder="Metrics/"+subf)
+                    savefig(nameFig, folder_out, codeSave=redKey, subfolder="Metrics/"+subf)
                     plt.close()
 
         elif len(whatToPlot)==2:
@@ -363,10 +363,10 @@ def plotRes():
                 nameFig = ""
                 if whatToPlot == [4, 5]:
                     nameFig = "ClusvsInterp"
-                savefig(nameFig, codeSave=redKey, subfolder="Metrics/Heatmaps/")
+                savefig(nameFig, folder_out, codeSave=redKey, subfolder="Metrics/Heatmaps/")
                 plt.close()
 
-def plotInput1D(thetas, p, intToOut, intToFeat, codeSave):
+def plotInput1D(thetas, p, intToOut, intToFeat, codeSave, folder_out):
     def get_label_rotation(angle, offset):
         # Rotation must be specified in degrees :(
         rotation = np.rad2deg(angle + offset)
@@ -487,10 +487,10 @@ def plotInput1D(thetas, p, intToOut, intToFeat, codeSave):
 
         offset += size + PAD
 
-    savefig("CircBarPlot_input_to_output", codeSave, subfolder="Inter=1/InputToOutput/")
+    savefig("CircBarPlot_input_to_output", folder_out, codeSave, subfolder="Inter=1/InputToOutput/")
     plt.close()
 
-def plotInput2D(thetas, p, intToOut, intToFeat, codeSave):
+def plotInput2D(thetas, p, intToOut, intToFeat, codeSave, folder_out):
     import scipy.cluster.hierarchy as sch
     matHeatAvg = thetas[0].dot(thetas[0].dot(p))
     xlabels = ylabels = np.array([intToFeat[0][i] for i in range(len(thetas[0]))])
@@ -509,7 +509,7 @@ def plotInput2D(thetas, p, intToOut, intToFeat, codeSave):
         matHeatAvg[:, :, o] = matHeatAvg[:,index, o]
 
         plt.subplot(1, p.shape[-1], o+1)
-        sns.heatmap(np.round(matHeatAvg[:, :, o]*100), cmap="afmhot_r", linewidth=0.03, vmin=0, vmax=100, square=True, annot=False, cbar=True, fmt='g')
+        sns.heatmap(np.round(matHeatAvg[:, :, o]*100), cmap="PuOr", linewidth=0.03, vmin=-35, vmax=135, square=True, annot=False, cbar=True, fmt='g')
 
         plt.xticks(0.5+np.array(list(range(len(xlabels)))), xlabels_new, fontsize=3, rotation=90)
         plt.yticks(0.5+np.array(list(range(len(ylabels)))), ylabels_new, fontsize=3)
@@ -517,10 +517,10 @@ def plotInput2D(thetas, p, intToOut, intToFeat, codeSave):
         plt.title(intToOut[o])
 
     plt.tight_layout()
-    savefig("Heatmap_input_to_output", codeSave=codeSave, subfolder="Inter=2/InputToOutput/")
+    savefig("Heatmap_input_to_output", folder_out, codeSave=codeSave, subfolder="Inter=2/InputToOutput/")
     plt.close()
 
-def writeInput3D(thetas, p, intToOut, intToFeat, codeSave):
+def writeInput3D(thetas, p, intToOut, intToFeat, codeSave, folder_out):
     pio = thetas[0].dot(thetas[0].dot(thetas[0].dot(p)))
     pio = np.round(pio*100)
     txt = ""
@@ -538,11 +538,11 @@ def writeInput3D(thetas, p, intToOut, intToFeat, codeSave):
         txt += "\n\n"
 
     if "Inter=3" not in os.listdir("Plots/Merovingien"): os.mkdir("Plots/Merovingien/Inter=3/")
-    with open("Plots/Merovingien/Inter=3/"+codeSave+"readmap.txt", "w+", encoding="utf-8") as f:
+    with open("Plots/"+folder_out+"/Inter=3/"+codeSave+"readmap.txt", "w+", encoding="utf-8") as f:
         f.write(txt)
 
 def visualize_all():
-    from run_all import folder, features, DS, folds, nbRuns, list_output, list_nbInterp, list_nbClus, prec, maxCnt, lim, seuil, propTrainingSet, num_processes
+    from run_all import folder, folder_out, features, DS, folds, nbRuns, list_output, list_nbInterp, list_nbClus, prec, maxCnt, lim, seuil, propTrainingSet, num_processes
     list_params = []
 
     for nbInterp in list_nbInterp:
@@ -551,7 +551,7 @@ def visualize_all():
                 list_params.append((features, output, DS, nbInterp, nbClus, seuil, folds))
 
 
-    plotRes()
+    plotRes(folder_out)
     for features, output, DS, nbInterp, nbClus, seuil, folds in list_params:
         for fold in range(folds):
             featToClus = []
@@ -574,16 +574,16 @@ def visualize_all():
             print(intToOut)
 
             if nbInterp==[1]:
-                plotInput1D(thetas, p, intToOut, intToFeat, codeSave)
-                plotGraph1D(thetas, p, intToOut, intToFeat, codeSave)
+                plotInput1D(thetas, p, intToOut, intToFeat, codeSave, folder_out)
+                plotGraph1D(thetas, p, intToOut, intToFeat, codeSave, folder_out)
             if nbInterp==[2]:
-                plotInput2D(thetas, p, intToOut, intToFeat, codeSave)
-                plotGraph2D(thetas, p, intToOut, intToFeat, codeSave)
+                plotInput2D(thetas, p, intToOut, intToFeat, codeSave, folder_out)
+                plotGraph2D(thetas, p, intToOut, intToFeat, codeSave, folder_out)
             if nbInterp==[3]:
-                writeInput3D(thetas, p, intToOut, intToFeat, codeSave)
+                writeInput3D(thetas, p, intToOut, intToFeat, codeSave, folder_out)
 
             writeClusters(thetas, codeSave, intToFeat)
-            plotThetas(thetas, intToFeat, codeSave)
+            plotThetas(thetas, intToFeat, codeSave, folder_out)
             # except Exception as e:
             #     print("Run manquant -", e)
 
@@ -599,9 +599,11 @@ if __name__ == "__main__":
         seuil = int(sys.argv[7])
         folds = int(sys.argv[8])
         nbRuns = int(sys.argv[9])
+        folder_out = folder
     except Exception as e:
         print("Using predefined parameters")
         folder = "Merovingien"
+        folder_out = folder
         features = [0]
         DS = [3]
         nbInterp = [1]
@@ -632,7 +634,7 @@ if __name__ == "__main__":
                 list_params.append((features, output, DS, nbInterp, nbClus, seuil, folds))
 
 
-    plotRes()
+    plotRes(folder_out)
     for features, output, DS, nbInterp, nbClus, seuil, folds in list_params:
         for fold in range(folds):
             featToClus = []
@@ -656,16 +658,16 @@ if __name__ == "__main__":
                 nbOut = p.shape[-1]
 
                 if nbInterp==[1]:
-                    plotInput1D(thetas, p, intToOut, intToFeat, codeSave)
-                    plotGraph1D(thetas, p, intToOut, intToFeat, codeSave)
+                    plotInput1D(thetas, p, intToOut, intToFeat, codeSave, folder_out)
+                    plotGraph1D(thetas, p, intToOut, intToFeat, codeSave, folder_out)
                 if nbInterp==[2]:
-                    plotInput2D(thetas, p, intToOut, intToFeat, codeSave)
-                    plotGraph2D(thetas, p, intToOut, intToFeat, codeSave)
+                    plotInput2D(thetas, p, intToOut, intToFeat, codeSave, folder_out)
+                    plotGraph2D(thetas, p, intToOut, intToFeat, codeSave, folder_out)
                 if nbInterp==[3]:
-                    writeInput3D(thetas, p, intToOut, intToFeat, codeSave)
+                    writeInput3D(thetas, p, intToOut, intToFeat, codeSave, folder_out)
 
                 writeClusters(thetas, codeSave, intToFeat)
-                plotThetas(thetas, intToFeat, codeSave)
+                plotThetas(thetas, intToFeat, codeSave, folder_out)
             except:
                 print("Run manquant")
 

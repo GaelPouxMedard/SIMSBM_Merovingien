@@ -1,3 +1,7 @@
+Res_old_all_obj/
+AFAM/
+Figures_article/
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]

@@ -343,7 +343,7 @@ def EMLoop(alpha, featToClus, popFeat, nbOutputs, nbNatures, nbClus, maxCnt, pre
         #print(i)
         if num_iterations%10==0:  # Computes the likelihood and possibly save the results every 10 iterations
             L = likelihood(alpha, Pfo)
-            print(f"Run {run} - Iter {num_iterations} - Feat {features} - Out {output} - Interps {nbInterp} - Clus {nbClus} - Fold {fold+1}/{folds} - L={np.round(L, 2)}")
+            print(f"Run {run}\tIter {num_iterations}\tFeat {features}\tOut {output}\tInterps {nbInterp}\tClus {nbClus}\tFold {fold+1}/{folds}\tL={np.round(L, 2)}".expandtabs(20))
 
             if ((L - prevL) / abs(L)) < prec:
                 cnt += num_iterations-prec_iteration

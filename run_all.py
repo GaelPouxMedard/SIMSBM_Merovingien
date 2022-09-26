@@ -5,6 +5,7 @@ from Visualisations import visualize_all
 import BuildAlpha
 
 folder = "Merovingien"
+folder_out = folder
 
 features = [0]
 DS = [3]
@@ -21,10 +22,19 @@ lim = -1
 seuil = 0
 num_processes = 6
 
+
+list_output = [1]
+list_nbInterp = [[1], [2]]
+list_nbClus = [[3], [7]]
+folder_out = "Temp"
+
 if __name__ == "__main__":
-    treat_all()
-    for output in list_output:
-        BuildAlpha.run(folder, DS, features, output, propTrainingSet, folds, lim, seuil=seuil)
-    os.system("python run_XP.py")  # For multiprocessing
+    # treat_all()
+    # for output in list_output:
+    #     BuildAlpha.run(folder, DS, features, output, propTrainingSet, folds, lim, seuil=seuil)
+    # os.system("python run_XP.py")  # For multiprocessing
+    # evaluate_all()
+    # visualize_all()
+
     evaluate_all()
     visualize_all()
