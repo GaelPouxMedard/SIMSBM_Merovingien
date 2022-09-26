@@ -199,7 +199,7 @@ def readRes(folder_out):
     folder = "Results/"+folder_out+"/"
     files = os.listdir(folder)
 
-    metricsToExclude = ["CovErr", "CovErrNorm", "Acc", "P@1", "RankAvgPrec"]
+    metricsToExclude = ["CovErr", "CovErrNorm", "Acc@1", "P@1", "RankAvgPrec"]
 
     dicAvg, dicStd, dicSem = {}, {}, {}
     matAvg, matStd, matSem = [], [], []
@@ -330,7 +330,7 @@ def plotRes(folder_out):
 
         elif len(whatToPlot)==2:
             for redKey in dicToPlotx:
-                label = "Acc@1"
+                label = "Acc"
                 if label not in dicToPlotAvg[redKey]: continue
 
                 arrx, arry = set(), set()

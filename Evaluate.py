@@ -208,7 +208,10 @@ def scores(listTrue, listProbs, label, tabMetricsAll, nbOut, fold):
     tabMetricsAll[label][fold]["F1"], tabMetricsAll[label][fold]["Acc"] = 0, 0
     for thres in np.linspace(0, 1, 1001):
         F1 = metrics.f1_score(listTrue, (listProbs>thres).astype(int), labels=labels_considered, average="micro")
-        acc = metrics.accuracy_score(listTrue, (listProbs>thres).astype(int))
+
+        listTrue_flat = np.array(listTrue).flatten()
+        listProbs_flat = (np.array(listProbs).flatten()>thres).astype(int)
+        acc = np.sum((listTrue_flat==listProbs_flat).astype(int))/len(listTrue_flat)
         if F1 > tabMetricsAll[label][fold]["F1"]:
             tabMetricsAll[label][fold]["F1"] = F1
         if acc > tabMetricsAll[label][fold]["Acc"]:
