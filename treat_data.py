@@ -92,11 +92,23 @@ if __name__ == "__main__":
     columns_considered = ["Sepulture", "Statut", "Objets", "Nombre_indiv", "Sexe", "Classe_age"]
     setObj, setAge, setSexe = [], [], []
     setPlaces = set()
+
+
+    cntobj = {}
+    with open("Data/data.csv", "r") as f:
+        f.readline()
+        for line in f:
+            data_line = list(map(str.lower, line.split(";")))
+            if data_line[3] not in cntobj: cntobj[data_line[3]] = 0
+            cntobj[data_line[3]] += 1
+
+
     with open("Data/data.csv", "r") as f:
         columns = f.readline()
         print("\t".join(columns.split(";")))
         for line in f:
             data_line = list(map(str.lower, line.split(";")))
+            if cntobj[data_line[3]]<10: continue  # Considère pas objets apparaissant moins de 10 fois au total
 
             data_line[3] = data_line[3].replace("contenant du défunt/chambre funéraire", "contenant du défunt")
             data_line[3] = data_line[3].replace(" ", "_")
@@ -208,6 +220,6 @@ if __name__ == "__main__":
 
 
     plt.tight_layout()
-    plt.savefig("Figures_article\\Stats_DS.pdf")
+    # plt.savefig("Figures_article\\Stats_DS.pdf")
 
 

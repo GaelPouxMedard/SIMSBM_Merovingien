@@ -454,8 +454,8 @@ def plotInput1D(thetas, p, intToOut, intToFeat, codeSave, folder_out):
     for i, size in enumerate(GROUPS_SIZE):
         for _ in range(size):
             c = f"C{i}"
-            if GROUP_LAB[i]=="Masculin": c="blue"
-            if GROUP_LAB[i]=="Féminin": c="pink"
+            if GROUP_LAB[i]=="Masculin": c="purple"
+            if GROUP_LAB[i]=="Féminin": c="gold"
             COLORS.append(c)
 
     # Add bars to represent ...
