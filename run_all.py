@@ -22,11 +22,14 @@ lim = -1
 seuil = 0
 num_processes = 7
 
+list_output = [1, 2]
+list_nbInterp = [[2]]
+list_nbClus = [[6], [7], [8]]
 if __name__ == "__main__":
-    treat_all()
-    for output in list_output:
-        BuildAlpha.run(folder, DS, features, output, propTrainingSet, folds, lim, seuil=seuil)
-    os.system("python run_XP.py")  # For multiprocessing
-    evaluate_all()
+    # treat_all()
+    # for output in list_output:
+    #     BuildAlpha.run(folder, DS, features, output, propTrainingSet, folds, lim, seuil=seuil)
+    # os.system("python run_XP.py")  # For multiprocessing
+    # evaluate_all()
     visualize_all()
 

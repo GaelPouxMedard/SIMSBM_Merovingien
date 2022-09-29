@@ -350,7 +350,7 @@ def plotRes(folder_out):
 
                 matHeatAvg = sparse.COO(list(zip(*coords)), data=dicToPlotAvg[redKey][label]).todense()
 
-                sns.heatmap(np.round(matHeatAvg*100), cmap="afmhot_r", linewidth=0.03, vmin=0, vmax=100, square=True, annot=True, cbar=False, fmt='g')
+                sns.heatmap(np.round(matHeatAvg*100), cmap="afmhot_r", linewidth=0.03, vmin=50, vmax=100, square=True, annot=True, cbar=False, fmt='g')
 
                 plt.xlabel(names[whatToPlot[1]])
                 plt.ylabel(names[whatToPlot[0]])
@@ -495,7 +495,7 @@ def plotInput2D(thetas, p, intToOut, intToFeat, codeSave, folder_out):
     matHeatAvg = thetas[0].dot(thetas[0].dot(p))
     xlabels = ylabels = np.array([intToFeat[0][i] for i in range(len(thetas[0]))])
 
-    plt.figure(figsize=(5*p.shape[-1], 5))
+    plt.figure(figsize=(3.5*p.shape[-1], 5))
 
     Y = sch.linkage(np.max(matHeatAvg, axis=-1), method='centroid')
     Z = sch.dendrogram(Y, orientation='right', no_plot=True)
