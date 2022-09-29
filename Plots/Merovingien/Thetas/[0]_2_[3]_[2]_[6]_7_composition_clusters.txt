@@ -1,0 +1,107 @@
+Cluster 0
+100.0% - Pendant/pendentif
+50.0% - Anneau(x) de châtelaine
+29.0% - Châtelaine
+26.0% - Perle(s) de châtelaine
+22.0% - Monnaie
+18.0% - Flèche
+18.0% - Fibule
+12.0% - Fusaïole
+12.0% - Collier
+11.0% - Pot
+7.0% - Boucle d'oreille
+6.0% - Gobelet
+6.0% - Couteau
+5.0% - Aumônière/sacoche
+Cluster 1
+42.0% - Châtelaine
+35.0% - Œuf
+34.0% - Fibule
+31.0% - Ceinture
+29.0% - Contenant du défunt/chambre funéraire
+27.0% - Couteau
+27.0% - Collier
+25.0% - Pot
+24.0% - Fusaïole
+22.0% - Anneau(x) de châtelaine
+20.0% - Aumônière/sacoche
+18.0% - Peigne
+15.0% - Scramasaxe
+9.0% - Flèche
+8.0% - Pierre(s) à feu
+8.0% - Clou(s)
+6.0% - Fourreau
+5.0% - Pot verseur
+Cluster 2
+100.0% - Faune
+78.0% - Monnaie
+74.0% - Perle(s) de châtelaine
+71.0% - Contenant du défunt/chambre funéraire
+64.0% - Fusaïole
+61.0% - Collier
+60.0% - Pierre(s) à feu
+55.0% - Œuf
+53.0% - Aumônière/sacoche
+49.0% - Fibule
+31.0% - Gobelet
+22.0% - Couteau
+17.0% - Châtelaine
+13.0% - Ceinture
+Cluster 3
+97.0% - Lance
+95.0% - Chaussures/jarretières
+92.0% - Poinçon
+83.0% - Forces
+83.0% - Boucle d'oreille
+72.0% - Fiche
+72.0% - Récipient
+68.0% - Épée
+66.0% - Baudrier d'épée
+57.0% - Lot de perles (vrac)
+45.0% - Coffre/coffret
+45.0% - Bouclier
+39.0% - Pot verseur
+36.0% - Clou(s)
+36.0% - Pot
+26.0% - Scramasaxe
+25.0% - Peigne
+20.0% - Gobelet
+8.0% - Pierre(s) à feu
+7.0% - Ceinture
+5.0% - Anneau(x) de châtelaine
+Cluster 4
+67.0% - Fourreau
+55.0% - Bouclier
+55.0% - Coffre/coffret
+52.0% - Peigne
+39.0% - Lot de perles (vrac)
+37.0% - Pot verseur
+36.0% - Gobelet
+34.0% - Baudrier d'épée
+33.0% - Couteau
+32.0% - Épée
+31.0% - Ceinture
+28.0% - Récipient
+28.0% - Fiche
+17.0% - Forces
+9.0% - Châtelaine
+8.0% - Poinçon
+8.0% - Clou(s)
+7.0% - Pot
+6.0% - Scramasaxe
+6.0% - Boucle d'oreille
+5.0% - Chaussures/jarretières
+Cluster 5
+73.0% - Flèche
+53.0% - Scramasaxe
+48.0% - Clou(s)
+24.0% - Fourreau
+21.0% - Pierre(s) à feu
+20.0% - Aumônière/sacoche
+20.0% - Pot
+20.0% - Anneau(x) de châtelaine
+19.0% - Pot verseur
+13.0% - Ceinture
+8.0% - Couteau
+8.0% - Gobelet
+6.0% - Peigne

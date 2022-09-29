@@ -1,0 +1,112 @@
+Cluster 0
+39.0% - Ceinture
+35.0% - Couteau
+32.0% - Faune
+30.0% - Pot verseur
+30.0% - Coffre/coffret
+24.0% - Collier
+23.0% - Monnaie
+20.0% - Fibule
+20.0% - Aumônière/sacoche
+19.0% - Pot
+17.0% - Gobelet
+17.0% - Œuf
+15.0% - Boucle d'oreille
+13.0% - Lot de perles (vrac)
+13.0% - Clou(s)
+10.0% - Peigne
+6.0% - Fourreau
+5.0% - Châtelaine
+Cluster 1
+89.0% - Baudrier d'épée
+88.0% - Forces
+86.0% - Poinçon
+86.0% - Pierre(s) à feu
+85.0% - Récipient
+81.0% - Fiche
+78.0% - Lance
+76.0% - Épée
+68.0% - Scramasaxe
+63.0% - Bouclier
+53.0% - Fourreau
+32.0% - Pot
+28.0% - Boucle d'oreille
+27.0% - Gobelet
+24.0% - Peigne
+22.0% - Clou(s)
+21.0% - Faune
+18.0% - Œuf
+18.0% - Monnaie
+17.0% - Pot verseur
+12.0% - Aumônière/sacoche
+11.0% - Couteau
+Cluster 2
+100.0% - Fusaïole
+100.0% - Anneau(x) de châtelaine
+100.0% - Perle(s) de châtelaine
+100.0% - Pendant/pendentif
+100.0% - Contenant du défunt/chambre funéraire
+97.0% - Chaussures/jarretières
+95.0% - Châtelaine
+65.0% - Coffre/coffret
+63.0% - Collier
+63.0% - Lot de perles (vrac)
+61.0% - Fibule
+29.0% - Monnaie
+28.0% - Œuf
+23.0% - Boucle d'oreille
+23.0% - Pot
+21.0% - Faune
+20.0% - Clou(s)
+17.0% - Peigne
+16.0% - Gobelet
+16.0% - Pot verseur
+12.0% - Aumônière/sacoche
+8.0% - Couteau
+Cluster 3
+77.0% - Flèche
+51.0% - Ceinture
+29.0% - Pot verseur
+28.0% - Aumônière/sacoche
+28.0% - Fourreau
+26.0% - Boucle d'oreille
+26.0% - Bouclier
+23.0% - Faune
+22.0% - Couteau
+21.0% - Peigne
+19.0% - Clou(s)
+16.0% - Lance
+13.0% - Fiche
+11.0% - Œuf
+11.0% - Pierre(s) à feu
+11.0% - Gobelet
+11.0% - Scramasaxe
+10.0% - Récipient
+9.0% - Poinçon
+8.0% - Épée
+7.0% - Monnaie
+7.0% - Forces
+7.0% - Collier
+5.0% - Fibule
+5.0% - Pot
+Cluster 4
+29.0% - Gobelet
+28.0% - Aumônière/sacoche
+27.0% - Peigne
+26.0% - Clou(s)
+26.0% - Œuf
+24.0% - Couteau
+23.0% - Monnaie
+23.0% - Flèche
+21.0% - Scramasaxe
+21.0% - Pot
+20.0% - Lot de perles (vrac)
+16.0% - Épée
+14.0% - Fourreau
+11.0% - Bouclier
+10.0% - Fibule
+8.0% - Boucle d'oreille
+7.0% - Pot verseur
+7.0% - Baudrier d'épée
+6.0% - Fiche
+6.0% - Lance

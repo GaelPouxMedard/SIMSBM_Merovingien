@@ -1,0 +1,102 @@
+Cluster 0
+82.0% - Coffre/coffret
+76.0% - Fiche
+67.0% - Forces
+63.0% - Peigne
+58.0% - Lance
+50.0% - Récipient
+43.0% - Chaussures/jarretières
+41.0% - Fourreau
+36.0% - Aumônière/sacoche
+32.0% - Baudrier d'épée
+25.0% - Monnaie
+25.0% - Poinçon
+25.0% - Lot de perles (vrac)
+24.0% - Gobelet
+23.0% - Flèche
+22.0% - Scramasaxe
+14.0% - Pot verseur
+13.0% - Pierre(s) à feu
+12.0% - Fusaïole
+8.0% - Ceinture
+7.0% - Bouclier
+Cluster 1
+100.0% - Pendant/pendentif
+42.0% - Flèche
+18.0% - Châtelaine
+16.0% - Pot
+11.0% - Fibule
+11.0% - Collier
+8.0% - Œuf
+7.0% - Anneau(x) de châtelaine
+6.0% - Scramasaxe
+5.0% - Couteau
+5.0% - Aumônière/sacoche
+Cluster 2
+90.0% - Œuf
+73.0% - Clou(s)
+73.0% - Pot verseur
+72.0% - Pot
+63.0% - Faune
+55.0% - Châtelaine
+52.0% - Ceinture
+41.0% - Collier
+41.0% - Contenant du défunt/chambre funéraire
+39.0% - Couteau
+35.0% - Pierre(s) à feu
+26.0% - Anneau(x) de châtelaine
+23.0% - Scramasaxe
+16.0% - Lot de perles (vrac)
+11.0% - Fusaïole
+11.0% - Perle(s) de châtelaine
+7.0% - Flèche
+Cluster 3
+100.0% - Épée
+93.0% - Bouclier
+75.0% - Poinçon
+73.0% - Boucle d'oreille
+68.0% - Baudrier d'épée
+58.0% - Lot de perles (vrac)
+57.0% - Chaussures/jarretières
+51.0% - Gobelet
+50.0% - Récipient
+43.0% - Fourreau
+42.0% - Lance
+33.0% - Forces
+28.0% - Flèche
+27.0% - Peigne
+24.0% - Pierre(s) à feu
+24.0% - Fiche
+20.0% - Scramasaxe
+18.0% - Coffre/coffret
+11.0% - Aumônière/sacoche
+11.0% - Pot verseur
+11.0% - Pot
+8.0% - Monnaie
+6.0% - Fusaïole
+Cluster 4
+89.0% - Perle(s) de châtelaine
+71.0% - Fusaïole
+67.0% - Monnaie
+58.0% - Fibule
+37.0% - Faune
+32.0% - Aumônière/sacoche
+25.0% - Collier
+23.0% - Couteau
+20.0% - Gobelet
+16.0% - Châtelaine
+Cluster 5
+66.0% - Anneau(x) de châtelaine
+59.0% - Contenant du défunt/chambre funéraire
+36.0% - Ceinture
+33.0% - Couteau
+32.0% - Fibule
+28.0% - Pierre(s) à feu
+28.0% - Scramasaxe
+23.0% - Clou(s)
+23.0% - Boucle d'oreille
+23.0% - Collier
+16.0% - Fourreau
+14.0% - Aumônière/sacoche
+11.0% - Châtelaine
+10.0% - Peigne

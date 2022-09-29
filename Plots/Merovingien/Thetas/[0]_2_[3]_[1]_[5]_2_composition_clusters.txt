@@ -1,0 +1,138 @@
+Cluster 0
+75.0% - Lot de perles (vrac)
+66.0% - Gobelet
+59.0% - Récipient
+49.0% - Lance
+48.0% - Forces
+47.0% - Fiche
+45.0% - Coffre/coffret
+44.0% - Pot
+43.0% - Épée
+42.0% - Chaussures/jarretières
+39.0% - Flèche
+37.0% - Ceinture
+36.0% - Baudrier d'épée
+36.0% - Pot verseur
+34.0% - Faune
+33.0% - Poinçon
+31.0% - Clou(s)
+31.0% - Œuf
+30.0% - Couteau
+30.0% - Monnaie
+27.0% - Scramasaxe
+25.0% - Peigne
+23.0% - Pierre(s) à feu
+22.0% - Fibule
+22.0% - Fourreau
+17.0% - Contenant du défunt/chambre funéraire
+15.0% - Pendant/pendentif
+14.0% - Collier
+14.0% - Fusaïole
+11.0% - Perle(s) de châtelaine
+11.0% - Aumônière/sacoche
+5.0% - Boucle d'oreille
+5.0% - Anneau(x) de châtelaine
+Cluster 1
+50.0% - Pendant/pendentif
+41.0% - Anneau(x) de châtelaine
+38.0% - Flèche
+33.0% - Œuf
+31.0% - Fibule
+28.0% - Perle(s) de châtelaine
+27.0% - Collier
+24.0% - Aumônière/sacoche
+24.0% - Fusaïole
+22.0% - Pot
+19.0% - Clou(s)
+18.0% - Contenant du défunt/chambre funéraire
+18.0% - Monnaie
+17.0% - Scramasaxe
+16.0% - Couteau
+15.0% - Châtelaine
+12.0% - Ceinture
+11.0% - Fourreau
+6.0% - Pierre(s) à feu
+Cluster 2
+56.0% - Épée
+53.0% - Fiche
+52.0% - Bouclier
+51.0% - Forces
+50.0% - Poinçon
+48.0% - Pierre(s) à feu
+42.0% - Aumônière/sacoche
+40.0% - Fourreau
+37.0% - Chaussures/jarretières
+36.0% - Clou(s)
+34.0% - Coffre/coffret
+32.0% - Baudrier d'épée
+29.0% - Anneau(x) de châtelaine
+26.0% - Peigne
+25.0% - Œuf
+24.0% - Couteau
+19.0% - Ceinture
+16.0% - Pendant/pendentif
+16.0% - Scramasaxe
+15.0% - Faune
+15.0% - Pot verseur
+14.0% - Perle(s) de châtelaine
+14.0% - Fibule
+13.0% - Lot de perles (vrac)
+13.0% - Collier
+12.0% - Boucle d'oreille
+12.0% - Contenant du défunt/chambre funéraire
+11.0% - Lance
+9.0% - Gobelet
+9.0% - Fusaïole
+6.0% - Châtelaine
+5.0% - Pot
+Cluster 3
+71.0% - Châtelaine
+42.0% - Fusaïole
+34.0% - Monnaie
+31.0% - Contenant du défunt/chambre funéraire
+26.0% - Collier
+26.0% - Scramasaxe
+26.0% - Pot
+26.0% - Peigne
+22.0% - Faune
+20.0% - Couteau
+19.0% - Perle(s) de châtelaine
+18.0% - Anneau(x) de châtelaine
+18.0% - Pendant/pendentif
+16.0% - Gobelet
+16.0% - Flèche
+15.0% - Ceinture
+15.0% - Boucle d'oreille
+14.0% - Pot verseur
+12.0% - Fibule
+9.0% - Pierre(s) à feu
+7.0% - Aumônière/sacoche
+Cluster 4
+67.0% - Boucle d'oreille
+45.0% - Bouclier
+41.0% - Récipient
+40.0% - Lance
+35.0% - Pot verseur
+32.0% - Baudrier d'épée
+28.0% - Perle(s) de châtelaine
+26.0% - Fourreau
+24.0% - Faune
+22.0% - Contenant du défunt/chambre funéraire
+22.0% - Peigne
+21.0% - Fibule
+21.0% - Chaussures/jarretières
+21.0% - Coffre/coffret
+20.0% - Collier
+17.0% - Monnaie
+17.0% - Poinçon
+17.0% - Ceinture
+16.0% - Aumônière/sacoche
+15.0% - Scramasaxe
+14.0% - Pierre(s) à feu
+13.0% - Clou(s)
+12.0% - Œuf
+11.0% - Fusaïole
+10.0% - Couteau
+8.0% - Gobelet
+8.0% - Lot de perles (vrac)
+7.0% - Anneau(x) de châtelaine

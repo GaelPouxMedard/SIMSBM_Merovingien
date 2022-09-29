@@ -1,0 +1,116 @@
+Cluster 0
+98.0% - Pot verseur
+80.0% - Monnaie
+78.0% - Faune
+72.0% - Pierre(s) à feu
+62.0% - Perle(s) de châtelaine
+61.0% - Fusaïole
+48.0% - Aumônière/sacoche
+28.0% - Collier
+8.0% - Couteau
+Cluster 1
+100.0% - Pendant/pendentif
+81.0% - Anneau(x) de châtelaine
+35.0% - Châtelaine
+26.0% - Perle(s) de châtelaine
+20.0% - Fusaïole
+20.0% - Monnaie
+18.0% - Fibule
+13.0% - Flèche
+13.0% - Collier
+9.0% - Pot
+8.0% - Aumônière/sacoche
+7.0% - Couteau
+Cluster 2
+94.0% - Contenant du défunt/chambre funéraire
+82.0% - Fibule
+51.0% - Œuf
+31.0% - Châtelaine
+30.0% - Ceinture
+25.0% - Pot
+25.0% - Couteau
+24.0% - Collier
+22.0% - Clou(s)
+17.0% - Peigne
+16.0% - Pierre(s) à feu
+16.0% - Aumônière/sacoche
+12.0% - Perle(s) de châtelaine
+7.0% - Scramasaxe
+Cluster 3
+89.0% - Récipient
+53.0% - Coffre/coffret
+47.0% - Fourreau
+47.0% - Forces
+46.0% - Bouclier
+44.0% - Boucle d'oreille
+42.0% - Baudrier d'épée
+40.0% - Lance
+40.0% - Gobelet
+34.0% - Chaussures/jarretières
+29.0% - Lot de perles (vrac)
+28.0% - Peigne
+25.0% - Fiche
+13.0% - Poinçon
+13.0% - Pot
+12.0% - Scramasaxe
+5.0% - Anneau(x) de châtelaine
+5.0% - Couteau
+Cluster 4
+49.0% - Œuf
+46.0% - Pot
+36.0% - Clou(s)
+36.0% - Gobelet
+33.0% - Châtelaine
+29.0% - Collier
+19.0% - Fusaïole
+16.0% - Faune
+16.0% - Boucle d'oreille
+14.0% - Ceinture
+9.0% - Couteau
+6.0% - Lot de perles (vrac)
+Cluster 5
+87.0% - Flèche
+60.0% - Scramasaxe
+28.0% - Aumônière/sacoche
+25.0% - Fourreau
+24.0% - Ceinture
+21.0% - Couteau
+15.0% - Peigne
+11.0% - Pierre(s) à feu
+6.0% - Contenant du défunt/chambre funéraire
+5.0% - Collier
+Cluster 6
+83.0% - Épée
+68.0% - Poinçon
+62.0% - Lot de perles (vrac)
+61.0% - Fiche
+51.0% - Forces
+51.0% - Bouclier
+40.0% - Chaussures/jarretières
+39.0% - Lance
+38.0% - Peigne
+34.0% - Boucle d'oreille
+29.0% - Clou(s)
+27.0% - Baudrier d'épée
+18.0% - Scramasaxe
+17.0% - Ceinture
+15.0% - Couteau
+15.0% - Gobelet
+9.0% - Anneau(x) de châtelaine
+7.0% - Coffre/coffret
+6.0% - Fourreau
+Cluster 7
+40.0% - Coffre/coffret
+32.0% - Baudrier d'épée
+26.0% - Chaussures/jarretières
+21.0% - Lance
+18.0% - Poinçon
+18.0% - Fourreau
+14.0% - Épée
+13.0% - Fiche
+10.0% - Couteau
+9.0% - Gobelet
+8.0% - Récipient
+8.0% - Ceinture
+7.0% - Clou(s)
+6.0% - Boucle d'oreille

@@ -1,0 +1,103 @@
+Cluster 0
+72.0% - Peigne
+68.0% - Pot verseur
+65.0% - Monnaie
+60.0% - Poinçon
+59.0% - Fiche
+48.0% - Bouclier
+39.0% - Pendant/pendentif
+36.0% - Aumônière/sacoche
+34.0% - Baudrier d'épée
+33.0% - Perle(s) de châtelaine
+33.0% - Contenant du défunt/chambre funéraire
+32.0% - Œuf
+31.0% - Coffre/coffret
+31.0% - Fourreau
+27.0% - Clou(s)
+26.0% - Ceinture
+26.0% - Gobelet
+22.0% - Pierre(s) à feu
+20.0% - Châtelaine
+19.0% - Lot de perles (vrac)
+17.0% - Épée
+17.0% - Fibule
+16.0% - Couteau
+15.0% - Récipient
+14.0% - Scramasaxe
+14.0% - Anneau(x) de châtelaine
+13.0% - Lance
+12.0% - Pot
+12.0% - Collier
+10.0% - Fusaïole
+9.0% - Forces
+6.0% - Faune
+Cluster 1
+70.0% - Fibule
+61.0% - Pot
+49.0% - Couteau
+46.0% - Scramasaxe
+45.0% - Fusaïole
+39.0% - Anneau(x) de châtelaine
+39.0% - Clou(s)
+36.0% - Flèche
+35.0% - Aumônière/sacoche
+33.0% - Châtelaine
+26.0% - Contenant du défunt/chambre funéraire
+25.0% - Pierre(s) à feu
+23.0% - Peigne
+21.0% - Collier
+20.0% - Faune
+19.0% - Œuf
+19.0% - Gobelet
+19.0% - Pendant/pendentif
+16.0% - Ceinture
+9.0% - Boucle d'oreille
+Cluster 2
+98.0% - Chaussures/jarretières
+91.0% - Forces
+89.0% - Boucle d'oreille
+87.0% - Lance
+85.0% - Récipient
+83.0% - Épée
+78.0% - Lot de perles (vrac)
+73.0% - Faune
+69.0% - Coffre/coffret
+67.0% - Perle(s) de châtelaine
+66.0% - Baudrier d'épée
+53.0% - Gobelet
+53.0% - Fourreau
+52.0% - Bouclier
+46.0% - Pierre(s) à feu
+41.0% - Fiche
+40.0% - Poinçon
+39.0% - Fusaïole
+36.0% - Collier
+33.0% - Pendant/pendentif
+33.0% - Clou(s)
+32.0% - Pot verseur
+29.0% - Ceinture
+28.0% - Couteau
+26.0% - Scramasaxe
+22.0% - Pot
+17.0% - Œuf
+16.0% - Aumônière/sacoche
+14.0% - Contenant du défunt/chambre funéraire
+10.0% - Châtelaine
+Cluster 3
+54.0% - Flèche
+43.0% - Anneau(x) de châtelaine
+37.0% - Châtelaine
+31.0% - Œuf
+31.0% - Collier
+31.0% - Monnaie
+29.0% - Ceinture
+28.0% - Contenant du défunt/chambre funéraire
+13.0% - Scramasaxe
+13.0% - Aumônière/sacoche
+12.0% - Fourreau
+12.0% - Fibule
+9.0% - Pendant/pendentif
+7.0% - Fusaïole
+7.0% - Pierre(s) à feu
+6.0% - Couteau
+5.0% - Pot

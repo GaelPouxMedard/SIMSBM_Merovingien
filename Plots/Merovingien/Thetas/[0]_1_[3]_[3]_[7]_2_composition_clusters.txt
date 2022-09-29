@@ -1,0 +1,63 @@
+Cluster 0
+59.0% - Ceinture
+57.0% - Gobelet
+22.0% - Pot
+18.0% - Faune
+17.0% - Couteau
+10.0% - Peigne
+Cluster 1
+98.0% - Fourreau
+27.0% - Aumônière/sacoche
+25.0% - Peigne
+11.0% - Clou(s)
+Cluster 2
+100.0% - Monnaie
+90.0% - Pot verseur
+79.0% - Couteau
+68.0% - Aumônière/sacoche
+60.0% - Œuf
+47.0% - Peigne
+34.0% - Ceinture
+29.0% - Pot
+17.0% - Gobelet
+Cluster 3
+100.0% - Poinçon
+100.0% - Pierre(s) à feu
+100.0% - Épée
+100.0% - Forces
+100.0% - Baudrier d'épée
+100.0% - Lance
+100.0% - Scramasaxe
+100.0% - Bouclier
+100.0% - Récipient
+100.0% - Fiche
+100.0% - Flèche
+Cluster 4
+100.0% - Fibule
+80.0% - Faune
+49.0% - Collier
+26.0% - Gobelet
+18.0% - Peigne
+9.0% - Œuf
+7.0% - Ceinture
+5.0% - Aumônière/sacoche
+Cluster 5
+100.0% - Perle(s) de châtelaine
+100.0% - Contenant du défunt/chambre funéraire
+100.0% - Fusaïole
+100.0% - Anneau(x) de châtelaine
+100.0% - Pendant/pendentif
+100.0% - Chaussures/jarretières
+98.0% - Châtelaine
+69.0% - Coffre/coffret
+46.0% - Collier
+42.0% - Lot de perles (vrac)
+9.0% - Pot verseur
+7.0% - Œuf
+Cluster 6
+98.0% - Boucle d'oreille
+89.0% - Clou(s)
+58.0% - Lot de perles (vrac)
+43.0% - Pot
+30.0% - Coffre/coffret
+24.0% - Œuf

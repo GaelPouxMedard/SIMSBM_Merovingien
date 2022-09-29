@@ -1,0 +1,106 @@
+Cluster 0
+84.0% - Forces
+69.0% - Fiche
+56.0% - Baudrier d'épée
+51.0% - Pierre(s) à feu
+43.0% - Épée
+40.0% - Coffre/coffret
+39.0% - Clou(s)
+38.0% - Poinçon
+36.0% - Œuf
+30.0% - Lance
+25.0% - Scramasaxe
+22.0% - Chaussures/jarretières
+19.0% - Fourreau
+19.0% - Lot de perles (vrac)
+17.0% - Pot verseur
+16.0% - Récipient
+12.0% - Gobelet
+12.0% - Peigne
+11.0% - Faune
+10.0% - Ceinture
+9.0% - Boucle d'oreille
+8.0% - Couteau
+7.0% - Bouclier
+6.0% - Monnaie
+Cluster 1
+100.0% - Pendant/pendentif
+50.0% - Anneau(x) de châtelaine
+49.0% - Flèche
+36.0% - Monnaie
+15.0% - Châtelaine
+10.0% - Scramasaxe
+8.0% - Aumônière/sacoche
+7.0% - Gobelet
+Cluster 2
+62.0% - Gobelet
+58.0% - Pot
+48.0% - Pot verseur
+16.0% - Clou(s)
+15.0% - Lot de perles (vrac)
+14.0% - Faune
+10.0% - Aumônière/sacoche
+7.0% - Scramasaxe
+6.0% - Collier
+6.0% - Couteau
+Cluster 3
+51.0% - Flèche
+51.0% - Scramasaxe
+45.0% - Ceinture
+44.0% - Anneau(x) de châtelaine
+38.0% - Œuf
+36.0% - Clou(s)
+36.0% - Aumônière/sacoche
+36.0% - Couteau
+34.0% - Châtelaine
+32.0% - Pot
+28.0% - Peigne
+25.0% - Fourreau
+16.0% - Collier
+15.0% - Fusaïole
+8.0% - Pot verseur
+Cluster 4
+93.0% - Bouclier
+88.0% - Boucle d'oreille
+84.0% - Récipient
+78.0% - Chaussures/jarretières
+70.0% - Lance
+64.0% - Lot de perles (vrac)
+62.0% - Poinçon
+60.0% - Coffre/coffret
+58.0% - Peigne
+57.0% - Épée
+56.0% - Fourreau
+44.0% - Baudrier d'épée
+31.0% - Fiche
+28.0% - Pot verseur
+20.0% - Œuf
+19.0% - Gobelet
+16.0% - Forces
+15.0% - Monnaie
+14.0% - Faune
+10.0% - Ceinture
+8.0% - Scramasaxe
+7.0% - Couteau
+5.0% - Clou(s)
+Cluster 5
+68.0% - Perle(s) de châtelaine
+56.0% - Faune
+55.0% - Collier
+48.0% - Châtelaine
+43.0% - Monnaie
+41.0% - Fusaïole
+36.0% - Aumônière/sacoche
+36.0% - Couteau
+35.0% - Ceinture
+25.0% - Contenant du défunt/chambre funéraire
+17.0% - Fibule
+6.0% - Œuf
+Cluster 6
+83.0% - Fibule
+75.0% - Contenant du défunt/chambre funéraire
+44.0% - Fusaïole
+42.0% - Pierre(s) à feu
+32.0% - Perle(s) de châtelaine
+23.0% - Collier
+5.0% - Anneau(x) de châtelaine

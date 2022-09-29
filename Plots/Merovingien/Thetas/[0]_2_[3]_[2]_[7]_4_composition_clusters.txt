@@ -1,0 +1,108 @@
+Cluster 0
+86.0% - Lance
+79.0% - Chaussures/jarretières
+71.0% - Boucle d'oreille
+70.0% - Peigne
+65.0% - Bouclier
+60.0% - Épée
+59.0% - Poinçon
+56.0% - Baudrier d'épée
+54.0% - Coffre/coffret
+48.0% - Récipient
+48.0% - Lot de perles (vrac)
+47.0% - Forces
+44.0% - Gobelet
+36.0% - Fourreau
+35.0% - Pot verseur
+29.0% - Fiche
+29.0% - Clou(s)
+23.0% - Faune
+18.0% - Couteau
+15.0% - Pot
+10.0% - Ceinture
+6.0% - Œuf
+Cluster 1
+71.0% - Fiche
+53.0% - Forces
+52.0% - Récipient
+47.0% - Lot de perles (vrac)
+46.0% - Coffre/coffret
+44.0% - Baudrier d'épée
+43.0% - Pot verseur
+41.0% - Poinçon
+40.0% - Épée
+35.0% - Bouclier
+31.0% - Fourreau
+28.0% - Gobelet
+24.0% - Scramasaxe
+21.0% - Pot
+21.0% - Chaussures/jarretières
+19.0% - Ceinture
+19.0% - Boucle d'oreille
+18.0% - Clou(s)
+17.0% - Faune
+14.0% - Lance
+10.0% - Œuf
+9.0% - Couteau
+6.0% - Collier
+Cluster 2
+64.0% - Perle(s) de châtelaine
+61.0% - Monnaie
+47.0% - Fusaïole
+42.0% - Contenant du défunt/chambre funéraire
+37.0% - Fibule
+32.0% - Collier
+24.0% - Faune
+22.0% - Pierre(s) à feu
+21.0% - Aumônière/sacoche
+5.0% - Boucle d'oreille
+Cluster 3
+100.0% - Flèche
+60.0% - Scramasaxe
+44.0% - Pot
+36.0% - Clou(s)
+27.0% - Œuf
+25.0% - Gobelet
+21.0% - Fourreau
+17.0% - Aumônière/sacoche
+17.0% - Ceinture
+14.0% - Couteau
+9.0% - Peigne
+6.0% - Pot verseur
+Cluster 4
+58.0% - Pierre(s) à feu
+58.0% - Contenant du défunt/chambre funéraire
+39.0% - Monnaie
+36.0% - Perle(s) de châtelaine
+30.0% - Aumônière/sacoche
+17.0% - Œuf
+8.0% - Couteau
+8.0% - Faune
+7.0% - Ceinture
+6.0% - Fourreau
+Cluster 5
+100.0% - Pendant/pendentif
+95.0% - Anneau(x) de châtelaine
+43.0% - Châtelaine
+17.0% - Fibule
+15.0% - Couteau
+12.0% - Ceinture
+11.0% - Collier
+7.0% - Aumônière/sacoche
+Cluster 6
+57.0% - Châtelaine
+53.0% - Fusaïole
+48.0% - Collier
+47.0% - Fibule
+39.0% - Œuf
+36.0% - Couteau
+34.0% - Ceinture
+28.0% - Faune
+24.0% - Aumônière/sacoche
+20.0% - Peigne
+20.0% - Pierre(s) à feu
+19.0% - Pot
+16.0% - Pot verseur
+13.0% - Clou(s)
+11.0% - Scramasaxe
+6.0% - Fourreau

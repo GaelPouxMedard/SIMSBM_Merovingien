@@ -1,0 +1,119 @@
+Cluster 0
+39.0% - Fibule
+35.0% - Monnaie
+23.0% - Œuf
+19.0% - Aumônière/sacoche
+17.0% - Pot verseur
+17.0% - Gobelet
+15.0% - Faune
+14.0% - Pot
+13.0% - Peigne
+13.0% - Collier
+12.0% - Couteau
+8.0% - Coffre/coffret
+7.0% - Boucle d'oreille
+6.0% - Lot de perles (vrac)
+Cluster 1
+36.0% - Couteau
+30.0% - Ceinture
+30.0% - Monnaie
+30.0% - Coffre/coffret
+22.0% - Lot de perles (vrac)
+15.0% - Pot
+15.0% - Faune
+13.0% - Fibule
+9.0% - Aumônière/sacoche
+8.0% - Pot verseur
+7.0% - Boucle d'oreille
+6.0% - Fourreau
+Cluster 2
+100.0% - Perle(s) de châtelaine
+100.0% - Fusaïole
+100.0% - Pendant/pendentif
+100.0% - Contenant du défunt/chambre funéraire
+100.0% - Anneau(x) de châtelaine
+97.0% - Chaussures/jarretières
+95.0% - Châtelaine
+65.0% - Collier
+52.0% - Coffre/coffret
+40.0% - Fibule
+40.0% - Lot de perles (vrac)
+31.0% - Pot verseur
+16.0% - Gobelet
+13.0% - Œuf
+10.0% - Peigne
+9.0% - Monnaie
+8.0% - Faune
+8.0% - Aumônière/sacoche
+8.0% - Ceinture
+Cluster 3
+70.0% - Baudrier d'épée
+69.0% - Épée
+59.0% - Poinçon
+58.0% - Bouclier
+52.0% - Forces
+47.0% - Boucle d'oreille
+46.0% - Lance
+42.0% - Pierre(s) à feu
+36.0% - Clou(s)
+28.0% - Flèche
+26.0% - Gobelet
+25.0% - Scramasaxe
+21.0% - Fiche
+21.0% - Œuf
+19.0% - Pot verseur
+17.0% - Faune
+17.0% - Peigne
+16.0% - Pot
+16.0% - Lot de perles (vrac)
+10.0% - Fourreau
+9.0% - Aumônière/sacoche
+6.0% - Monnaie
+Cluster 4
+59.0% - Clou(s)
+54.0% - Scramasaxe
+47.0% - Ceinture
+45.0% - Lance
+43.0% - Fourreau
+41.0% - Forces
+35.0% - Peigne
+35.0% - Bouclier
+31.0% - Poinçon
+27.0% - Œuf
+27.0% - Flèche
+25.0% - Couteau
+25.0% - Faune
+21.0% - Baudrier d'épée
+20.0% - Pierre(s) à feu
+18.0% - Monnaie
+16.0% - Boucle d'oreille
+15.0% - Gobelet
+13.0% - Aumônière/sacoche
+11.0% - Pot verseur
+10.0% - Fiche
+8.0% - Épée
+6.0% - Collier
+Cluster 5
+69.0% - Fiche
+52.0% - Pot
+45.0% - Flèche
+43.0% - Aumônière/sacoche
+39.0% - Fourreau
+38.0% - Pierre(s) à feu
+24.0% - Gobelet
+23.0% - Épée
+22.0% - Peigne
+22.0% - Couteau
+22.0% - Boucle d'oreille
+21.0% - Scramasaxe
+20.0% - Faune
+14.0% - Lot de perles (vrac)
+14.0% - Pot verseur
+14.0% - Œuf
+14.0% - Collier
+11.0% - Poinçon
+10.0% - Ceinture
+9.0% - Baudrier d'épée
+9.0% - Lance
+7.0% - Forces
+7.0% - Bouclier
