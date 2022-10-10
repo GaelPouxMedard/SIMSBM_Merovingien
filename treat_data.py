@@ -16,6 +16,8 @@ def treat_all():
             cntobj[data_line[3]] += 1
 
     if "Merovingien" not in os.listdir("Data"): os.mkdir("Data\\Merovingien\\")
+    id_to_cnt = {}
+    cnt = 0
     with open("Data/data.csv", "r") as f:
         columns = f.readline()
         print("\t".join(columns.split(";")))
@@ -32,28 +34,31 @@ def treat_all():
             if data_line[7] not in ["féminin", "masculin"]:
                 if data_line[8] not in ["", "indéterminé"]:
                     data_line[7] = data_line[8]
-                if data_line[9] not in ["", "indéterminé"]:
-                    data_line[7] = data_line[9]
+                # if data_line[9] not in ["", "indéterminé"]:  # Sexe archéo
+                #     data_line[7] = data_line[9]
 
             data_line[10] = data_line[10].replace("adolescent", "adulte")  # APPROXIMATION
             data_line[10] = data_line[10].replace("adulte mature-âgé", "adulte")  # APPROXIMATION
 
-
-            if data_line[1] not in dicData:
-                dicData[data_line[1]] = {}
-                dicData[data_line[1]]["Statut"] = "-1"
-                dicData[data_line[1]]["Objets"] = []
-                dicData[data_line[1]]["Nombre_indiv"] = "-1"
-                dicData[data_line[1]]["Sexe"] = "-1"
-                dicData[data_line[1]]["Classe_age"] = "-1"
+            id_tombe = data_line[0]+" - "+data_line[1]
+            if id_tombe not in id_to_cnt:
+                id_to_cnt[id_tombe] = cnt
+                cnt += 1
+            if id_to_cnt[id_tombe] not in dicData:
+                dicData[id_to_cnt[id_tombe]] = {}
+                dicData[id_to_cnt[id_tombe]]["Statut"] = "-1"
+                dicData[id_to_cnt[id_tombe]]["Objets"] = []
+                dicData[id_to_cnt[id_tombe]]["Nombre_indiv"] = "-1"
+                dicData[id_to_cnt[id_tombe]]["Sexe"] = "-1"
+                dicData[id_to_cnt[id_tombe]]["Classe_age"] = "-1"
 
             if data_line[3] in ["non_identifié", "indéterminé", "objet_décontextualisé"]: continue
 
-            dicData[data_line[1]]["Statut"] = data_line[2]
-            dicData[data_line[1]]["Objets"].append(data_line[3])
-            dicData[data_line[1]]["Nombre_indiv"] = data_line[6]
-            dicData[data_line[1]]["Sexe"] = data_line[7]
-            dicData[data_line[1]]["Classe_age"] = data_line[10]
+            dicData[id_to_cnt[id_tombe]]["Statut"] = data_line[2]
+            dicData[id_to_cnt[id_tombe]]["Objets"].append(data_line[3])
+            dicData[id_to_cnt[id_tombe]]["Nombre_indiv"] = data_line[6]
+            dicData[id_to_cnt[id_tombe]]["Sexe"] = data_line[7]
+            dicData[id_to_cnt[id_tombe]]["Classe_age"] = data_line[10]
 
             setObj.append(data_line[3].replace(" ", "_"))
             setSexe.append(data_line[7])
@@ -71,9 +76,12 @@ def treat_all():
     if "Data" not in os.listdir("."):
         os.mkdir("Data/")
 
+    id_to_sep = open("Data/Merovingien/id2sep.txt", "w+", encoding="utf-8")
     featureObj = open("Data/Merovingien/feature_0.txt", "w+", encoding="utf-8")
     featureSexe = open("Data/Merovingien/feature_1.txt", "w+", encoding="utf-8")
     featureAge = open("Data/Merovingien/feature_2.txt", "w+", encoding="utf-8")
+    for s in id_to_cnt:
+        id_to_sep.write(f"{s}\t{id_to_cnt[s]}\n")
     for s in dicData:
         if dicData[s]['Objets'] != []:
             featureObj.write(f"{s}\t{' '.join(dicData[s]['Objets'])}\n")
@@ -103,6 +111,9 @@ if __name__ == "__main__":
             cntobj[data_line[3]] += 1
 
 
+    id_to_cnt = {}
+    cnt_to_id = {}
+    cnt = 0
     with open("Data/data.csv", "r") as f:
         columns = f.readline()
         print("\t".join(columns.split(";")))
@@ -120,35 +131,73 @@ if __name__ == "__main__":
             if data_line[7] not in ["féminin", "masculin"]:
                 if data_line[8] not in ["", "indéterminé"]:
                     data_line[7] = data_line[8]
-                if data_line[9] not in ["", "indéterminé"]:
-                    data_line[7] = data_line[9]
+                # if data_line[9] not in ["", "indéterminé"]:  # Sexe archéo
+                #     data_line[7] = data_line[9]
 
             data_line[10] = data_line[10].replace("adolescent", "adulte")  # APPROXIMATION
             data_line[10] = data_line[10].replace("adulte mature-âgé", "adulte")  # APPROXIMATION
 
             setPlaces.add(data_line[0])
 
-            if data_line[1] not in dicData:
-                dicData[data_line[1]] = {}
-                dicData[data_line[1]]["Statut"] = "-1"
-                dicData[data_line[1]]["Objets"] = []
-                dicData[data_line[1]]["Nombre_indiv"] = "-1"
-                dicData[data_line[1]]["Sexe"] = "-1"
-                dicData[data_line[1]]["Classe_age"] = "-1"
+            id_tombe = data_line[0]+" - "+data_line[1]
+            if id_tombe not in id_to_cnt:
+                id_to_cnt[id_tombe] = cnt
+                cnt_to_id[cnt] = id_tombe
+                cnt += 1
+            if id_to_cnt[id_tombe] not in dicData:
+                dicData[id_to_cnt[id_tombe]] = {}
+                dicData[id_to_cnt[id_tombe]]["Statut"] = "-1"
+                dicData[id_to_cnt[id_tombe]]["Objets"] = []
+                dicData[id_to_cnt[id_tombe]]["Nombre_indiv"] = "-1"
+                dicData[id_to_cnt[id_tombe]]["Sexe"] = "-1"
+                dicData[id_to_cnt[id_tombe]]["Classe_age"] = "-1"
 
             if data_line[3] in ["non_identifié", "indéterminé", "objet_décontextualisé"]: continue
 
-            dicData[data_line[1]]["Statut"] = data_line[2]
-            dicData[data_line[1]]["Objets"].append(data_line[3])
-            dicData[data_line[1]]["Nombre_indiv"] = data_line[6]
+            dicData[id_to_cnt[id_tombe]]["Statut"] = data_line[2]
+            dicData[id_to_cnt[id_tombe]]["Objets"].append(data_line[3])
+            dicData[id_to_cnt[id_tombe]]["Nombre_indiv"] = data_line[6]
 
             setObj.append(data_line[3].replace(" ", "_"))
             if data_line[7] not in ["indéterminé", "-1", ""]:  # Sexe
                 setSexe.append(data_line[7])
-                dicData[data_line[1]]["Sexe"] = data_line[7]
+                dicData[id_to_cnt[id_tombe]]["Sexe"] = data_line[7]
             if data_line[10] not in ["nd", "-1", ""]:  # Age
                 setAge.append(data_line[10])
-                dicData[data_line[1]]["Classe_age"] = data_line[10]
+                dicData[id_to_cnt[id_tombe]]["Classe_age"] = data_line[10]
+
+    i = 1
+    txt = ""
+    txt_corr = ""
+    if False:
+        txt += "\\begin{table}\n" \
+               "    \\centering\n " \
+               "    \\begin{tabularx}{\linewidth}{|L|L|L|L|} \n \\hline \n"
+        for k in dicData:
+            txt += f"                Sépulture {k} & {', '.join(dicData[k]['Objets']).replace('_', ' ').capitalize()} & & \\\\ \\hline \n"
+            if i%20==0:
+                txt += "    \end{tabularx}" \
+                       "\end{table}\n\n\n"
+                txt += "\\begin{table}\n" \
+                       "    \\centering\n " \
+                       "    \\begin{tabularx}{\linewidth}{|L|L|L|L|} \n \\hline \n"
+            i+=1
+        txt += "    \end{tabularx}" \
+               "\end{table}\n\n\n"
+    else:
+        coche = "☒"
+        i = 1
+        for k in dicData:
+            if dicData[k]['Objets'] != [] and dicData[k]['Sexe'] not in ["indéterminé", "-1", ""]:
+                txt += f"{cnt_to_id[k].capitalize()}\t{', '.join(dicData[k]['Objets']).replace('_', ' ').capitalize()}\t☐ Féminin - ☐ Masculin\n"
+                if dicData[k]['Sexe']=="féminin":
+                    txt_corr += f"{cnt_to_id[k].capitalize()}\t{', '.join(dicData[k]['Objets']).replace('_', ' ').capitalize()}\t"+coche+" Féminin - ☐ Masculin\n"
+                if dicData[k]['Sexe']=="masculin":
+                    txt_corr += f"{cnt_to_id[k].capitalize()}\t{', '.join(dicData[k]['Objets']).replace('_', ' ').capitalize()}\t☐ Féminin - "+coche+" Masculin\n"
+                i += 1
+    print(txt_corr)
+    #pause()
+
 
     nombre_objets = 2158
     sexe, nombre_objets_sexe = np.unique(setSexe, return_counts=True)

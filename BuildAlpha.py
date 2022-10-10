@@ -91,7 +91,7 @@ def splitDS(outcome, features, propTrainingSet, folds):
 
     return allIDsTraining, allIDsTest
 
-def getAlpha(features, outcome, nbInterp, IDsTraining, IDsTest):
+def getAlpha(features, outcome, nbInterp, IDsTraining, IDsTest, featToInt, outToInt):
     # ================================ ALPHA TRAINING
     dicAlpha = {}
     keysSeen = set()
@@ -143,7 +143,7 @@ def getAlpha(features, outcome, nbInterp, IDsTraining, IDsTest):
     alphaTe = sparse.COO(list(zip(*dicAlpha.keys())), list(dicAlpha.values()))
     #print(alphaTe, "# triples:", alphaTe.sum())
 
-    shape = tuple(np.max([alphaTr.shape, alphaTe.shape], axis=0))
+    shape = tuple([len(featToInt[i]) for i in range(len(featToInt)) for _ in range(nbInterp[i])]+[len(outToInt)])
     alphaTe.shape=shape
     alphaTr.shape=shape
 
@@ -173,7 +173,6 @@ def getAlpha(features, outcome, nbInterp, IDsTraining, IDsTest):
             alphaTe2 += alphaTe.transpose(arrTot)
         alphaTe = alphaTe2 / len(permuts)
         prev += i
-
 
     return alphaTr, alphaTe, IDsTraining, IDsTest
 
@@ -354,7 +353,7 @@ def run(folder, nbInterp, featuresData, outputData, propTrainingSet, folds, lim=
 
     for fold in range(folds):
         print("FOLD", fold)
-        alphaTr, alphaTe, IDsTraining, IDsTest = getAlpha(features, outcome, nbInterp, allIDsTraining[fold], allIDsTest[fold])
+        alphaTr, alphaTe, IDsTraining, IDsTest = getAlpha(features, outcome, nbInterp, allIDsTraining[fold], allIDsTest[fold], featToInt, outToInt)
         print("Original shape :", alphaTr.shape)
         alphaTr, alphaTe, currentFeatToInt, currentOutToInt = reduceAlpha(seuil, alphaTr, alphaTe, nbInterp, featToInt, outToInt)
         print("Final shape :", alphaTr.shape)
