@@ -1,0 +1,108 @@
+Cluster 0
+94.0% - Flèche
+41.0% - Pot
+23.0% - Clou(s)
+14.0% - Monnaie
+12.0% - Peigne
+12.0% - Faune
+12.0% - Œuf
+7.0% - Gobelet
+7.0% - Baudrier d'épée
+Cluster 1
+50.0% - Poinçon
+48.0% - Lot de perles (vrac)
+45.0% - Anneau(x) de châtelaine
+42.0% - Lance
+36.0% - Récipient
+34.0% - Clou(s)
+32.0% - Bouclier
+31.0% - Fiche
+31.0% - Épée
+29.0% - Pierre(s) à feu
+28.0% - Baudrier d'épée
+26.0% - Perle(s) de châtelaine
+25.0% - Faune
+22.0% - Coffre/coffret
+19.0% - Pot verseur
+14.0% - Œuf
+13.0% - Peigne
+12.0% - Forces
+10.0% - Gobelet
+9.0% - Couteau
+5.0% - Fourreau
+Cluster 2
+100.0% - Pendant/pendentif
+47.0% - Anneau(x) de châtelaine
+34.0% - Châtelaine
+30.0% - Perle(s) de châtelaine
+27.0% - Collier
+24.0% - Fibule
+16.0% - Ceinture
+12.0% - Fusaïole
+8.0% - Monnaie
+6.0% - Flèche
+5.0% - Couteau
+Cluster 3
+72.0% - Collier
+66.0% - Châtelaine
+52.0% - Fusaïole
+33.0% - Peigne
+32.0% - Œuf
+29.0% - Faune
+29.0% - Fibule
+22.0% - Pot
+16.0% - Ceinture
+14.0% - Couteau
+11.0% - Perle(s) de châtelaine
+11.0% - Clou(s)
+10.0% - Scramasaxe
+9.0% - Baudrier d'épée
+8.0% - Pierre(s) à feu
+7.0% - Aumônière/sacoche
+Cluster 4
+37.0% - Pot
+32.0% - Pot verseur
+27.0% - Gobelet
+21.0% - Œuf
+19.0% - Ceinture
+15.0% - Couteau
+9.0% - Récipient
+7.0% - Aumônière/sacoche
+Cluster 5
+100.0% - Contenant du défunt/chambre funéraire
+90.0% - Scramasaxe
+81.0% - Aumônière/sacoche
+78.0% - Monnaie
+67.0% - Fiche
+62.0% - Fourreau
+53.0% - Pierre(s) à feu
+48.0% - Fibule
+45.0% - Couteau
+43.0% - Ceinture
+35.0% - Peigne
+22.0% - Fusaïole
+14.0% - Perle(s) de châtelaine
+Cluster 6
+100.0% - Boucle d'oreille
+96.0% - Chaussures/jarretières
+88.0% - Forces
+78.0% - Coffre/coffret
+69.0% - Épée
+68.0% - Bouclier
+58.0% - Lance
+56.0% - Baudrier d'épée
+55.0% - Gobelet
+55.0% - Récipient
+52.0% - Lot de perles (vrac)
+50.0% - Poinçon
+48.0% - Pot verseur
+33.0% - Fourreau
+31.0% - Clou(s)
+31.0% - Faune
+17.0% - Œuf
+15.0% - Perle(s) de châtelaine
+12.0% - Fusaïole
+10.0% - Pierre(s) à feu
+8.0% - Couteau
+6.0% - Anneau(x) de châtelaine
+6.0% - Peigne

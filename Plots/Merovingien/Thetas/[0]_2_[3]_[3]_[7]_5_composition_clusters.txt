@@ -1,0 +1,102 @@
+Cluster 0
+92.0% - Fiche
+90.0% - Fourreau
+62.0% - Fusaïole
+54.0% - Faune
+54.0% - Scramasaxe
+50.0% - Peigne
+48.0% - Aumônière/sacoche
+47.0% - Contenant du défunt/chambre funéraire
+40.0% - Perle(s) de châtelaine
+34.0% - Couteau
+28.0% - Monnaie
+23.0% - Pierre(s) à feu
+17.0% - Pot
+Cluster 1
+51.0% - Boucle d'oreille
+51.0% - Bouclier
+44.0% - Lance
+43.0% - Forces
+37.0% - Clou(s)
+34.0% - Lot de perles (vrac)
+26.0% - Fusaïole
+25.0% - Poinçon
+25.0% - Épée
+13.0% - Pierre(s) à feu
+13.0% - Pot verseur
+12.0% - Fibule
+10.0% - Perle(s) de châtelaine
+7.0% - Faune
+7.0% - Gobelet
+6.0% - Coffre/coffret
+Cluster 2
+94.0% - Anneau(x) de châtelaine
+54.0% - Pierre(s) à feu
+51.0% - Pot verseur
+42.0% - Lot de perles (vrac)
+35.0% - Ceinture
+32.0% - Couteau
+26.0% - Œuf
+24.0% - Aumônière/sacoche
+15.0% - Scramasaxe
+Cluster 3
+94.0% - Flèche
+63.0% - Monnaie
+53.0% - Contenant du défunt/chambre funéraire
+44.0% - Ceinture
+26.0% - Scramasaxe
+24.0% - Pot
+22.0% - Collier
+19.0% - Aumônière/sacoche
+15.0% - Châtelaine
+13.0% - Couteau
+8.0% - Fourreau
+Cluster 4
+99.0% - Chaussures/jarretières
+94.0% - Coffre/coffret
+80.0% - Récipient
+75.0% - Épée
+75.0% - Poinçon
+72.0% - Baudrier d'épée
+57.0% - Forces
+56.0% - Lance
+51.0% - Gobelet
+49.0% - Bouclier
+48.0% - Clou(s)
+29.0% - Pot verseur
+12.0% - Lot de perles (vrac)
+9.0% - Pierre(s) à feu
+8.0% - Œuf
+7.0% - Perle(s) de châtelaine
+7.0% - Boucle d'oreille
+6.0% - Fusaïole
+Cluster 5
+100.0% - Pendant/pendentif
+85.0% - Fibule
+52.0% - Châtelaine
+42.0% - Perle(s) de châtelaine
+40.0% - Collier
+11.0% - Lot de perles (vrac)
+10.0% - Ceinture
+9.0% - Aumônière/sacoche
+9.0% - Monnaie
+6.0% - Fusaïole
+6.0% - Anneau(x) de châtelaine
+6.0% - Fiche
+6.0% - Scramasaxe
+Cluster 6
+59.0% - Pot
+58.0% - Œuf
+47.0% - Peigne
+42.0% - Gobelet
+41.0% - Boucle d'oreille
+36.0% - Faune
+34.0% - Châtelaine
+33.0% - Collier
+23.0% - Baudrier d'épée
+16.0% - Couteau
+15.0% - Récipient
+15.0% - Clou(s)
+7.0% - Ceinture
+7.0% - Pot verseur
+6.0% - Flèche

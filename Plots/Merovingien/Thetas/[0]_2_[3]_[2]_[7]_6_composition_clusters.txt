@@ -1,0 +1,108 @@
+Cluster 0
+100.0% - Pendant/pendentif
+72.0% - Anneau(x) de châtelaine
+42.0% - Châtelaine
+27.0% - Collier
+16.0% - Fusaïole
+14.0% - Ceinture
+13.0% - Perle(s) de châtelaine
+10.0% - Couteau
+5.0% - Flèche
+Cluster 1
+100.0% - Fibule
+52.0% - Monnaie
+46.0% - Flèche
+33.0% - Perle(s) de châtelaine
+23.0% - Aumônière/sacoche
+16.0% - Collier
+7.0% - Contenant du défunt/chambre funéraire
+7.0% - Ceinture
+7.0% - Scramasaxe
+Cluster 2
+90.0% - Pot
+67.0% - Œuf
+52.0% - Gobelet
+49.0% - Flèche
+47.0% - Peigne
+40.0% - Clou(s)
+38.0% - Faune
+35.0% - Collier
+29.0% - Fusaïole
+28.0% - Châtelaine
+16.0% - Baudrier d'épée
+16.0% - Perle(s) de châtelaine
+15.0% - Ceinture
+7.0% - Scramasaxe
+Cluster 3
+59.0% - Poinçon
+42.0% - Gobelet
+41.0% - Coffre/coffret
+39.0% - Boucle d'oreille
+38.0% - Baudrier d'épée
+34.0% - Lance
+32.0% - Forces
+31.0% - Récipient
+29.0% - Clou(s)
+26.0% - Châtelaine
+24.0% - Lot de perles (vrac)
+24.0% - Épée
+21.0% - Fourreau
+21.0% - Peigne
+20.0% - Couteau
+18.0% - Anneau(x) de châtelaine
+15.0% - Fiche
+14.0% - Faune
+11.0% - Pot verseur
+9.0% - Fusaïole
+8.0% - Chaussures/jarretières
+6.0% - Pierre(s) à feu
+5.0% - Pot
+Cluster 4
+95.0% - Bouclier
+92.0% - Chaussures/jarretières
+89.0% - Pot verseur
+76.0% - Épée
+68.0% - Forces
+66.0% - Lance
+63.0% - Récipient
+59.0% - Coffre/coffret
+51.0% - Lot de perles (vrac)
+46.0% - Baudrier d'épée
+41.0% - Poinçon
+31.0% - Clou(s)
+30.0% - Boucle d'oreille
+24.0% - Peigne
+22.0% - Fiche
+16.0% - Faune
+15.0% - Pierre(s) à feu
+14.0% - Fourreau
+12.0% - Œuf
+11.0% - Anneau(x) de châtelaine
+10.0% - Fusaïole
+8.0% - Couteau
+6.0% - Gobelet
+Cluster 5
+93.0% - Contenant du défunt/chambre funéraire
+73.0% - Pierre(s) à feu
+56.0% - Aumônière/sacoche
+56.0% - Scramasaxe
+48.0% - Monnaie
+43.0% - Ceinture
+42.0% - Couteau
+38.0% - Perle(s) de châtelaine
+36.0% - Fusaïole
+33.0% - Fourreau
+32.0% - Faune
+31.0% - Fiche
+Cluster 6
+32.0% - Fiche
+32.0% - Fourreau
+31.0% - Boucle d'oreille
+29.0% - Scramasaxe
+22.0% - Collier
+22.0% - Lot de perles (vrac)
+21.0% - Ceinture
+17.0% - Couteau
+15.0% - Œuf
+12.0% - Aumônière/sacoche
+7.0% - Récipient

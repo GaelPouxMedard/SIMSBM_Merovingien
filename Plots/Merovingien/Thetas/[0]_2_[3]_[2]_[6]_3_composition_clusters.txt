@@ -1,0 +1,110 @@
+Cluster 0
+84.0% - Récipient
+83.0% - Coffre/coffret
+82.0% - Forces
+80.0% - Baudrier d'épée
+80.0% - Chaussures/jarretières
+79.0% - Bouclier
+74.0% - Fiche
+73.0% - Épée
+62.0% - Pierre(s) à feu
+60.0% - Gobelet
+59.0% - Lance
+57.0% - Boucle d'oreille
+41.0% - Poinçon
+24.0% - Œuf
+22.0% - Couteau
+22.0% - Faune
+22.0% - Fibule
+15.0% - Fusaïole
+14.0% - Aumônière/sacoche
+14.0% - Ceinture
+13.0% - Anneau(x) de châtelaine
+12.0% - Peigne
+12.0% - Collier
+8.0% - Perle(s) de châtelaine
+8.0% - Pot verseur
+Cluster 1
+97.0% - Contenant du défunt/chambre funéraire
+93.0% - Fourreau
+79.0% - Clou(s)
+73.0% - Scramasaxe
+42.0% - Monnaie
+34.0% - Flèche
+33.0% - Aumônière/sacoche
+32.0% - Pot
+24.0% - Fusaïole
+24.0% - Peigne
+10.0% - Faune
+9.0% - Pierre(s) à feu
+6.0% - Couteau
+6.0% - Collier
+5.0% - Œuf
+5.0% - Ceinture
+Cluster 2
+59.0% - Pot
+39.0% - Œuf
+31.0% - Peigne
+29.0% - Flèche
+27.0% - Châtelaine
+22.0% - Ceinture
+22.0% - Gobelet
+22.0% - Faune
+18.0% - Clou(s)
+16.0% - Collier
+14.0% - Couteau
+12.0% - Baudrier d'épée
+9.0% - Pot verseur
+Cluster 3
+58.0% - Monnaie
+40.0% - Ceinture
+37.0% - Flèche
+37.0% - Aumônière/sacoche
+30.0% - Fibule
+27.0% - Pierre(s) à feu
+24.0% - Couteau
+23.0% - Scramasaxe
+23.0% - Perle(s) de châtelaine
+15.0% - Lot de perles (vrac)
+12.0% - Faune
+9.0% - Pot verseur
+9.0% - Boucle d'oreille
+9.0% - Pot
+Cluster 4
+100.0% - Pendant/pendentif
+56.0% - Châtelaine
+53.0% - Anneau(x) de châtelaine
+51.0% - Collier
+46.0% - Perle(s) de châtelaine
+45.0% - Fibule
+36.0% - Fusaïole
+9.0% - Boucle d'oreille
+7.0% - Ceinture
+6.0% - Œuf
+6.0% - Couteau
+Cluster 5
+80.0% - Lot de perles (vrac)
+74.0% - Pot verseur
+59.0% - Poinçon
+41.0% - Lance
+34.0% - Faune
+34.0% - Anneau(x) de châtelaine
+33.0% - Peigne
+28.0% - Couteau
+27.0% - Épée
+26.0% - Fiche
+25.0% - Œuf
+25.0% - Boucle d'oreille
+24.0% - Fusaïole
+22.0% - Perle(s) de châtelaine
+21.0% - Bouclier
+20.0% - Chaussures/jarretières
+18.0% - Forces
+18.0% - Gobelet
+17.0% - Coffre/coffret
+16.0% - Collier
+16.0% - Aumônière/sacoche
+13.0% - Châtelaine
+12.0% - Ceinture
+12.0% - Récipient
+7.0% - Baudrier d'épée

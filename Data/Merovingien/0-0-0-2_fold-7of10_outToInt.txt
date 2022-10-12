@@ -1,0 +1,2 @@
+immature	0
+adulte	1

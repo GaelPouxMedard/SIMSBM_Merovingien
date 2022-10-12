@@ -1,0 +1,108 @@
+Cluster 0
+35.0% - Œuf
+34.0% - Baudrier d'épée
+28.0% - Faune
+27.0% - Bouclier
+25.0% - Poinçon
+24.0% - Fourreau
+22.0% - Coffre/coffret
+22.0% - Fiche
+21.0% - Épée
+21.0% - Clou(s)
+21.0% - Scramasaxe
+20.0% - Lance
+19.0% - Peigne
+19.0% - Contenant du défunt/chambre funéraire
+16.0% - Aumônière/sacoche
+14.0% - Monnaie
+14.0% - Récipient
+7.0% - Pot
+6.0% - Ceinture
+5.0% - Pierre(s) à feu
+5.0% - Flèche
+Cluster 1
+48.0% - Contenant du défunt/chambre funéraire
+40.0% - Récipient
+37.0% - Ceinture
+35.0% - Œuf
+30.0% - Pot
+26.0% - Coffre/coffret
+26.0% - Pot verseur
+26.0% - Clou(s)
+22.0% - Peigne
+8.0% - Couteau
+8.0% - Chaussures/jarretières
+7.0% - Aumônière/sacoche
+7.0% - Monnaie
+7.0% - Fourreau
+Cluster 2
+100.0% - Gobelet
+100.0% - Anneau(x) de châtelaine
+100.0% - Boucle d'oreille
+100.0% - Lot de perles (vrac)
+100.0% - Pendant/pendentif
+100.0% - Collier
+100.0% - Fusaïole
+100.0% - Perle(s) de châtelaine
+97.0% - Châtelaine
+92.0% - Chaussures/jarretières
+35.0% - Coffre/coffret
+26.0% - Monnaie
+26.0% - Récipient
+23.0% - Faune
+18.0% - Couteau
+16.0% - Clou(s)
+13.0% - Pot
+10.0% - Pot verseur
+10.0% - Ceinture
+9.0% - Œuf
+8.0% - Contenant du défunt/chambre funéraire
+7.0% - Aumônière/sacoche
+6.0% - Peigne
+Cluster 3
+95.0% - Fibule
+71.0% - Pierre(s) à feu
+66.0% - Flèche
+54.0% - Poinçon
+53.0% - Lance
+47.0% - Fiche
+38.0% - Fourreau
+37.0% - Couteau
+37.0% - Aumônière/sacoche
+35.0% - Épée
+33.0% - Peigne
+33.0% - Faune
+31.0% - Baudrier d'épée
+27.0% - Pot verseur
+26.0% - Bouclier
+26.0% - Monnaie
+22.0% - Contenant du défunt/chambre funéraire
+22.0% - Pot
+20.0% - Récipient
+18.0% - Scramasaxe
+18.0% - Clou(s)
+14.0% - Ceinture
+13.0% - Œuf
+5.0% - Coffre/coffret
+Cluster 4
+61.0% - Scramasaxe
+46.0% - Bouclier
+43.0% - Épée
+35.0% - Baudrier d'épée
+34.0% - Ceinture
+33.0% - Pot verseur
+33.0% - Aumônière/sacoche
+32.0% - Couteau
+31.0% - Fiche
+30.0% - Pot
+29.0% - Flèche
+28.0% - Fourreau
+27.0% - Lance
+26.0% - Monnaie
+24.0% - Pierre(s) à feu
+22.0% - Poinçon
+20.0% - Peigne
+20.0% - Clou(s)
+13.0% - Faune
+11.0% - Coffre/coffret
+8.0% - Œuf

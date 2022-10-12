@@ -1,0 +1,108 @@
+Cluster 0
+100.0% - Pendant/pendentif
+49.0% - Anneau(x) de châtelaine
+48.0% - Châtelaine
+44.0% - Collier
+40.0% - Perle(s) de châtelaine
+27.0% - Fusaïole
+25.0% - Fibule
+21.0% - Monnaie
+16.0% - Lot de perles (vrac)
+11.0% - Ceinture
+9.0% - Aumônière/sacoche
+7.0% - Couteau
+Cluster 1
+51.0% - Flèche
+39.0% - Collier
+36.0% - Châtelaine
+19.0% - Ceinture
+18.0% - Fusaïole
+14.0% - Anneau(x) de châtelaine
+14.0% - Perle(s) de châtelaine
+11.0% - Couteau
+8.0% - Clou(s)
+8.0% - Aumônière/sacoche
+7.0% - Baudrier d'épée
+7.0% - Pot verseur
+6.0% - Scramasaxe
+6.0% - Faune
+6.0% - Gobelet
+Cluster 2
+80.0% - Lance
+63.0% - Chaussures/jarretières
+62.0% - Pot verseur
+52.0% - Boucle d'oreille
+52.0% - Épée
+51.0% - Peigne
+47.0% - Récipient
+43.0% - Lot de perles (vrac)
+41.0% - Baudrier d'épée
+38.0% - Coffre/coffret
+37.0% - Forces
+36.0% - Bouclier
+29.0% - Pierre(s) à feu
+27.0% - Clou(s)
+26.0% - Poinçon
+25.0% - Faune
+20.0% - Ceinture
+20.0% - Œuf
+18.0% - Couteau
+10.0% - Anneau(x) de châtelaine
+8.0% - Fibule
+7.0% - Flèche
+5.0% - Scramasaxe
+Cluster 3
+96.0% - Pot
+62.0% - Œuf
+42.0% - Peigne
+35.0% - Boucle d'oreille
+28.0% - Faune
+18.0% - Anneau(x) de châtelaine
+15.0% - Gobelet
+13.0% - Clou(s)
+12.0% - Châtelaine
+12.0% - Pot verseur
+8.0% - Baudrier d'épée
+6.0% - Couteau
+6.0% - Flèche
+5.0% - Ceinture
+Cluster 4
+79.0% - Gobelet
+74.0% - Poinçon
+64.0% - Bouclier
+63.0% - Forces
+62.0% - Coffre/coffret
+48.0% - Épée
+48.0% - Récipient
+44.0% - Baudrier d'épée
+40.0% - Lot de perles (vrac)
+37.0% - Chaussures/jarretières
+37.0% - Pierre(s) à feu
+25.0% - Fusaïole
+25.0% - Couteau
+20.0% - Lance
+17.0% - Perle(s) de châtelaine
+17.0% - Pot verseur
+14.0% - Œuf
+13.0% - Boucle d'oreille
+10.0% - Faune
+9.0% - Fibule
+9.0% - Anneau(x) de châtelaine
+7.0% - Ceinture
+Cluster 5
+97.0% - Contenant du défunt/chambre funéraire
+95.0% - Fourreau
+95.0% - Fiche
+80.0% - Scramasaxe
+79.0% - Monnaie
+79.0% - Aumônière/sacoche
+58.0% - Fibule
+51.0% - Clou(s)
+38.0% - Ceinture
+36.0% - Flèche
+34.0% - Couteau
+33.0% - Pierre(s) à feu
+30.0% - Faune
+29.0% - Fusaïole
+25.0% - Perle(s) de châtelaine
+17.0% - Collier

@@ -1,0 +1,103 @@
+Cluster 0
+32.0% - Pendant/pendentif
+24.0% - Collier
+23.0% - Flèche
+22.0% - Châtelaine
+20.0% - Anneau(x) de châtelaine
+19.0% - Pot
+17.0% - Œuf
+14.0% - Fibule
+14.0% - Ceinture
+11.0% - Scramasaxe
+11.0% - Aumônière/sacoche
+10.0% - Peigne
+10.0% - Monnaie
+7.0% - Couteau
+7.0% - Clou(s)
+6.0% - Perle(s) de châtelaine
+5.0% - Fusaïole
+Cluster 1
+37.0% - Pendant/pendentif
+24.0% - Châtelaine
+22.0% - Ceinture
+20.0% - Monnaie
+15.0% - Perle(s) de châtelaine
+15.0% - Pot
+13.0% - Couteau
+12.0% - Boucle d'oreille
+11.0% - Collier
+10.0% - Anneau(x) de châtelaine
+10.0% - Fusaïole
+9.0% - Peigne
+9.0% - Aumônière/sacoche
+9.0% - Fibule
+9.0% - Fourreau
+8.0% - Fiche
+8.0% - Pierre(s) à feu
+7.0% - Scramasaxe
+6.0% - Faune
+6.0% - Flèche
+Cluster 2
+84.0% - Chaussures/jarretières
+45.0% - Lance
+40.0% - Boucle d'oreille
+37.0% - Anneau(x) de châtelaine
+23.0% - Fourreau
+17.0% - Œuf
+16.0% - Forces
+16.0% - Flèche
+15.0% - Collier
+14.0% - Épée
+14.0% - Perle(s) de châtelaine
+13.0% - Ceinture
+12.0% - Pendant/pendentif
+12.0% - Baudrier d'épée
+12.0% - Châtelaine
+12.0% - Faune
+11.0% - Pot verseur
+11.0% - Peigne
+10.0% - Fibule
+10.0% - Fusaïole
+10.0% - Fiche
+10.0% - Bouclier
+9.0% - Aumônière/sacoche
+8.0% - Pot
+8.0% - Scramasaxe
+7.0% - Pierre(s) à feu
+6.0% - Monnaie
+Cluster 3
+100.0% - Poinçon
+97.0% - Récipient
+96.0% - Contenant du défunt/chambre funéraire
+95.0% - Coffre/coffret
+92.0% - Gobelet
+91.0% - Lot de perles (vrac)
+91.0% - Clou(s)
+90.0% - Bouclier
+86.0% - Épée
+84.0% - Baudrier d'épée
+84.0% - Forces
+82.0% - Pot verseur
+80.0% - Pierre(s) à feu
+78.0% - Couteau
+77.0% - Faune
+77.0% - Fiche
+75.0% - Fusaïole
+74.0% - Scramasaxe
+72.0% - Aumônière/sacoche
+70.0% - Peigne
+66.0% - Fibule
+65.0% - Perle(s) de châtelaine
+65.0% - Fourreau
+65.0% - Œuf
+64.0% - Monnaie
+58.0% - Pot
+55.0% - Flèche
+55.0% - Lance
+51.0% - Ceinture
+50.0% - Collier
+47.0% - Boucle d'oreille
+42.0% - Châtelaine
+32.0% - Anneau(x) de châtelaine
+18.0% - Pendant/pendentif
+16.0% - Chaussures/jarretières

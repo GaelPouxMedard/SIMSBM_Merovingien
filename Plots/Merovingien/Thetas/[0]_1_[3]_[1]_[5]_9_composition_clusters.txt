@@ -1,0 +1,104 @@
+Cluster 0
+92.0% - Poinçon
+75.0% - Épée
+66.0% - Flèche
+61.0% - Récipient
+59.0% - Fiche
+50.0% - Fourreau
+47.0% - Scramasaxe
+36.0% - Bouclier
+34.0% - Aumônière/sacoche
+33.0% - Pot verseur
+31.0% - Ceinture
+30.0% - Contenant du défunt/chambre funéraire
+29.0% - Monnaie
+27.0% - Pot
+27.0% - Lance
+26.0% - Pierre(s) à feu
+18.0% - Coffre/coffret
+14.0% - Baudrier d'épée
+13.0% - Couteau
+13.0% - Clou(s)
+10.0% - Peigne
+8.0% - Faune
+7.0% - Œuf
+Cluster 1
+98.0% - Boucle d'oreille
+80.0% - Fusaïole
+72.0% - Collier
+70.0% - Fibule
+66.0% - Châtelaine
+65.0% - Anneau(x) de châtelaine
+46.0% - Pendant/pendentif
+45.0% - Pot
+44.0% - Œuf
+42.0% - Lot de perles (vrac)
+40.0% - Gobelet
+37.0% - Faune
+34.0% - Ceinture
+27.0% - Clou(s)
+17.0% - Pot verseur
+17.0% - Pierre(s) à feu
+14.0% - Chaussures/jarretières
+14.0% - Aumônière/sacoche
+12.0% - Monnaie
+9.0% - Peigne
+8.0% - Couteau
+6.0% - Coffre/coffret
+6.0% - Contenant du défunt/chambre funéraire
+Cluster 2
+100.0% - Perle(s) de châtelaine
+74.0% - Chaussures/jarretières
+60.0% - Gobelet
+58.0% - Lot de perles (vrac)
+54.0% - Pendant/pendentif
+37.0% - Faune
+35.0% - Anneau(x) de châtelaine
+32.0% - Œuf
+32.0% - Châtelaine
+28.0% - Collier
+26.0% - Clou(s)
+22.0% - Peigne
+20.0% - Fusaïole
+19.0% - Pot verseur
+13.0% - Pierre(s) à feu
+11.0% - Coffre/coffret
+10.0% - Monnaie
+9.0% - Couteau
+Cluster 3
+46.0% - Couteau
+29.0% - Fibule
+25.0% - Contenant du défunt/chambre funéraire
+21.0% - Aumônière/sacoche
+18.0% - Pierre(s) à feu
+17.0% - Coffre/coffret
+16.0% - Pot
+15.0% - Peigne
+13.0% - Œuf
+12.0% - Chaussures/jarretières
+11.0% - Monnaie
+6.0% - Fourreau
+6.0% - Clou(s)
+Cluster 4
+86.0% - Baudrier d'épée
+73.0% - Lance
+64.0% - Bouclier
+53.0% - Scramasaxe
+47.0% - Coffre/coffret
+43.0% - Peigne
+42.0% - Fourreau
+41.0% - Fiche
+39.0% - Récipient
+38.0% - Monnaie
+36.0% - Contenant du défunt/chambre funéraire
+34.0% - Flèche
+29.0% - Clou(s)
+28.0% - Aumônière/sacoche
+28.0% - Pot verseur
+27.0% - Ceinture
+26.0% - Pierre(s) à feu
+25.0% - Épée
+24.0% - Couteau
+14.0% - Faune
+8.0% - Poinçon
+8.0% - Pot

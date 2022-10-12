@@ -1,0 +1,105 @@
+Cluster 0
+86.0% - Baudrier d'épée
+65.0% - Pot verseur
+58.0% - Forces
+57.0% - Poinçon
+56.0% - Récipient
+56.0% - Lance
+54.0% - Bouclier
+52.0% - Épée
+50.0% - Peigne
+46.0% - Boucle d'oreille
+44.0% - Faune
+43.0% - Fourreau
+42.0% - Anneau(x) de châtelaine
+39.0% - Couteau
+38.0% - Clou(s)
+35.0% - Coffre/coffret
+35.0% - Œuf
+32.0% - Fiche
+30.0% - Perle(s) de châtelaine
+28.0% - Chaussures/jarretières
+26.0% - Fusaïole
+25.0% - Collier
+21.0% - Gobelet
+15.0% - Ceinture
+14.0% - Fibule
+14.0% - Scramasaxe
+10.0% - Aumônière/sacoche
+8.0% - Lot de perles (vrac)
+Cluster 1
+100.0% - Pendant/pendentif
+50.0% - Anneau(x) de châtelaine
+49.0% - Châtelaine
+40.0% - Fibule
+39.0% - Collier
+33.0% - Perle(s) de châtelaine
+19.0% - Ceinture
+17.0% - Fusaïole
+12.0% - Boucle d'oreille
+11.0% - Couteau
+9.0% - Lot de perles (vrac)
+8.0% - Œuf
+7.0% - Aumônière/sacoche
+6.0% - Monnaie
+Cluster 2
+78.0% - Lot de perles (vrac)
+72.0% - Chaussures/jarretières
+65.0% - Coffre/coffret
+62.0% - Gobelet
+48.0% - Épée
+47.0% - Pierre(s) à feu
+46.0% - Bouclier
+44.0% - Lance
+44.0% - Récipient
+43.0% - Poinçon
+42.0% - Forces
+39.0% - Boucle d'oreille
+37.0% - Clou(s)
+32.0% - Pot
+31.0% - Châtelaine
+24.0% - Œuf
+23.0% - Pot verseur
+22.0% - Faune
+18.0% - Fusaïole
+15.0% - Fibule
+14.0% - Scramasaxe
+14.0% - Ceinture
+14.0% - Couteau
+12.0% - Collier
+12.0% - Fiche
+11.0% - Aumônière/sacoche
+10.0% - Peigne
+9.0% - Perle(s) de châtelaine
+8.0% - Anneau(x) de châtelaine
+6.0% - Fourreau
+Cluster 3
+61.0% - Pot
+40.0% - Flèche
+33.0% - Peigne
+33.0% - Œuf
+26.0% - Faune
+24.0% - Clou(s)
+21.0% - Collier
+19.0% - Châtelaine
+17.0% - Gobelet
+15.0% - Fusaïole
+13.0% - Ceinture
+12.0% - Baudrier d'épée
+9.0% - Couteau
+7.0% - Pot verseur
+Cluster 4
+98.0% - Contenant du défunt/chambre funéraire
+94.0% - Monnaie
+69.0% - Aumônière/sacoche
+65.0% - Scramasaxe
+60.0% - Flèche
+56.0% - Fiche
+51.0% - Fourreau
+48.0% - Pierre(s) à feu
+39.0% - Ceinture
+31.0% - Fibule
+27.0% - Couteau
+26.0% - Perle(s) de châtelaine
+24.0% - Fusaïole
+7.0% - Faune

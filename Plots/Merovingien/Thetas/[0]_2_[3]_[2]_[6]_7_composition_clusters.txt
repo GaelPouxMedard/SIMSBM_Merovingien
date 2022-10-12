@@ -1,0 +1,108 @@
+Cluster 0
+100.0% - Fibule
+67.0% - Anneau(x) de châtelaine
+52.0% - Collier
+45.0% - Châtelaine
+23.0% - Couteau
+21.0% - Lot de perles (vrac)
+21.0% - Ceinture
+20.0% - Pendant/pendentif
+18.0% - Œuf
+18.0% - Pot verseur
+16.0% - Aumônière/sacoche
+14.0% - Pierre(s) à feu
+11.0% - Scramasaxe
+Cluster 1
+90.0% - Poinçon
+77.0% - Forces
+60.0% - Bouclier
+59.0% - Récipient
+58.0% - Gobelet
+50.0% - Coffre/coffret
+50.0% - Lance
+49.0% - Épée
+49.0% - Clou(s)
+44.0% - Couteau
+44.0% - Faune
+42.0% - Baudrier d'épée
+40.0% - Fusaïole
+40.0% - Perle(s) de châtelaine
+38.0% - Pierre(s) à feu
+36.0% - Pot verseur
+36.0% - Lot de perles (vrac)
+35.0% - Contenant du défunt/chambre funéraire
+30.0% - Fourreau
+29.0% - Scramasaxe
+24.0% - Chaussures/jarretières
+24.0% - Œuf
+24.0% - Monnaie
+20.0% - Pot
+14.0% - Aumônière/sacoche
+11.0% - Boucle d'oreille
+9.0% - Peigne
+6.0% - Fiche
+Cluster 2
+76.0% - Chaussures/jarretières
+65.0% - Contenant du défunt/chambre funéraire
+59.0% - Boucle d'oreille
+52.0% - Fiche
+51.0% - Épée
+50.0% - Lance
+50.0% - Coffre/coffret
+48.0% - Baudrier d'épée
+45.0% - Peigne
+40.0% - Bouclier
+39.0% - Pot verseur
+36.0% - Récipient
+33.0% - Fusaïole
+32.0% - Gobelet
+31.0% - Lot de perles (vrac)
+30.0% - Faune
+27.0% - Perle(s) de châtelaine
+26.0% - Fourreau
+25.0% - Pierre(s) à feu
+24.0% - Clou(s)
+23.0% - Aumônière/sacoche
+23.0% - Forces
+18.0% - Œuf
+11.0% - Scramasaxe
+10.0% - Pot
+10.0% - Poinçon
+6.0% - Couteau
+Cluster 3
+100.0% - Flèche
+21.0% - Pot
+20.0% - Ceinture
+18.0% - Scramasaxe
+13.0% - Couteau
+6.0% - Pot verseur
+6.0% - Faune
+Cluster 4
+79.0% - Pendant/pendentif
+54.0% - Châtelaine
+49.0% - Pot
+41.0% - Collier
+40.0% - Peigne
+36.0% - Œuf
+33.0% - Perle(s) de châtelaine
+28.0% - Clou(s)
+27.0% - Fusaïole
+26.0% - Anneau(x) de châtelaine
+20.0% - Faune
+19.0% - Ceinture
+11.0% - Baudrier d'épée
+9.0% - Gobelet
+Cluster 5
+76.0% - Monnaie
+42.0% - Fiche
+41.0% - Aumônière/sacoche
+40.0% - Fourreau
+32.0% - Ceinture
+31.0% - Scramasaxe
+30.0% - Boucle d'oreille
+20.0% - Pierre(s) à feu
+12.0% - Lot de perles (vrac)
+9.0% - Couteau
+7.0% - Collier
+6.0% - Anneau(x) de châtelaine
+5.0% - Récipient

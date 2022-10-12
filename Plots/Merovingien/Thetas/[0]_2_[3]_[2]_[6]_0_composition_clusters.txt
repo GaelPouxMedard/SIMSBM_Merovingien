@@ -1,0 +1,113 @@
+Cluster 0
+99.0% - Boucle d'oreille
+98.0% - Épée
+95.0% - Lot de perles (vrac)
+70.0% - Baudrier d'épée
+66.0% - Pot verseur
+48.0% - Récipient
+38.0% - Perle(s) de châtelaine
+32.0% - Couteau
+31.0% - Coffre/coffret
+30.0% - Pierre(s) à feu
+29.0% - Clou(s)
+27.0% - Bouclier
+21.0% - Peigne
+21.0% - Forces
+19.0% - Faune
+18.0% - Scramasaxe
+18.0% - Chaussures/jarretières
+17.0% - Aumônière/sacoche
+17.0% - Fourreau
+15.0% - Contenant du défunt/chambre funéraire
+15.0% - Fiche
+15.0% - Lance
+14.0% - Gobelet
+11.0% - Fusaïole
+10.0% - Œuf
+8.0% - Poinçon
+6.0% - Ceinture
+5.0% - Anneau(x) de châtelaine
+Cluster 1
+53.0% - Pot
+39.0% - Œuf
+37.0% - Collier
+34.0% - Châtelaine
+31.0% - Anneau(x) de châtelaine
+30.0% - Clou(s)
+28.0% - Gobelet
+19.0% - Fusaïole
+18.0% - Peigne
+17.0% - Faune
+15.0% - Baudrier d'épée
+11.0% - Pot verseur
+9.0% - Ceinture
+6.0% - Récipient
+Cluster 2
+93.0% - Flèche
+78.0% - Contenant du défunt/chambre funéraire
+77.0% - Monnaie
+47.0% - Scramasaxe
+40.0% - Aumônière/sacoche
+31.0% - Couteau
+30.0% - Fourreau
+27.0% - Ceinture
+24.0% - Pot
+23.0% - Fusaïole
+22.0% - Peigne
+16.0% - Pierre(s) à feu
+15.0% - Faune
+8.0% - Clou(s)
+7.0% - Fiche
+Cluster 3
+100.0% - Pendant/pendentif
+31.0% - Perle(s) de châtelaine
+26.0% - Châtelaine
+19.0% - Anneau(x) de châtelaine
+15.0% - Ceinture
+14.0% - Collier
+11.0% - Fibule
+7.0% - Flèche
+Cluster 4
+92.0% - Poinçon
+85.0% - Lance
+82.0% - Chaussures/jarretières
+79.0% - Forces
+73.0% - Bouclier
+69.0% - Coffre/coffret
+58.0% - Gobelet
+55.0% - Fiche
+48.0% - Fourreau
+47.0% - Récipient
+39.0% - Faune
+37.0% - Pierre(s) à feu
+33.0% - Clou(s)
+24.0% - Œuf
+21.0% - Ceinture
+21.0% - Scramasaxe
+19.0% - Fusaïole
+18.0% - Aumônière/sacoche
+16.0% - Peigne
+13.0% - Baudrier d'épée
+13.0% - Pot verseur
+9.0% - Couteau
+6.0% - Anneau(x) de châtelaine
+5.0% - Monnaie
+Cluster 5
+89.0% - Fibule
+49.0% - Collier
+40.0% - Châtelaine
+39.0% - Anneau(x) de châtelaine
+26.0% - Perle(s) de châtelaine
+25.0% - Œuf
+24.0% - Aumônière/sacoche
+24.0% - Peigne
+23.0% - Fusaïole
+23.0% - Pot
+22.0% - Couteau
+22.0% - Fiche
+21.0% - Ceinture
+17.0% - Monnaie
+16.0% - Pierre(s) à feu
+14.0% - Scramasaxe
+10.0% - Pot verseur
+10.0% - Faune

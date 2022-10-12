@@ -1,0 +1,351 @@
+0	ceinture couteau
+1	ceinture contenant_du_défunt/chambre_funéraire
+2	peigne
+3	baudrier_d'épée ceinture flèche
+6	ceinture
+7	châtelaine anneau(x)_de_châtelaine peigne couteau pendant/pendentif pendant/pendentif pendant/pendentif lot_de_perles_(vrac) boucle_d'oreille boucle_d'oreille
+9	pot
+10	boucle_d'oreille
+11	scramasaxe fourreau couteau fourreau ceinture
+12	pot
+13	récipient
+14	couteau
+15	boucle_d'oreille boucle_d'oreille fibule collier
+16	récipient clou(s)
+17	pot ceinture
+18	pot
+19	pot clou(s)
+20	pot
+21	ceinture
+22	pot
+23	lance flèche bouclier épée fourreau baudrier_d'épée scramasaxe fourreau ceinture aumônière/sacoche couteau peigne flèche ceinture
+24	ceinture
+25	couteau
+26	lance ceinture
+27	boucle_d'oreille boucle_d'oreille collier ceinture
+28	poinçon
+29	boucle_d'oreille boucle_d'oreille ceinture
+30	pot
+31	couteau ceinture fourreau
+32	scramasaxe ceinture flèche
+33	ceinture couteau pot clou(s) pot faune
+34	fibule ceinture coffre/coffret pot faune
+35	collier lot_de_perles_(vrac) ceinture
+36	pot collier ceinture faune
+37	ceinture collier fibule aumônière/sacoche lot_de_perles_(vrac) faune
+38	bouclier lance épée fourreau scramasaxe fourreau baudrier_d'épée ceinture
+39	gobelet peigne ceinture collier faune œuf
+40	châtelaine lot_de_perles_(vrac) ceinture fourreau collier coffre/coffret faune œuf
+41	scramasaxe fourreau épée fourreau baudrier_d'épée ceinture peigne lance bouclier ceinture
+42	pot couteau
+43	collier ceinture gobelet fusaïole coffre/coffret fusaïole châtelaine anneau(x)_de_châtelaine perle(s)_de_châtelaine pendant/pendentif pendant/pendentif couteau fourreau peigne faune œuf
+44	scramasaxe fourreau couteau ceinture aumônière/sacoche
+45	pot fourreau scramasaxe flèche ceinture
+46	fibule collier ceinture châtelaine couteau fourreau œuf
+47	scramasaxe fourreau couteau ceinture
+48	ceinture scramasaxe fourreau couteau aumônière/sacoche
+49	pot ceinture peigne flèche couteau
+50	pot ceinture faune faune œuf
+51	ceinture couteau pot collier coffre/coffret
+52	collier pot pot anneau(x)_de_châtelaine coffre/coffret
+53	pot peigne
+54	scramasaxe pot aumônière/sacoche couteau couteau couteau pierre(s)_à_feu clou(s)
+55	collier ceinture couteau fourreau pot_verseur faune
+56	collier ceinture châtelaine
+57	collier ceinture perle(s)_de_châtelaine châtelaine peigne pot faune faune
+58	ceinture aumônière/sacoche couteau poinçon pierre(s)_à_feu clou(s) clou(s) scramasaxe couteau fourreau flèche flèche flèche pot_verseur pot faune
+59	peigne flèche pot baudrier_d'épée faune œuf
+60	collier monnaie monnaie pierre(s)_à_feu anneau(x)_de_châtelaine ceinture châtelaine aumônière/sacoche
+61	œuf scramasaxe ceinture pot pot couteau fourreau couteau peigne aumônière/sacoche faune faune
+62	ceinture couteau lance pot poinçon faune œuf
+63	baudrier_d'épée aumônière/sacoche bouclier épée lance fourreau peigne pot_verseur ceinture couteau couteau fiche clou(s) pierre(s)_à_feu faune
+64	pot épée coffre/coffret
+65	pot peigne lance bouclier coffre/coffret œuf faune pot_verseur fourreau ceinture baudrier_d'épée faune
+66	scramasaxe fourreau lance
+67	pot
+68	pot
+69	ceinture fiche couteau pierre(s)_à_feu aumônière/sacoche scramasaxe fourreau couteau flèche couteau ceinture baudrier_d'épée
+70	couteau faune faune faune
+71	ceinture pot faune faune
+72	couteau ceinture ceinture fiche pot baudrier_d'épée épée bouclier
+73	lance peigne gobelet faune faune épée baudrier_d'épée scramasaxe fourreau ceinture aumônière/sacoche couteau couteau forces fiche pierre(s)_à_feu bouclier
+74	lance bouclier pot pot faune faune œuf ceinture baudrier_d'épée flèche gobelet
+75	pot œuf faune collier ceinture châtelaine couteau aumônière/sacoche chaussures/jarretières
+76	pot ceinture scramasaxe aumônière/sacoche pierre(s)_à_feu
+77	pot pot œuf peigne ceinture châtelaine couteau
+78	boucle_d'oreille
+79	lance scramasaxe ceinture couteau fourreau
+80	pot
+81	gobelet fusaïole faune faune collier ceinture châtelaine couteau monnaie
+82	couteau
+83	pot flèche flèche pierre(s)_à_feu couteau
+84	collier boucle_d'oreille boucle_d'oreille ceinture
+85	pot peigne flèche flèche flèche flèche ceinture couteau aumônière/sacoche scramasaxe fourreau poinçon pot
+86	ceinture aumônière/sacoche couteau couteau ceinture pierre(s)_à_feu scramasaxe flèche flèche flèche ceinture fibule ceinture
+87	couteau ceinture
+88	pot fusaïole ceinture
+89	faune
+90	chaussures/jarretières faune
+91	ceinture scramasaxe fourreau aumônière/sacoche flèche flèche flèche baudrier_d'épée pierre(s)_à_feu faune
+92	fibule
+93	flèche ceinture pierre(s)_à_feu aumônière/sacoche
+95	ceinture faune baudrier_d'épée
+96	épée fourreau baudrier_d'épée scramasaxe fourreau ceinture couteau
+97	pot pot baudrier_d'épée pierre(s)_à_feu
+98	ceinture couteau
+99	lot_de_perles_(vrac) ceinture
+100	gobelet couteau lot_de_perles_(vrac)
+101	pot ceinture aumônière/sacoche couteau pierre(s)_à_feu flèche flèche
+102	pot gobelet œuf ceinture collier
+103	gobelet gobelet épée fourreau baudrier_d'épée ceinture couteau pierre(s)_à_feu aumônière/sacoche scramasaxe fourreau bouclier lance
+104	boucle_d'oreille boucle_d'oreille faune
+105	pot peigne pendant/pendentif pendant/pendentif pendant/pendentif pendant/pendentif pendant/pendentif châtelaine ceinture
+106	lot_de_perles_(vrac)
+107	pot pierre(s)_à_feu ceinture couteau couteau faune œuf
+108	collier couteau pot_verseur ceinture pot contenant_du_défunt/chambre_funéraire faune faune œuf faune
+109	monnaie pierre(s)_à_feu gobelet bouclier épée lance ceinture forces clou(s)
+110	ceinture
+112	scramasaxe fourreau couteau ceinture fiche ceinture monnaie aumônière/sacoche aumônière/sacoche
+113	ceinture lot_de_perles_(vrac) pot pendant/pendentif boucle_d'oreille châtelaine faune œuf
+114	pot lot_de_perles_(vrac) ceinture pierre(s)_à_feu
+115	ceinture peigne
+116	pot œuf
+117	monnaie
+118	pot peigne scramasaxe aumônière/sacoche flèche ceinture œuf
+119	couteau aumônière/sacoche pierre(s)_à_feu scramasaxe fourreau épée baudrier_d'épée faune œuf
+120	ceinture fourreau
+121	boucle_d'oreille boucle_d'oreille ceinture couteau châtelaine
+122	lot_de_perles_(vrac) boucle_d'oreille boucle_d'oreille pendant/pendentif anneau(x)_de_châtelaine
+123	peigne lot_de_perles_(vrac) couteau clou(s)
+124	couteau fourreau
+125	ceinture fibule fibule collier pot couteau fusaïole aumônière/sacoche châtelaine perle(s)_de_châtelaine monnaie chaussures/jarretières chaussures/jarretières œuf
+126	pot
+127	lot_de_perles_(vrac) pot faune
+128	couteau forces lot_de_perles_(vrac) gobelet faune
+129	pot ceinture scramasaxe fiche monnaie aumônière/sacoche clou(s) faune faune œuf
+130	scramasaxe ceinture clou(s) aumônière/sacoche
+131	peigne pot couteau ceinture
+132	flèche scramasaxe ceinture aumônière/sacoche monnaie monnaie couteau pierre(s)_à_feu
+133	scramasaxe ceinture fourreau
+134	scramasaxe fourreau ceinture couteau poinçon clou(s) monnaie aumônière/sacoche
+135	collier pot faune
+136	pot ceinture couteau poinçon pierre(s)_à_feu aumônière/sacoche faune œuf
+137	fusaïole pendant/pendentif récipient
+138	peigne couteau récipient lot_de_perles_(vrac) fusaïole contenant_du_défunt/chambre_funéraire
+139	pot épée fourreau couteau fourreau ceinture lance
+140	fourreau
+141	flèche flèche flèche couteau scramasaxe ceinture pot faune
+142	ceinture collier faune
+143	lot_de_perles_(vrac) ceinture fourreau chaussures/jarretières chaussures/jarretières faune
+144	couteau ceinture
+145	lot_de_perles_(vrac)
+146	lot_de_perles_(vrac) couteau fourreau œuf
+147	épée fourreau bouclier ceinture chaussures/jarretières couteau fourreau aumônière/sacoche gobelet lance contenant_du_défunt/chambre_funéraire clou(s) faune faune
+148	pot ceinture fourreau gobelet faune faune œuf
+149	couteau collier pierre(s)_à_feu faune faune œuf
+150	lot_de_perles_(vrac) peigne fusaïole ceinture couteau faune
+151	épée fourreau scramasaxe couteau aumônière/sacoche bouclier lance faune œuf
+152	couteau couteau ceinture pierre(s)_à_feu aumônière/sacoche poinçon clou(s) fiche monnaie monnaie monnaie monnaie monnaie monnaie faune œuf
+153	monnaie peigne ceinture lance aumônière/sacoche scramasaxe couteau couteau fiche clou(s) pierre(s)_à_feu faune faune œuf
+154	pot flèche flèche flèche aumônière/sacoche ceinture couteau
+155	collier ceinture couteau pot faune œuf
+156	lance bouclier scramasaxe pot aumônière/sacoche pierre(s)_à_feu clou(s) couteau couteau ceinture fiche pierre(s)_à_feu faune faune œuf
+157	couteau clou(s) peigne pot faune faune œuf faune faune
+158	ceinture clou(s)
+159	faune
+160	collier ceinture boucle_d'oreille boucle_d'oreille lot_de_perles_(vrac)
+161	pot pot pot collier couteau ceinture flèche châtelaine œuf œuf faune faune
+162	peigne pot œuf faune
+163	fibule ceinture pot fusaïole collier coffre/coffret faune
+164	fourreau pierre(s)_à_feu œuf
+165	peigne pot bouclier lance ceinture contenant_du_défunt/chambre_funéraire œuf faune
+166	œuf
+167	pot œuf lot_de_perles_(vrac) pierre(s)_à_feu
+168	couteau flèche fourreau
+169	fusaïole peigne œuf lot_de_perles_(vrac) contenant_du_défunt/chambre_funéraire
+170	ceinture clou(s) pierre(s)_à_feu fourreau épée pierre(s)_à_feu faune faune faune œuf
+171	lance pot faune
+172	collier fibule couteau forces ceinture
+173	peigne
+174	forces fibule lot_de_perles_(vrac) couteau
+175	collier fibule ceinture anneau(x)_de_châtelaine couteau châtelaine collier
+176	bouclier fourreau pot peigne ceinture faune
+177	couteau ceinture poinçon pierre(s)_à_feu récipient aumônière/sacoche faune
+178	collier couteau pendant/pendentif pendant/pendentif anneau(x)_de_châtelaine châtelaine aumônière/sacoche perle(s)_de_châtelaine pot faune faune
+179	récipient
+180	pot faune faune
+181	chaussures/jarretières chaussures/jarretières perle(s)_de_châtelaine châtelaine gobelet ceinture couteau œuf faune faune
+182	pot_verseur gobelet lance récipient bouclier épée fourreau faune faune œuf
+183	ceinture couteau fourreau peigne
+184	ceinture poinçon contenant_du_défunt/chambre_funéraire pierre(s)_à_feu
+185	pot collier œuf
+186	flèche pot pot pot faune œuf
+187	faune
+188	gobelet faune
+189	collier fibule fibule couteau peigne ceinture châtelaine faune
+190	poinçon œuf
+191	ceinture couteau clou(s) pot pierre(s)_à_feu faune œuf
+192	peigne
+193	scramasaxe fourreau pot ceinture peigne poinçon forces aumônière/sacoche
+194	flèche couteau pot
+195	ceinture fourreau
+196	épée fourreau couteau poinçon pierre(s)_à_feu
+197	ceinture couteau pot lot_de_perles_(vrac) œuf
+198	collier ceinture fusaïole monnaie châtelaine aumônière/sacoche
+199	lot_de_perles_(vrac) ceinture ceinture couteau
+200	clou(s)
+201	boucle_d'oreille boucle_d'oreille
+202	scramasaxe ceinture fourreau
+203	collier ceinture anneau(x)_de_châtelaine couteau châtelaine
+204	scramasaxe ceinture fourreau
+205	collier ceinture pot_verseur faune faune œuf
+206	récipient couteau
+207	pot
+208	scramasaxe couteau flèche monnaie fiche pierre(s)_à_feu aumônière/sacoche ceinture pot_verseur récipient
+209	pot pot ceinture clou(s) fusaïole anneau(x)_de_châtelaine châtelaine collier œuf
+210	fourreau
+211	couteau
+212	ceinture fourreau pot
+213	ceinture
+214	scramasaxe ceinture
+215	pot_verseur pot collier ceinture châtelaine
+216	pot
+217	pot flèche ceinture couteau fourreau
+218	pot couteau ceinture
+219	couteau
+220	collier ceinture couteau anneau(x)_de_châtelaine châtelaine
+221	flèche flèche flèche flèche contenant_du_défunt/chambre_funéraire scramasaxe couteau ceinture couteau
+222	pierre(s)_à_feu
+223	pot ceinture
+224	scramasaxe fourreau couteau ceinture
+225	ceinture collier
+226	scramasaxe pierre(s)_à_feu couteau flèche
+227	ceinture couteau
+228	pot_verseur ceinture scramasaxe flèche
+229	ceinture
+230	scramasaxe ceinture fourreau
+231	lance peigne bouclier pot ceinture couteau épée fourreau couteau aumônière/sacoche faune
+232	collier fibule peigne collier ceinture châtelaine anneau(x)_de_châtelaine couteau aumônière/sacoche gobelet faune faune œuf
+233	pot
+234	pot_verseur fusaïole peigne couteau collier ceinture faune œuf faune œuf
+235	fusaïole pierre(s)_à_feu pot gobelet collier pendant/pendentif ceinture perle(s)_de_châtelaine couteau anneau(x)_de_châtelaine châtelaine faune œuf faune œuf
+236	épée forces lance bouclier ceinture pot faune faune faune faune gobelet faune
+237	scramasaxe fourreau ceinture aumônière/sacoche fiche bouclier lance
+238	collier peigne pot
+239	ceinture pot_verseur pierre(s)_à_feu
+240	pot peigne boucle_d'oreille
+241	pot pot_verseur pot aumônière/sacoche couteau ceinture
+242	pot ceinture épée fourreau aumônière/sacoche couteau lance bouclier
+243	lance bouclier épée fourreau ceinture aumônière/sacoche couteau
+244	collier
+246	couteau
+247	gobelet fusaïole faune fibule fibule collier collier fibule fibule châtelaine couteau anneau(x)_de_châtelaine forces couteau pendant/pendentif aumônière/sacoche pierre(s)_à_feu chaussures/jarretières
+248	gobelet ceinture flèche flèche flèche flèche scramasaxe aumônière/sacoche pierre(s)_à_feu monnaie couteau fourreau
+249	pot ceinture collier
+250	pot
+251	épée fourreau baudrier_d'épée couteau
+252	faune fusaïole aumônière/sacoche couteau fibule fibule collier monnaie pendant/pendentif châtelaine perle(s)_de_châtelaine pendant/pendentif
+253	collier collier ceinture contenant_du_défunt/chambre_funéraire châtelaine pendant/pendentif anneau(x)_de_châtelaine couteau
+254	gobelet ceinture couteau
+255	forces
+256	collier
+257	lance peigne peigne bouclier
+258	collier
+259	pot_verseur ceinture collier peigne œuf faune faune faune châtelaine perle(s)_de_châtelaine aumônière/sacoche couteau
+260	pot_verseur faune ceinture scramasaxe fourreau
+261	collier gobelet
+262	peigne collier
+263	flèche ceinture
+264	gobelet flèche
+265	pot faune ceinture pierre(s)_à_feu
+266	peigne faune pot
+267	gobelet forces peigne pot_verseur faune faune œuf faune contenant_du_défunt/chambre_funéraire contenant_du_défunt/chambre_funéraire lance coffre/coffret ceinture fourreau baudrier_d'épée épée faune
+268	ceinture
+269	ceinture aumônière/sacoche couteau fiche pierre(s)_à_feu
+270	collier ceinture
+271	pot faune
+272	pot pot lance ceinture aumônière/sacoche couteau pierre(s)_à_feu
+273	faune collier pot fusaïole fibule fibule fibule ceinture châtelaine couteau aumônière/sacoche perle(s)_de_châtelaine peigne pierre(s)_à_feu anneau(x)_de_châtelaine aumônière/sacoche forces
+274	ceinture flèche flèche
+275	épée fourreau aumônière/sacoche couteau pierre(s)_à_feu ceinture lance faune
+276	pot
+277	faune
+278	ceinture
+279	collier ceinture chaussures/jarretières chaussures/jarretières couteau monnaie
+280	collier gobelet pot faune faune
+281	collier ceinture châtelaine anneau(x)_de_châtelaine couteau faune pot
+282	collier fibule fibule fibule fibule châtelaine perle(s)_de_châtelaine forces couteau anneau(x)_de_châtelaine anneau(x)_de_châtelaine anneau(x)_de_châtelaine aumônière/sacoche couteau ceinture contenant_du_défunt/chambre_funéraire coffre/coffret faune faune faune pendant/pendentif faune
+283	fusaïole collier ceinture châtelaine couteau aumônière/sacoche
+284	couteau
+285	collier
+286	ceinture châtelaine aumônière/sacoche couteau chaussures/jarretières chaussures/jarretières
+287	ceinture couteau
+288	couteau collier
+289	ceinture scramasaxe fourreau
+290	ceinture boucle_d'oreille boucle_d'oreille
+291	ceinture chaussures/jarretières chaussures/jarretières couteau fourreau
+292	scramasaxe fourreau ceinture
+293	collier
+294	collier couteau
+295	pot peigne
+296	ceinture
+297	épée couteau
+298	couteau
+299	ceinture
+300	ceinture couteau châtelaine
+301	boucle_d'oreille
+302	collier
+303	gobelet faune faune faune faune faune faune lot_de_perles_(vrac) fibule fibule ceinture châtelaine peigne pendant/pendentif chaussures/jarretières couteau clou(s) fibule
+304	couteau
+305	boucle_d'oreille boucle_d'oreille collier ceinture
+306	collier
+307	ceinture
+308	ceinture
+309	ceinture couteau
+310	ceinture clou(s) fourreau scramasaxe
+311	collier ceinture
+312	ceinture clou(s)
+313	scramasaxe fourreau ceinture couteau collier
+314	aumônière/sacoche clou(s) fiche pierre(s)_à_feu
+315	couteau récipient
+316	pot forces collier récipient châtelaine couteau faune
+318	pot collier
+319	pot peigne œuf œuf œuf faune faune baudrier_d'épée flèche flèche
+320	scramasaxe pot clou(s) ceinture
+321	pot scramasaxe clou(s) fibule récipient pierre(s)_à_feu pierre(s)_à_feu pierre(s)_à_feu pierre(s)_à_feu pierre(s)_à_feu
+322	épée fourreau pot ceinture lance
+323	fibule ceinture collier
+324	scramasaxe fourreau ceinture pierre(s)_à_feu clou(s) fiche
+325	pot peigne
+326	couteau pierre(s)_à_feu clou(s)
+327	ceinture œuf œuf clou(s)
+328	pot
+329	scramasaxe peigne ceinture couteau couteau clou(s) pierre(s)_à_feu fiche
+330	épée couteau clou(s) fibule bouclier œuf œuf œuf peigne pot pot
+331	pot pot
+332	fibule collier couteau fusaïole
+333	pot pierre(s)_à_feu clou(s)
+334	pot
+335	ceinture couteau fusaïole châtelaine
+336	épée couteau fiche clou(s) ceinture pot pot
+337	collier boucle_d'oreille boucle_d'oreille ceinture fusaïole pot
+338	collier couteau châtelaine peigne perle(s)_de_châtelaine pot pot fusaïole
+339	épée lance pot bouclier pot faune faune faune faune œuf peigne poinçon ceinture baudrier_d'épée fourreau
+340	collier ceinture
+341	pot œuf œuf fibule fibule chaussures/jarretières chaussures/jarretières chaussures/jarretières aumônière/sacoche fibule faune lot_de_perles_(vrac) lot_de_perles_(vrac)
+342	pot épée bouclier lance couteau faune
+343	collier couteau
+344	châtelaine lot_de_perles_(vrac) peigne récipient clou(s) récipient
+345	collier
+346	faune œuf collier peigne
+347	collier œuf faune faune
+348	ceinture
+349	ceinture clou(s) scramasaxe
+350	ceinture couteau scramasaxe épée fourreau baudrier_d'épée lance
+351	récipient récipient
+352	ceinture aumônière/sacoche pierre(s)_à_feu clou(s) monnaie bouclier baudrier_d'épée flèche flèche pot
+353	ceinture
+354	épée baudrier_d'épée pierre(s)_à_feu aumônière/sacoche couteau pot pot lance faune œuf peigne
+355	coffre/coffret faune châtelaine pendant/pendentif peigne lot_de_perles_(vrac) récipient couteau
+356	peigne lot_de_perles_(vrac) fusaïole ceinture couteau récipient récipient
+357	ceinture lance fiche

@@ -1,0 +1,103 @@
+Cluster 0
+73.0% - Forces
+73.0% - Lance
+67.0% - Coffre/coffret
+62.0% - Peigne
+55.0% - Gobelet
+50.0% - Pierre(s) à feu
+50.0% - Récipient
+47.0% - Chaussures/jarretières
+46.0% - Lot de perles (vrac)
+37.0% - Baudrier d'épée
+35.0% - Boucle d'oreille
+31.0% - Bouclier
+30.0% - Couteau
+28.0% - Épée
+17.0% - Œuf
+14.0% - Aumônière/sacoche
+14.0% - Clou(s)
+13.0% - Poinçon
+12.0% - Pot verseur
+11.0% - Fusaïole
+9.0% - Flèche
+8.0% - Fiche
+6.0% - Ceinture
+Cluster 1
+100.0% - Pendant/pendentif
+62.0% - Anneau(x) de châtelaine
+54.0% - Châtelaine
+50.0% - Collier
+45.0% - Perle(s) de châtelaine
+35.0% - Fusaïole
+27.0% - Fibule
+21.0% - Monnaie
+14.0% - Lot de perles (vrac)
+12.0% - Ceinture
+11.0% - Aumônière/sacoche
+7.0% - Couteau
+6.0% - Œuf
+5.0% - Fourreau
+Cluster 2
+97.0% - Contenant du défunt/chambre funéraire
+88.0% - Fourreau
+86.0% - Fiche
+81.0% - Scramasaxe
+79.0% - Monnaie
+69.0% - Aumônière/sacoche
+52.0% - Fibule
+49.0% - Clou(s)
+42.0% - Flèche
+32.0% - Ceinture
+31.0% - Faune
+31.0% - Couteau
+30.0% - Pierre(s) à feu
+28.0% - Pot
+25.0% - Fusaïole
+23.0% - Perle(s) de châtelaine
+13.0% - Collier
+Cluster 3
+61.0% - Pot
+41.0% - Châtelaine
+40.0% - Flèche
+40.0% - Œuf
+38.0% - Collier
+29.0% - Peigne
+25.0% - Boucle d'oreille
+25.0% - Faune
+24.0% - Ceinture
+19.0% - Anneau(x) de châtelaine
+17.0% - Gobelet
+17.0% - Clou(s)
+16.0% - Couteau
+15.0% - Pot verseur
+13.0% - Baudrier d'épée
+11.0% - Fusaïole
+10.0% - Perle(s) de châtelaine
+5.0% - Aumônière/sacoche
+Cluster 4
+87.0% - Poinçon
+72.0% - Épée
+70.0% - Pot verseur
+69.0% - Bouclier
+53.0% - Chaussures/jarretières
+50.0% - Baudrier d'épée
+46.0% - Récipient
+42.0% - Faune
+39.0% - Boucle d'oreille
+36.0% - Lot de perles (vrac)
+33.0% - Coffre/coffret
+33.0% - Œuf
+27.0% - Gobelet
+27.0% - Lance
+27.0% - Forces
+26.0% - Ceinture
+22.0% - Perle(s) de châtelaine
+20.0% - Clou(s)
+18.0% - Fusaïole
+18.0% - Pierre(s) à feu
+17.0% - Fibule
+17.0% - Couteau
+15.0% - Anneau(x) de châtelaine
+9.0% - Flèche
+8.0% - Pot
+6.0% - Scramasaxe

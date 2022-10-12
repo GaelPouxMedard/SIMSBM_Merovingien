@@ -1,0 +1,106 @@
+Cluster 0
+99.0% - Pendant/pendentif
+54.0% - Anneau(x) de châtelaine
+42.0% - Collier
+37.0% - Châtelaine
+27.0% - Flèche
+27.0% - Perle(s) de châtelaine
+26.0% - Fibule
+25.0% - Fusaïole
+24.0% - Monnaie
+18.0% - Ceinture
+13.0% - Pot
+13.0% - Œuf
+11.0% - Peigne
+9.0% - Aumônière/sacoche
+8.0% - Faune
+8.0% - Scramasaxe
+7.0% - Contenant du défunt/chambre funéraire
+7.0% - Couteau
+6.0% - Clou(s)
+5.0% - Fourreau
+Cluster 1
+58.0% - Lot de perles (vrac)
+50.0% - Faune
+46.0% - Couteau
+45.0% - Fiche
+42.0% - Flèche
+39.0% - Boucle d'oreille
+37.0% - Épée
+36.0% - Forces
+35.0% - Baudrier d'épée
+34.0% - Bouclier
+34.0% - Fourreau
+33.0% - Lance
+33.0% - Pot verseur
+30.0% - Œuf
+25.0% - Clou(s)
+24.0% - Ceinture
+22.0% - Poinçon
+22.0% - Pot
+19.0% - Fibule
+16.0% - Chaussures/jarretières
+16.0% - Monnaie
+16.0% - Fusaïole
+10.0% - Perle(s) de châtelaine
+7.0% - Collier
+6.0% - Récipient
+6.0% - Châtelaine
+5.0% - Peigne
+5.0% - Gobelet
+Cluster 2
+55.0% - Perle(s) de châtelaine
+54.0% - Châtelaine
+51.0% - Pot
+49.0% - Fibule
+44.0% - Anneau(x) de châtelaine
+40.0% - Fusaïole
+40.0% - Monnaie
+39.0% - Ceinture
+38.0% - Couteau
+38.0% - Aumônière/sacoche
+37.0% - Collier
+36.0% - Contenant du défunt/chambre funéraire
+30.0% - Scramasaxe
+28.0% - Œuf
+28.0% - Flèche
+25.0% - Fiche
+20.0% - Pierre(s) à feu
+20.0% - Peigne
+16.0% - Faune
+16.0% - Boucle d'oreille
+14.0% - Gobelet
+12.0% - Fourreau
+12.0% - Lot de perles (vrac)
+Cluster 3
+98.0% - Coffre/coffret
+93.0% - Récipient
+84.0% - Chaussures/jarretières
+78.0% - Poinçon
+76.0% - Gobelet
+72.0% - Pierre(s) à feu
+67.0% - Pot verseur
+67.0% - Lance
+66.0% - Bouclier
+64.0% - Clou(s)
+64.0% - Peigne
+64.0% - Forces
+63.0% - Épée
+60.0% - Scramasaxe
+60.0% - Baudrier d'épée
+53.0% - Contenant du défunt/chambre funéraire
+52.0% - Aumônière/sacoche
+49.0% - Fourreau
+42.0% - Boucle d'oreille
+29.0% - Œuf
+28.0% - Fiche
+28.0% - Lot de perles (vrac)
+26.0% - Faune
+20.0% - Monnaie
+20.0% - Fusaïole
+19.0% - Ceinture
+15.0% - Pot
+14.0% - Collier
+9.0% - Couteau
+8.0% - Perle(s) de châtelaine
+6.0% - Fibule

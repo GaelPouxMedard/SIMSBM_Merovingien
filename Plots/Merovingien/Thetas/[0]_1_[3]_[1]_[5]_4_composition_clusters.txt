@@ -1,0 +1,106 @@
+Cluster 0
+63.0% - Perle(s) de châtelaine
+56.0% - Chaussures/jarretières
+38.0% - Anneau(x) de châtelaine
+28.0% - Lot de perles (vrac)
+27.0% - Boucle d'oreille
+26.0% - Fusaïole
+24.0% - Clou(s)
+21.0% - Œuf
+19.0% - Récipient
+19.0% - Coffre/coffret
+17.0% - Pot verseur
+16.0% - Couteau
+15.0% - Collier
+15.0% - Ceinture
+14.0% - Faune
+12.0% - Pot
+11.0% - Aumônière/sacoche
+11.0% - Peigne
+10.0% - Fibule
+10.0% - Pierre(s) à feu
+6.0% - Pendant/pendentif
+Cluster 1
+96.0% - Épée
+87.0% - Lance
+84.0% - Scramasaxe
+84.0% - Fiche
+79.0% - Contenant du défunt/chambre funéraire
+72.0% - Fourreau
+71.0% - Bouclier
+70.0% - Poinçon
+67.0% - Clou(s)
+58.0% - Baudrier d'épée
+50.0% - Flèche
+40.0% - Pot
+38.0% - Récipient
+37.0% - Aumônière/sacoche
+35.0% - Coffre/coffret
+33.0% - Peigne
+26.0% - Pot verseur
+24.0% - Ceinture
+23.0% - Pierre(s) à feu
+23.0% - Œuf
+19.0% - Faune
+19.0% - Fibule
+16.0% - Monnaie
+Cluster 2
+44.0% - Monnaie
+39.0% - Couteau
+31.0% - Œuf
+28.0% - Fibule
+22.0% - Faune
+22.0% - Peigne
+20.0% - Récipient
+19.0% - Pot verseur
+17.0% - Aumônière/sacoche
+17.0% - Ceinture
+12.0% - Pierre(s) à feu
+7.0% - Coffre/coffret
+Cluster 3
+50.0% - Flèche
+42.0% - Baudrier d'épée
+31.0% - Pierre(s) à feu
+30.0% - Poinçon
+29.0% - Bouclier
+29.0% - Couteau
+27.0% - Ceinture
+24.0% - Peigne
+24.0% - Aumônière/sacoche
+24.0% - Pot verseur
+24.0% - Pot
+21.0% - Fourreau
+21.0% - Contenant du défunt/chambre funéraire
+18.0% - Coffre/coffret
+16.0% - Faune
+16.0% - Fiche
+16.0% - Scramasaxe
+13.0% - Lance
+13.0% - Monnaie
+10.0% - Récipient
+10.0% - Fibule
+Cluster 4
+98.0% - Gobelet
+96.0% - Châtelaine
+94.0% - Pendant/pendentif
+85.0% - Collier
+74.0% - Fusaïole
+73.0% - Boucle d'oreille
+72.0% - Lot de perles (vrac)
+62.0% - Anneau(x) de châtelaine
+37.0% - Perle(s) de châtelaine
+37.0% - Chaussures/jarretières
+33.0% - Fibule
+28.0% - Faune
+25.0% - Monnaie
+24.0% - Pierre(s) à feu
+22.0% - Coffre/coffret
+21.0% - Œuf
+20.0% - Pot
+17.0% - Ceinture
+14.0% - Couteau
+14.0% - Pot verseur
+12.0% - Récipient
+10.0% - Aumônière/sacoche
+10.0% - Peigne
+6.0% - Clou(s)
